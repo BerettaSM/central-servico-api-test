@@ -1,0 +1,1512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+
+    <changeSet author="Team-CS-devs" id="TBL_TICKET-2022-10-22-insert">
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="1"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu monitor está quebrado. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis hoc dicit? Sed virtutem ipsam inchoavit, nihil amplius. Sequitur disserendi ratio cognitioque naturae; Quae cum essent dicta, discessimus. Duo Reges: constructio interrete. Dat enim intervalla et relaxat. Idem iste, inquam, de voluptate quid sentit? Easdemne res? Quae duo sunt, unum facit. Quorum altera prosunt, nocent altera. Sed nimis multa. Profectus in exilium Tubulus statim nec respondere ausus; Sed ad bona praeterita redeamus. Pauca mutat vel plura sane; Et ille ridens: Video, inquit, quid agas; "/>
+        <column name="ID_USER_OPEN_BY" value="15"/>
+        <column name="ID_USER_RESPONSIBLE" value="2"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-17 04:43:55"/>
+        <column name="DATE_END" value="2022-10-18 04:43:55"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="2"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu PC está sumido. Preciso de conselho."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quasi ego id curem, quid ille aiat aut neget. At iam decimum annum in spelunca iacet. Quae diligentissime contra Aristonem dicuntur a Chryippo. Suo genere perveniant ad extremum; Hoc loco tenere se Triarius non potuit. Quis hoc dicit? Huius, Lyco, oratione locuples, rebus ipsis ielunior. Quo modo autem philosophus loquitur? Ut non sine causa ex iis memoriae ducta sit disciplina. Negat esse eam, inquit, propter se expetendam. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Certe, nisi voluptatem tanti aestimaretis. Non laboro, inquit, de nomine. Non autem hoc: igitur ne illud quidem. Quae sequuntur igitur? Quae cum magnifice primo dici viderentur, considerata minus probabantur. Cyrenaici quidem non recusant; Sed ad bona praeterita redeamus. Non igitur bene. Ac tamen hic mallet non dolere. Cum audissem Antiochum, Brute, ut solebam, cum M. Quod quidem nobis non saepe contingit. Quorum sine causa fieri nihil putandum est. Quid de Pythagora? Poterat autem inpune; Suo enim quisque studio maxime ducitur. Compensabatur, inquit, cum summis doloribus laetitia. Erat enim res aperta. Hoc enim constituto in philosophia constituta sunt omnia. Quae similitudo in genere etiam humano apparet. Quid me istud rogas? Non potes, nisi retexueris illa. Fortemne possumus dicere eundem illum Torquatum? Cur iustitia laudatur? Huius ego nunc auctoritatem sequens idem faciam. Ut pulsi recurrant? Ego vero isti, inquam, permitto. Duo Reges: constructio interrete. Sed nimis multa. "/>
+        <column name="ID_USER_OPEN_BY" value="7"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-23 19:15:38"/>
+        <column name="DATE_END" value="2022-10-25 19:15:38"/>
+        <column name="ENABLE" valueBoolean="TRUE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="3"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu sistema está estragado. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gloriosa ostentatio in constituendo summo bono. Aliter homines, aliter philosophos loqui putas oportere? Primum in nostrane potestate est, quid meminerimus? Hoc non est positum in nostra actione. Omnes enim iucundum motum, quo sensus hilaretur. In schola desinis. Vitae autem degendae ratio maxime quidem illis placuit quieta. Quodsi ipsam honestatem undique pertectam atque absolutam. Summum a vobis bonum voluptas dicitur. Nulla erit controversia. Sed tamen intellego quid velit. Frater et T. Indicant pueri, in quibus ut in speculis natura cernitur. Ille enim occurrentia nescio quae comminiscebatur; Nulla erit controversia. Itaque his sapiens semper vacabit. Et ille ridens: Video, inquit, quid agas; Sed quid sentiat, non videtis. Nunc de hominis summo bono quaeritur; Bonum negas esse divitias, praeposìtum esse dicis? Nam Pyrrho, Aristo, Erillus iam diu abiecti. Sed quid sentiat, non videtis. Qualem igitur hominem natura inchoavit? Tanta vis admonitionis inest in locis; Sint ista Graecorum; Quid est enim aliud esse versutum? Haec et tu ita posuisti, et verba vestra sunt. Quae sequuntur igitur? Sic enim censent, oportunitatis esse beate vivere. Hoc non est positum in nostra actione. Quippe: habes enim a rhetoribus; Consequens enim est et post oritur, ut dixi. Duo Reges: constructio interrete. Paria sunt igitur. Sed quae tandem ista ratio est? Hos contra singulos dici est melius. Aliter enim nosmet ipsos nosse non possumus. Erit enim mecum, si tecum erit. Cur iustitia laudatur? Suo genere perveniant ad extremum; "/>
+        <column name="ID_USER_OPEN_BY" value="14"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-18 04:54:11"/>
+        <column name="DATE_END" value="2022-10-20 04:54:11"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="4"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu colega está queimado. Preciso de auxilio."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tria genera bonorum; Immo alio genere; Quae sequuntur igitur? Id Sextilius factum negabat. Duo Reges: constructio interrete. "/>
+        <column name="ID_USER_OPEN_BY" value="8"/>
+        <column name="ID_USER_RESPONSIBLE" value="2"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-13 08:36:31"/>
+        <column name="DATE_END" value="2022-10-15 08:36:31"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="5"/>
+        <column name="STATUS" value="5"/>
+        <column name="TITLE" value="Meu teclado está queimado. Preciso de conselho."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Huius ego nunc auctoritatem sequens idem faciam. Eaedem res maneant alio modo. Ille enim occurrentia nescio quae comminiscebatur; Maximus dolor, inquit, brevis est. Restinguet citius, si ardentem acceperit. Quasi ego id curem, quid ille aiat aut neget. Duo Reges: constructio interrete. "/>
+        <column name="ID_USER_OPEN_BY" value="11"/>
+        <column name="ID_USER_RESPONSIBLE" value="2"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-16 01:59:16"/>
+        <column name="DATE_END" value="2022-10-17 01:59:16"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="6"/>
+        <column name="STATUS" value="4"/>
+        <column name="TITLE" value="Meu PC está em pane. Preciso de suporte."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed haec quidem liberius ab eo dicuntur et saepius. Hoc est non dividere, sed frangere. Nam ante Aristippus, et ille melius. Quid iudicant sensus? Tu vero, inquam, ducas licet, si sequetur; Ergo id est convenienter naturae vivere, a natura discedere. Aliud igitur esse censet gaudere, aliud non dolere. Tum mihi Piso: Quid ergo? Memini vero, inquam; Duo Reges: constructio interrete. Tu enim ista lenius, hic Stoicorum more nos vexat. Tibi hoc incredibile, quod beatissimum. Quid vero? Quid Zeno? Haec quo modo conveniant, non sane intellego. Cur post Tarentum ad Archytam? Sint ista Graecorum; "/>
+        <column name="ID_USER_OPEN_BY" value="9"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-18 09:11:44"/>
+        <column name="DATE_END" value="2022-10-20 09:11:44"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="7"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu cachorro está estragado. Preciso de suporte."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc etsi multimodis reprehendi potest, tamen accipio, quod dant. Id Sextilius factum negabat. Nunc haec primum fortasse audientis servire debemus. Sed ad bona praeterita redeamus. Duo Reges: constructio interrete. Tum ille timide vel potius verecunde: Facio, inquit. Neque solum ea communia, verum etiam paria esse dixerunt. Quae contraria sunt his, malane? An eiusdem modi? Putabam equidem satis, inquit, me dixisse. Restatis igitur vos; Videsne quam sit magna dissensio? Si longus, levis. Diodorus, eius auditor, adiungit ad honestatem vacuitatem doloris. Non est igitur summum malum dolor. Age, inquies, ista parva sunt. An vero, inquit, quisquam potest probare, quod perceptfum, quod. Negare non possum. Itaque contra est, ac dicitis; Si qua in iis corrigere voluit, deteriora fecit. Dici enim nihil potest verius. Tubulo putas dicere? Tum ille: Ain tandem? Deprehensus omnem poenam contemnet. Comprehensum, quod cognitum non habet? Is es profecto tu. Age, inquies, ista parva sunt. Sedulo, inquam, faciam. Quo modo autem philosophus loquitur? Deinde dolorem quem maximum? Ait enim se, si uratur, Quam hoc suave! dicturum. Minime vero istorum quidem, inquit. At iste non dolendi status non vocatur voluptas. Praeclarae mortes sunt imperatoriae; Erat enim res aperta. Idemne, quod iucunde? Tum mihi Piso: Quid ergo? Maximus dolor, inquit, brevis est. Aliter autem vobis placet. Istam voluptatem perpetuam quis potest praestare sapienti? Pugnant Stoici cum Peripateticis. Tamen a proposito, inquam, aberramus. Qua tu etiam inprudens utebare non numquam. Itaque contra est, ac dicitis; Quis est tam dissimile homini. Ita fit cum gravior, tum etiam splendidior oratio. Sed fortuna fortis; "/>
+        <column name="ID_USER_OPEN_BY" value="14"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-12 11:27:21"/>
+        <column name="DATE_END" value="2022-10-13 11:27:21"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="8"/>
+        <column name="STATUS" value="5"/>
+        <column name="TITLE" value="Meu colega está pifado. Preciso de conselho."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid censes in Latino fore? Ait enim se, si uratur, Quam hoc suave! dicturum. Duo Reges: constructio interrete. Quis Aristidem non mortuum diligit? Nescio quo modo praetervolavit oratio. At enim hic etiam dolore. Laboro autem non sine causa; Non potes, nisi retexueris illa. Tanta vis admonitionis inest in locis; Quis non odit sordidos, vanos, leves, futtiles? "/>
+        <column name="ID_USER_OPEN_BY" value="10"/>
+        <column name="ID_USER_RESPONSIBLE" value="2"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-17 10:05:57"/>
+        <column name="DATE_END" value="2022-10-19 10:05:57"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="9"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu mouse está em pane. Preciso de um companheiro."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Obsecro, inquit, Torquate, haec dicit Epicurus? Quid me istud rogas? Quid censes in Latino fore? Duo Reges: constructio interrete. Praeclarae mortes sunt imperatoriae; Est enim effectrix multarum et magnarum voluptatum. Quod quidem iam fit etiam in Academia. Videmus igitur ut conquiescere ne infantes quidem possint. In schola desinis. Mihi enim satis est, ipsis non satis. Quid ait Aristoteles reliquique Platonis alumni? Nemo igitur esse beatus potest. Ex rebus enim timiditas, non ex vocabulis nascitur. "/>
+        <column name="ID_USER_OPEN_BY" value="11"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-08 12:45:01"/>
+        <column name="DATE_END" value="2022-10-10 12:45:01"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="10"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu monitor está pifado. Preciso de conselho."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc non est positum in nostra actione. Quoniam, si dis placet, ab Epicuro loqui discimus. Quid de Platone aut de Democrito loquar? Quod totum contra est. Idem adhuc; Age, inquies, ista parva sunt. Prave, nequiter, turpiter cenabat; Duo Reges: constructio interrete. Si longus, levis. Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Quod non faceret, si in voluptate summum bonum poneret. "/>
+        <column name="ID_USER_OPEN_BY" value="10"/>
+        <column name="ID_USER_RESPONSIBLE" value="2"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-23 08:41:23"/>
+        <column name="DATE_END" value="2022-10-24 08:41:23"/>
+        <column name="ENABLE" valueBoolean="TRUE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="11"/>
+        <column name="STATUS" value="4"/>
+        <column name="TITLE" value="Meu cachorro está em pane. Preciso de um companheiro."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Age sane, inquam. Nullus est igitur cuiusquam dies natalis. Non potes, nisi retexueris illa. Audeo dicere, inquit. Nulla erit controversia. Cur post Tarentum ad Archytam? Haec quo modo conveniant, non sane intellego. Laboro autem non sine causa; Nos vero, inquit ille; Quid ergo? Quid de Platone aut de Democrito loquar? Ita multa dicunt, quae vix intellegam. At certe gravius. Aliter autem vobis placet. Quare conare, quaeso. Bonum patria: miserum exilium. Praeclare hoc quidem. Nihil enim hoc differt. Haec dicuntur inconstantissime. Sed haec nihil sane ad rem; Ratio enim nostra consentit, pugnat oratio. Recte, inquit, intellegis. Itaque his sapiens semper vacabit. Hoc est non dividere, sed frangere. Non est ista, inquam, Piso, magna dissensio. Duo Reges: constructio interrete. Bonum patria: miserum exilium. Tum ille timide vel potius verecunde: Facio, inquit. Restinguet citius, si ardentem acceperit. Videsne quam sit magna dissensio? Nihil ad rem! Ne sit sane; Invidiosum nomen est, infame, suspectum. Prave, nequiter, turpiter cenabat; Nunc omni virtuti vitium contrario nomine opponitur. Nos cum te, M. Nam Pyrrho, Aristo, Erillus iam diu abiecti. Quod iam a me expectare noli. Ergo, inquit, tibi Q. Proclivi currit oratio. Quid ad utilitatem tantae pecuniae? Aliter enim explicari, quod quaeritur, non potest. Quid de Pythagora? De quibus cupio scire quid sentias. Zenonis est, inquam, hoc Stoici. Efficiens dici potest. "/>
+        <column name="ID_USER_OPEN_BY" value="13"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-07 23:06:31"/>
+        <column name="DATE_END" value="2022-10-08 23:06:31"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="12"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu cachorro está estragado. Preciso de conselho."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Apud ceteros autem philosophos, qui quaesivit aliquid, tacet; Quae ista amicitia est? Ac tamen hic mallet non dolere. Quid ergo hoc loco intellegit honestum? Paria sunt igitur. Duo enim genera quae erant, fecit tria. Itaque contra est, ac dicitis; Qui ita affectus, beatum esse numquam probabis; Duo Reges: constructio interrete. Idemne, quod iucunde? Suam denique cuique naturam esse ad vivendum ducem. Ut pulsi recurrant? Invidiosum nomen est, infame, suspectum. Vide, quantum, inquam, fallare, Torquate. Quod totum contra est. Quid sequatur, quid repugnet, vident. Aut haec tibi, Torquate, sunt vituperanda aut patrocinium voluptatis repudiandum. At coluit ipse amicitias. Nonne igitur tibi videntur, inquit, mala? "/>
+        <column name="ID_USER_OPEN_BY" value="13"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-13 01:11:44"/>
+        <column name="DATE_END" value="2022-10-14 01:11:44"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="13"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu monitor está quebrado. Preciso de conselho."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Videmus igitur ut conquiescere ne infantes quidem possint. Dat enim intervalla et relaxat. Itaque his sapiens semper vacabit. Duo Reges: constructio interrete. Et ille ridens: Video, inquit, quid agas; "/>
+        <column name="ID_USER_OPEN_BY" value="7"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-11 23:58:31"/>
+        <column name="DATE_END" value="2022-10-13 23:58:31"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="14"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu mouse está pifado. Preciso de socorro."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non quam nostram quidem, inquit Pomponius iocans; Quid ait Aristoteles reliquique Platonis alumni? Duo Reges: constructio interrete. Aliud igitur esse censet gaudere, aliud non dolere. Ille enim occurrentia nescio quae comminiscebatur; Facile est hoc cernere in primis puerorum aetatulis. Quid igitur, inquit, eos responsuros putas? Suo genere perveniant ad extremum; Quippe: habes enim a rhetoribus; Vestri haec verecundius, illi fortasse constantius. Quis est tam dissimile homini. A mene tu? Rationis enim perfectio est virtus; Ita fit cum gravior, tum etiam splendidior oratio. Idemne potest esse dies saepius, qui semel fuit? Primum in nostrane potestate est, quid meminerimus? De illis, cum volemus. Age, inquies, ista parva sunt. Teneo, inquit, finem illi videri nihil dolere. Sed videbimus. An haec ab eo non dicuntur? Omnia peccata paria dicitis. Quae similitudo in genere etiam humano apparet. Sed plane dicit quod intellegit. Hoc mihi cum tuo fratre convenit. Sed ea mala virtuti magnitudine obruebantur. Ne amores quidem sanctos a sapiente alienos esse arbitrantur. Quantum Aristoxeni ingenium consumptum videmus in musicis? Quoniam, si dis placet, ab Epicuro loqui discimus. Restatis igitur vos; Sed quae tandem ista ratio est? Tum Torquatus: Prorsus, inquit, assentior; Non est ista, inquam, Piso, magna dissensio. Illa videamus, quae a te de amicitia dicta sunt. An tu me de L. Quis istum dolorem timet? Cur haec eadem Democritus? Praeteritis, inquit, gaudeo. Illi enim inter se dissentiunt. Sint ista Graecorum; Illa tamen simplicia, vestra versuta. Summae mihi videtur inscitiae. Itaque fecimus. Tum mihi Piso: Quid ergo? "/>
+        <column name="ID_USER_OPEN_BY" value="6"/>
+        <column name="ID_USER_RESPONSIBLE" value="2"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-19 19:05:04"/>
+        <column name="DATE_END" value="2022-10-20 19:05:04"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="15"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu colega está com problemas. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Aliter enim explicari, quod quaeritur, non potest. Duo Reges: constructio interrete. Sin aliud quid voles, postea. Qua tu etiam inprudens utebare non numquam. Aufert enim sensus actionemque tollit omnem. Optime, inquam. Si longus, levis dictata sunt. An est aliquid, quod te sua sponte delectet? Sed ad illum redeo. Prioris generis est docilitas, memoria; Quid adiuvas? Sit enim idem caecus, debilis. Age sane, inquam. Qui convenit? Cum audissem Antiochum, Brute, ut solebam, cum M. Utilitatis causa amicitia est quaesita. Cui Tubuli nomen odio non est? Illa tamen simplicia, vestra versuta. Nam Pyrrho, Aristo, Erillus iam diu abiecti. Profectus in exilium Tubulus statim nec respondere ausus; Sequitur disserendi ratio cognitioque naturae; Ita enim vivunt quidam, ut eorum vita refellatur oratio. Philosophi autem in suis lectulis plerumque moriuntur. Videsne quam sit magna dissensio? Quid enim? Consequens enim est et post oritur, ut dixi. Tibi hoc incredibile, quod beatissimum. Idem adhuc; Conferam avum tuum Drusum cum C. An tu me de L. Obsecro, inquit, Torquate, haec dicit Epicurus? "/>
+        <column name="ID_USER_OPEN_BY" value="12"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-10 02:34:47"/>
+        <column name="DATE_END" value="2022-10-12 02:34:47"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="16"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu PC está sumido. Preciso de um companheiro."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Verum hoc idem saepe faciamus. Nihil sane. Sed erat aequius Triarium aliquid de dissensione nostra iudicare. "/>
+        <column name="ID_USER_OPEN_BY" value="12"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-09 00:28:22"/>
+        <column name="DATE_END" value="2022-10-10 00:28:22"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="17"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu monitor está estragado. Preciso de suporte."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In schola desinis. Sed venio ad inconstantiae crimen, ne saepius dicas me aberrare; Ergo hoc quidem apparet, nos ad agendum esse natos. Tuo vero id quidem, inquam, arbitratu. Duo Reges: constructio interrete. Occultum facinus esse potuerit, gaudebit; Egone quaeris, inquit, quid sentiam? Tubulo putas dicere? Non autem hoc: igitur ne illud quidem. Nunc de hominis summo bono quaeritur; Sint ista Graecorum; Quod vestri non item. Venit ad extremum; Quo tandem modo? Cave putes quicquam esse verius. Refert tamen, quo modo. Immo videri fortasse. Haec quo modo conveniant, non sane intellego. At ille pellit, qui permulcet sensum voluptate. Illi enim inter se dissentiunt. Praeteritis, inquit, gaudeo. Tum Torquatus: Prorsus, inquit, assentior; Tollenda est atque extrahenda radicitus. Respondent extrema primis, media utrisque, omnia omnibus. Iam in altera philosophiae parte. Quod ea non occurrentia fingunt, vincunt Aristonem; Ac tamen hic mallet non dolere. Quid nunc honeste dicit? Aeque enim contingit omnibus fidibus, ut incontentae sint. Quantum Aristoxeni ingenium consumptum videmus in musicis? Prodest, inquit, mihi eo esse animo. Quid enim possumus hoc agere divinius? Satis est ad hoc responsum. Est enim effectrix multarum et magnarum voluptatum. Disserendi artem nullam habuit. Velut ego nunc moveor. Quo modo autem philosophus loquitur? Nihil enim hoc differt. Erat enim Polemonis. Negat enim summo bono afferre incrementum diem. Ratio quidem vestra sic cogit. Quantum Aristoxeni ingenium consumptum videmus in musicis? Quae contraria sunt his, malane? Age sane, inquam. Nullus est igitur cuiusquam dies natalis. Est, ut dicis, inquam. Quae contraria sunt his, malane? "/>
+        <column name="ID_USER_OPEN_BY" value="11"/>
+        <column name="ID_USER_RESPONSIBLE" value="2"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-15 01:51:35"/>
+        <column name="DATE_END" value="2022-10-16 01:51:35"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="18"/>
+        <column name="STATUS" value="3"/>
+        <column name="TITLE" value="Meu colega está em pane. Preciso de socorro."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Teneo, inquit, finem illi videri nihil dolere. Quae cum essent dicta, discessimus. Sed quot homines, tot sententiae; Tubulo putas dicere? Bona autem corporis huic sunt, quod posterius posui, similiora. Inde sermone vario sex illa a Dipylo stadia confecimus. Pauca mutat vel plura sane; Suo genere perveniant ad extremum; Id mihi magnum videtur. Eaedem res maneant alio modo. At ego quem huic anteponam non audeo dicere; At enim sequor utilitatem. Sed virtutem ipsam inchoavit, nihil amplius. Sine ea igitur iucunde negat posse se vivere? Id est enim, de quo quaerimus. Sint modo partes vitae beatae. Illa tamen simplicia, vestra versuta. Aliter enim nosmet ipsos nosse non possumus. Poterat autem inpune; Nos cum te, M. Age sane, inquam. Haeret in salebra. Sed quanta sit alias, nunc tantum possitne esse tanta. Nunc omni virtuti vitium contrario nomine opponitur. Est, ut dicis, inquam. Mihi, inquam, qui te id ipsum rogavi? Suam denique cuique naturam esse ad vivendum ducem. Quamquam tu hanc copiosiorem etiam soles dicere. Suo genere perveniant ad extremum; Quonam, inquit, modo? Quamquam te quidem video minime esse deterritum. Erat enim res aperta. Nonne igitur tibi videntur, inquit, mala? Sine ea igitur iucunde negat posse se vivere? An potest cupiditas finiri? Ex rebus enim timiditas, non ex vocabulis nascitur. Sed ad bona praeterita redeamus. Quorum altera prosunt, nocent altera. Occultum facinus esse potuerit, gaudebit; Haec para/doca illi, nos admirabilia dicamus. Hoc Hieronymus summum bonum esse dixit. Equidem etiam Epicurum, in physicis quidem, Democriteum puto. Aeque enim contingit omnibus fidibus, ut incontentae sint. Sumenda potius quam expetenda. Qui est in parvis malis. Ergo ita: non posse honeste vivi, nisi honeste vivatur? Primum divisit ineleganter; Duo Reges: constructio interrete. Hoc ipsum elegantius poni meliusque potuit. Quamquam id quidem, infinitum est in hac urbe; Nos paucis ad haec additis finem faciamus aliquando; "/>
+        <column name="ID_USER_OPEN_BY" value="11"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-15 20:49:08"/>
+        <column name="DATE_END" value="2022-10-16 20:49:08"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="19"/>
+        <column name="STATUS" value="5"/>
+        <column name="TITLE" value="Meu mouse está pifado. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cur haec eadem Democritus? Istam voluptatem perpetuam quis potest praestare sapienti? Cur iustitia laudatur? Frater et T. A mene tu? Comprehensum, quod cognitum non habet? Quae cum essent dicta, discessimus. Quam nemo umquam voluptatem appellavit, appellat; Eaedem res maneant alio modo. Haec para/doca illi, nos admirabilia dicamus. Respondent extrema primis, media utrisque, omnia omnibus. Sed residamus, inquit, si placet. Quid de Pythagora? At iam decimum annum in spelunca iacet. Duo Reges: constructio interrete. Quid Zeno? Summum ením bonum exposuit vacuitatem doloris; Age sane, inquam. Itaque ad tempus ad Pisonem omnes. Nihilo magis. An potest cupiditas finiri? Quorum altera prosunt, nocent altera. Egone quaeris, inquit, quid sentiam? Faceres tu quidem, Torquate, haec omnia; Ut optime, secundum naturam affectum esse possit. Quod equidem non reprehendo; Tanta vis admonitionis inest in locis; Ratio quidem vestra sic cogit. Immo videri fortasse. Sint ista Graecorum; Erat enim Polemonis. Nam quid possumus facere melius? Quid dubitas igitur mutare principia naturae? Satis est ad hoc responsum. Haec igitur Epicuri non probo, inquam. Vitae autem degendae ratio maxime quidem illis placuit quieta. Quid, de quo nulla dissensio est? Sed vos squalidius, illorum vides quam niteat oratio. Iam contemni non poteris. Illa tamen simplicia, vestra versuta. Bonum patria: miserum exilium. Frater et T. "/>
+        <column name="ID_USER_OPEN_BY" value="7"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-21 09:35:44"/>
+        <column name="DATE_END" value="2022-10-22 09:35:44"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="20"/>
+        <column name="STATUS" value="4"/>
+        <column name="TITLE" value="Meu mouse está quebrado. Preciso de socorro."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. An eiusdem modi? Audeo dicere, inquit. Age sane, inquam. Duo Reges: constructio interrete. Nunc haec primum fortasse audientis servire debemus. Istam voluptatem, inquit, Epicurus ignorat? Oratio me istius philosophi non offendit; Gerendus est mos, modo recte sentiat. Cur iustitia laudatur? Quae ista amicitia est? Haec igitur Epicuri non probo, inquam. Quid ergo hoc loco intellegit honestum? Primum quid tu dicis breve? Si quicquam extra virtutem habeatur in bonis. Sed quanta sit alias, nunc tantum possitne esse tanta. Nam Pyrrho, Aristo, Erillus iam diu abiecti. Apparet statim, quae sint officia, quae actiones. Ait enim se, si uratur, Quam hoc suave! dicturum. Quod totum contra est. Vestri haec verecundius, illi fortasse constantius. Age sane, inquam. Hoc non est positum in nostra actione. Cur post Tarentum ad Archytam? Non autem hoc: igitur ne illud quidem. Huius ego nunc auctoritatem sequens idem faciam. Nobis aliter videtur, recte secusne, postea; "/>
+        <column name="ID_USER_OPEN_BY" value="14"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-20 13:55:00"/>
+        <column name="DATE_END" value="2022-10-21 13:55:00"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="21"/>
+        <column name="STATUS" value="4"/>
+        <column name="TITLE" value="Meu teclado está queimado. Preciso de conselho."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Certe non potest. Quae contraria sunt his, malane? Recte dicis; Duo Reges: constructio interrete. At certe gravius. Facillimum id quidem est, inquam. Quae similitudo in genere etiam humano apparet. Quae cum dixisset, finem ille. Eam tum adesse, cum dolor omnis absit; Nunc haec primum fortasse audientis servire debemus. Sed haec omittamus; Cave putes quicquam esse verius. Igitur ne dolorem quidem. Quid ergo? Videamus animi partes, quarum est conspectus illustrior; Quis hoc dicit? Sint ista Graecorum; Poterat autem inpune; Teneo, inquit, finem illi videri nihil dolere. Primum divisit ineleganter; Quid ad utilitatem tantae pecuniae? De hominibus dici non necesse est. Eam tum adesse, cum dolor omnis absit; Hoc non est positum in nostra actione. Nescio quo modo praetervolavit oratio. Reguli reiciendam; Cave putes quicquam esse verius. Minime vero istorum quidem, inquit. Quae quo sunt excelsiores, eo dant clariora indicia naturae. Efficiens dici potest. Zenonis est, inquam, hoc Stoici. Quae cum essent dicta, discessimus. Deinde dolorem quem maximum? "/>
+        <column name="ID_USER_OPEN_BY" value="12"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-11 05:46:00"/>
+        <column name="DATE_END" value="2022-10-12 05:46:00"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="22"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu sistema está pifado. Preciso de ajuda."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Restatis igitur vos; Sed ad bona praeterita redeamus. Nunc agendum est subtilius. Sedulo, inquam, faciam. Haec et tu ita posuisti, et verba vestra sunt. Quid igitur, inquit, eos responsuros putas? Atqui reperies, inquit, in hoc quidem pertinacem; Quia dolori non voluptas contraria est, sed doloris privatio. Cur igitur, inquam, res tam dissimiles eodem nomine appellas? Pauca mutat vel plura sane; Idem adhuc; Claudii libidini, qui tum erat summo ne imperio, dederetur. Duo Reges: constructio interrete. Hic nihil fuit, quod quaereremus. Hanc quoque iucunditatem, si vis, transfer in animum; Faceres tu quidem, Torquate, haec omnia; Itaque ad tempus ad Pisonem omnes. Iam in altera philosophiae parte. Sed plane dicit quod intellegit. Poterat autem inpune; Teneo, inquit, finem illi videri nihil dolere. Pauca mutat vel plura sane; Nunc agendum est subtilius. Negat esse eam, inquit, propter se expetendam. Collige omnia, quae soletis: Praesidium amicorum. Dic in quovis conventu te omnia facere, ne doleas. Si longus, levis; Sed ne, dum huic obsequor, vobis molestus sim. "/>
+        <column name="ID_USER_OPEN_BY" value="14"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-22 03:11:46"/>
+        <column name="DATE_END" value="2022-10-24 03:11:46"/>
+        <column name="ENABLE" valueBoolean="TRUE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="23"/>
+        <column name="STATUS" value="5"/>
+        <column name="TITLE" value="Meu colega está quebrado. Preciso de socorro."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Esse enim, nisi eris, non potes. Prave, nequiter, turpiter cenabat; Sed haec omittamus; Sed ille, ut dixi, vitiose. Ad eas enim res ab Epicuro praecepta dantur. Duo Reges: constructio interrete. Quae diligentissime contra Aristonem dicuntur a Chryippo. Primum in nostrane potestate est, quid meminerimus? Itaque his sapiens semper vacabit. Poterat autem inpune; Quid ad utilitatem tantae pecuniae? Zenonis est, inquam, hoc Stoici. Quae contraria sunt his, malane? Contemnit enim disserendi elegantiam, confuse loquitur. Haec para/doca illi, nos admirabilia dicamus. Ecce aliud simile dissimile. Suo genere perveniant ad extremum; Prave, nequiter, turpiter cenabat; Ratio quidem vestra sic cogit. Quis Aristidem non mortuum diligit? Potius inflammat, ut coercendi magis quam dedocendi esse videantur. Si quicquam extra virtutem habeatur in bonis. Sint modo partes vitae beatae. Quis est tam dissimile homini. Idemne, quod iucunde? Suam denique cuique naturam esse ad vivendum ducem. Hoc loco tenere se Triarius non potuit. Hoc enim constituto in philosophia constituta sunt omnia. Quamquam id quidem, infinitum est in hac urbe; Restatis igitur vos; Quare attende, quaeso. Avaritiamne minuis? Eam tum adesse, cum dolor omnis absit; Duo enim genera quae erant, fecit tria. Uterque enim summo bono fruitur, id est voluptate. Eaedem enim utilitates poterunt eas labefactare atque pervertere. Bonum patria: miserum exilium. Itaque hic ipse iam pridem est reiectus; Si quicquam extra virtutem habeatur in bonis. Iam in altera philosophiae parte. Equidem e Cn. Quis enim redargueret? Non est igitur summum malum dolor. Haec dicuntur inconstantissime. Nulla erit controversia. Ostendit pedes et pectus. Sint ista Graecorum; Cur deinde Metrodori liberos commendas? Tecum optime, deinde etiam cum mediocri amico. "/>
+        <column name="ID_USER_OPEN_BY" value="15"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-20 03:38:31"/>
+        <column name="DATE_END" value="2022-10-21 03:38:31"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="24"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu cachorro está estragado. Preciso de ajuda."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. At hoc in eo M. Duo enim genera quae erant, fecit tria. Quid, de quo nulla dissensio est? Nam de isto magna dissensio est. Memini vero, inquam; Illum mallem levares, quo optimum atque humanissimum virum, Cn. Duo enim genera quae erant, fecit tria. Erat enim res aperta. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Immo alio genere; Rationis enim perfectio est virtus; Cui Tubuli nomen odio non est? Duo Reges: constructio interrete. Tu quidem reddes; Quare attende, quaeso. Cum praesertim illa perdiscere ludus esset. De illis, cum volemus. Igitur neque stultorum quisquam beatus neque sapientium non beatus. Sed in rebus apertissimis nimium longi sumus. Id est enim, de quo quaerimus. Illud non continuo, ut aeque incontentae. Quid ergo attinet gloriose loqui, nisi constanter loquare? Quae cum essent dicta, discessimus. Quid iudicant sensus? Quae contraria sunt his, malane? Quod ea non occurrentia fingunt, vincunt Aristonem; Hoc est non dividere, sed frangere. Sed ad bona praeterita redeamus. Tamen a proposito, inquam, aberramus. Quid est enim aliud esse versutum? Nunc agendum est subtilius. Consequens enim est et post oritur, ut dixi. Nam Pyrrho, Aristo, Erillus iam diu abiecti. Quid igitur, inquit, eos responsuros putas? Zenonis est, inquam, hoc Stoici. Hoc sic expositum dissimile est superiori. At eum nihili facit; Sed nunc, quod agimus; Respondeat totidem verbis. Quid me istud rogas? Maximus dolor, inquit, brevis est. Tum Torquatus: Prorsus, inquit, assentior; "/>
+        <column name="ID_USER_OPEN_BY" value="8"/>
+        <column name="ID_USER_RESPONSIBLE" value="2"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-10 18:15:19"/>
+        <column name="DATE_END" value="2022-10-12 18:15:19"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="25"/>
+        <column name="STATUS" value="3"/>
+        <column name="TITLE" value="Meu PC está queimado. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quidem, inquit, tollerem, sed relinquo. Utrum igitur tibi litteram videor an totas paginas commovere? Sed plane dicit quod intellegit. Non semper, inquam; Duo Reges: constructio interrete. "/>
+        <column name="ID_USER_OPEN_BY" value="13"/>
+        <column name="ID_USER_RESPONSIBLE" value="2"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-23 14:27:30"/>
+        <column name="DATE_END" value="2022-10-25 14:27:30"/>
+        <column name="ENABLE" valueBoolean="TRUE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="26"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu monitor está em pane. Preciso de conselho."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Zenonis est, inquam, hoc Stoici. Quamquam te quidem video minime esse deterritum. Venit ad extremum; Quae ista amicitia est? "/>
+        <column name="ID_USER_OPEN_BY" value="10"/>
+        <column name="ID_USER_RESPONSIBLE" value="2"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-23 16:01:51"/>
+        <column name="DATE_END" value="2022-10-24 16:01:51"/>
+        <column name="ENABLE" valueBoolean="TRUE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="27"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu cachorro está sumido. Preciso de socorro."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliter autem vobis placet. Haeret in salebra. Mihi, inquam, qui te id ipsum rogavi? Bonum valitudo: miser morbus. Tecum optime, deinde etiam cum mediocri amico. Istam voluptatem perpetuam quis potest praestare sapienti? Duo Reges: constructio interrete. An eiusdem modi? Age sane, inquam. Haec para/doca illi, nos admirabilia dicamus. Si verbum sequimur, primum longius verbum praepositum quam bonum. Et nemo nimium beatus est; Iam in altera philosophiae parte. Paria sunt igitur. Negat enim summo bono afferre incrementum diem. Ergo, inquit, tibi Q. Tum Triarius: Posthac quidem, inquit, audacius. Scrupulum, inquam, abeunti; Poterat autem inpune; Idemne, quod iucunde? Cyrenaici quidem non recusant; Confecta res esset. Teneo, inquit, finem illi videri nihil dolere. Ille incendat? Explanetur igitur. Si longus, levis. Hanc quoque iucunditatem, si vis, transfer in animum; Hoc non est positum in nostra actione. Sed quod proximum fuit non vidit. Nemo igitur esse beatus potest. Confecta res esset. Nihilo beatiorem esse Metellum quam Regulum. Non potes, nisi retexueris illa. Videamus animi partes, quarum est conspectus illustrior; Num quid tale Democritus? Quod non faceret, si in voluptate summum bonum poneret. "/>
+        <column name="ID_USER_OPEN_BY" value="10"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-19 14:44:35"/>
+        <column name="DATE_END" value="2022-10-21 14:44:35"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="28"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu monitor está estragado. Preciso de conselho."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec quo modo conveniant, non sane intellego. Uterque enim summo bono fruitur, id est voluptate. Disserendi artem nullam habuit. Praeclarae mortes sunt imperatoriae; Duo Reges: constructio interrete. Primum divisit ineleganter; Sed plane dicit quod intellegit. Honesta oratio, Socratica, Platonis etiam. Audeo dicere, inquit. De hominibus dici non necesse est. Graece donan, Latine voluptatem vocant. Ille incendat? Rationis enim perfectio est virtus; Si quae forte-possumus. Ratio quidem vestra sic cogit. Falli igitur possumus. Sed ille, ut dixi, vitiose. Cur id non ita fit? Quid sequatur, quid repugnet, vident. Nos paucis ad haec additis finem faciamus aliquando; Minime vero istorum quidem, inquit. Quis istud possit, inquit, negare? Omnia contraria, quos etiam insanos esse vultis. "/>
+        <column name="ID_USER_OPEN_BY" value="12"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-09 10:44:34"/>
+        <column name="DATE_END" value="2022-10-10 10:44:34"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="29"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu mouse está queimado. Preciso de um companheiro."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. An potest cupiditas finiri? Respondeat totidem verbis. Deprehensus omnem poenam contemnet. Quid sequatur, quid repugnet, vident. Duo Reges: constructio interrete. Istic sum, inquit. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Illa videamus, quae a te de amicitia dicta sunt. Quamquam te quidem video minime esse deterritum. Immo alio genere; Quorum altera prosunt, nocent altera. Ad eos igitur converte te, quaeso. Non semper, inquam; Sed hoc sane concedamus. Teneo, inquit, finem illi videri nihil dolere. Sed ego in hoc resisto; Age, inquies, ista parva sunt. Huius, Lyco, oratione locuples, rebus ipsis ielunior. Nunc de hominis summo bono quaeritur; Sed quot homines, tot sententiae; Sedulo, inquam, faciam. Hoc tu nunc in illo probas. Dici enim nihil potest verius. Quonam, inquit, modo? "/>
+        <column name="ID_USER_OPEN_BY" value="10"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-18 03:26:17"/>
+        <column name="DATE_END" value="2022-10-20 03:26:17"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="30"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu sistema está em pane. Preciso de suporte."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venit ad extremum; Sed quod proximum fuit non vidit. Sed in rebus apertissimis nimium longi sumus. Duo Reges: constructio interrete. Ne discipulum abducam, times. Aliter enim nosmet ipsos nosse non possumus. Obsecro, inquit, Torquate, haec dicit Epicurus? Nam quid possumus facere melius? Sed residamus, inquit, si placet. Apud ceteros autem philosophos, qui quaesivit aliquid, tacet; Videsne quam sit magna dissensio? "/>
+        <column name="ID_USER_OPEN_BY" value="9"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-13 09:04:14"/>
+        <column name="DATE_END" value="2022-10-14 09:04:14"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="31"/>
+        <column name="STATUS" value="5"/>
+        <column name="TITLE" value="Meu computador está quebrado. Preciso de conselho."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ait enim se, si uratur, Quam hoc suave! dicturum. Videamus animi partes, quarum est conspectus illustrior; Quod ea non occurrentia fingunt, vincunt Aristonem; Duo Reges: constructio interrete. Audeo dicere, inquit. Quis est tam dissimile homini. Urgent tamen et nihil remittunt. Prioris generis est docilitas, memoria; Pugnant Stoici cum Peripateticis. Huius, Lyco, oratione locuples, rebus ipsis ielunior. Quae cum dixisset paulumque institisset, Quid est? Ex rebus enim timiditas, non ex vocabulis nascitur. Velut ego nunc moveor. Itaque hic ipse iam pridem est reiectus; Quis enim redargueret? Scisse enim te quis coarguere possit? Et nemo nimium beatus est; Frater et T. Hunc vos beatum; Aliter enim nosmet ipsos nosse non possumus. Quae cum dixisset, finem ille. Compensabatur, inquit, cum summis doloribus laetitia. Nihil sane. Non quam nostram quidem, inquit Pomponius iocans; Laboro autem non sine causa; An tu me de L. An haec ab eo non dicuntur? Quid est, quod ab ea absolvi et perfici debeat? Quam ob rem tandem, inquit, non satisfacit? Esse enim quam vellet iniquus iustus poterat inpune. Restinguet citius, si ardentem acceperit. Id est enim, de quo quaerimus. Age sane, inquam. Sed haec omittamus; Quid enim de amicitia statueris utilitatis causa expetenda vides. Ut pulsi recurrant? Facete M. Suo genere perveniant ad extremum; Primum divisit ineleganter; "/>
+        <column name="ID_USER_OPEN_BY" value="10"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-20 20:00:40"/>
+        <column name="DATE_END" value="2022-10-22 20:00:40"/>
+        <column name="ENABLE" valueBoolean="TRUE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="32"/>
+        <column name="STATUS" value="4"/>
+        <column name="TITLE" value="Meu colega está com problemas. Preciso de conselho."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec igitur Epicuri non probo, inquam. Tum ille: Ain tandem? Sed plane dicit quod intellegit. Ratio quidem vestra sic cogit. At hoc in eo M. Duo Reges: constructio interrete. Teneo, inquit, finem illi videri nihil dolere. Profectus in exilium Tubulus statim nec respondere ausus; Haec para/doca illi, nos admirabilia dicamus. Graece donan, Latine voluptatem vocant. Quorum altera prosunt, nocent altera. Philosophi autem in suis lectulis plerumque moriuntur. Est, ut dicis, inquam. Hic nihil fuit, quod quaereremus. Non est igitur voluptas bonum. Bonum incolumis acies: misera caecitas. Quodsi ipsam honestatem undique pertectam atque absolutam. Restinguet citius, si ardentem acceperit. Sed ad bona praeterita redeamus. Qualem igitur hominem natura inchoavit? Ut aliquid scire se gaudeant? Non est ista, inquam, Piso, magna dissensio. Quorum altera prosunt, nocent altera. Sed in rebus apertissimis nimium longi sumus. Tanta vis admonitionis inest in locis; Sed haec omittamus; Quo modo autem philosophus loquitur? Minime vero istorum quidem, inquit. Nemo igitur esse beatus potest. Si verbum sequimur, primum longius verbum praepositum quam bonum. Nam Pyrrho, Aristo, Erillus iam diu abiecti. Haec para/doca illi, nos admirabilia dicamus. Illi enim inter se dissentiunt. Animum autem reliquis rebus ita perfecit, ut corpus; Addidisti ad extremum etiam indoctum fuisse. Cur id non ita fit? At enim hic etiam dolore. Quod cum dixissent, ille contra. Ea possunt paria non esse. "/>
+        <column name="ID_USER_OPEN_BY" value="7"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-18 02:34:38"/>
+        <column name="DATE_END" value="2022-10-19 02:34:38"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="33"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu teclado está sumido. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod quidem iam fit etiam in Academia. Quod cum dixissent, ille contra. Nam quid possumus facere melius? Sint ista Graecorum; Nos commodius agimus. Duo Reges: constructio interrete. Verum hoc idem saepe faciamus. Stoici scilicet. Quis non odit sordidos, vanos, leves, futtiles? Minime vero, inquit ille, consentit. De quibus cupio scire quid sentias. Quamquam te quidem video minime esse deterritum. Easdemne res? Quis hoc dicit? Restinguet citius, si ardentem acceperit. Quid, de quo nulla dissensio est? Quid igitur, inquit, eos responsuros putas? Videamus animi partes, quarum est conspectus illustrior; Conferam tecum, quam cuique verso rem subicias; Quid de Pythagora? Quis enim redargueret? Conferam tecum, quam cuique verso rem subicias; Cur iustitia laudatur? Age sane, inquam. Itaque contra est, ac dicitis; Nulla erit controversia. Hoc tu nunc in illo probas. Falli igitur possumus. Quod quidem iam fit etiam in Academia. Minime vero, inquit ille, consentit. Tecum optime, deinde etiam cum mediocri amico. Omnia contraria, quos etiam insanos esse vultis. Recte dicis; Quam nemo umquam voluptatem appellavit, appellat; Easdemne res? "/>
+        <column name="ID_USER_OPEN_BY" value="15"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-13 06:42:12"/>
+        <column name="DATE_END" value="2022-10-15 06:42:12"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="34"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu cachorro está sumido. Preciso de suporte."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc sic expositum dissimile est superiori. Hoc loco tenere se Triarius non potuit. Suo genere perveniant ad extremum; Si quae forte-possumus. Aliter enim nosmet ipsos nosse non possumus. Quamvis enim depravatae non sint, pravae tamen esse possunt. Addidisti ad extremum etiam indoctum fuisse. Ergo, inquit, tibi Q. Quis est tam dissimile homini. Praeteritis, inquit, gaudeo. An tu me de L. Animum autem reliquis rebus ita perfecit, ut corpus; Torquatus, is qui consul cum Cn. Hoc sic expositum dissimile est superiori. Qui est in parvis malis. Age, inquies, ista parva sunt. Sed plane dicit quod intellegit. Est, ut dicis, inquit; Memini me adesse P. Mihi, inquam, qui te id ipsum rogavi? Ut id aliis narrare gestiant? Non igitur bene. Easdemne res? Summus dolor plures dies manere non potest? Tu vero, inquam, ducas licet, si sequetur; Quid Zeno? Utilitatis causa amicitia est quaesita. Eaedem res maneant alio modo. Itaque his sapiens semper vacabit. Quamquam te quidem video minime esse deterritum. Illum mallem levares, quo optimum atque humanissimum virum, Cn. Nemo igitur esse beatus potest. At multis se probavit. Inde igitur, inquit, ordiendum est. Hic ambiguo ludimur. Qualem igitur hominem natura inchoavit? Illa tamen simplicia, vestra versuta. Sed quod proximum fuit non vidit. Verum hoc idem saepe faciamus. Duo Reges: constructio interrete. An tu me de L. Hoc sic expositum dissimile est superiori. Ego vero isti, inquam, permitto. Sed ego in hoc resisto; Haec dicuntur inconstantissime. "/>
+        <column name="ID_USER_OPEN_BY" value="9"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-10 08:29:22"/>
+        <column name="DATE_END" value="2022-10-12 08:29:22"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="35"/>
+        <column name="STATUS" value="5"/>
+        <column name="TITLE" value="Meu teclado está estragado. Preciso de um companheiro."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Falli igitur possumus. Sed virtutem ipsam inchoavit, nihil amplius. Mihi, inquam, qui te id ipsum rogavi? Sed ego in hoc resisto; Tria genera bonorum; Omnia peccata paria dicitis. Rhetorice igitur, inquam, nos mavis quam dialectice disputare? Paria sunt igitur. Hoc est non dividere, sed frangere. Quid ergo? Tenent mordicus. Eademne, quae restincta siti? Videamus animi partes, quarum est conspectus illustrior; Negat enim summo bono afferre incrementum diem. Primum in nostrane potestate est, quid meminerimus? Age sane, inquam. Illa videamus, quae a te de amicitia dicta sunt. Nunc de hominis summo bono quaeritur; Si quae forte-possumus. Si qua in iis corrigere voluit, deteriora fecit. Si verbum sequimur, primum longius verbum praepositum quam bonum. Nos vero, inquit ille; Quid censes in Latino fore? Quid de Pythagora? At coluit ipse amicitias. Tu quidem reddes; Eadem fortitudinis ratio reperietur. Bonum integritas corporis: misera debilitas. Tubulo putas dicere? Iam id ipsum absurdum, maximum malum neglegi. Dici enim nihil potest verius. Certe, nisi voluptatem tanti aestimaretis. Quae cum dixisset paulumque institisset, Quid est? Sed nunc, quod agimus; Ut id aliis narrare gestiant? Quonam, inquit, modo? Cur haec eadem Democritus? Duo Reges: constructio interrete. Ut id aliis narrare gestiant? Sed quid attinet de rebus tam apertis plura requirere? Haec dicuntur fortasse ieiunius; Recte, inquit, intellegis. Ita relinquet duas, de quibus etiam atque etiam consideret. Quae quidem vel cum periculo est quaerenda vobis; "/>
+        <column name="ID_USER_OPEN_BY" value="10"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-18 03:05:10"/>
+        <column name="DATE_END" value="2022-10-20 03:05:10"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="36"/>
+        <column name="STATUS" value="5"/>
+        <column name="TITLE" value="Meu monitor está sumido. Preciso de ajuda."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Zenonis est, inquam, hoc Stoici. Non est igitur summum malum dolor. Non igitur bene. Satisne vobis videor pro meo iure in vestris auribus commentatus? Nos cum te, M. Duo Reges: constructio interrete. Hanc quoque iucunditatem, si vis, transfer in animum; At ille pellit, qui permulcet sensum voluptate. Non est ista, inquam, Piso, magna dissensio. Quo tandem modo? Hoc non est positum in nostra actione. At hoc in eo M. Ratio quidem vestra sic cogit. Sed ille, ut dixi, vitiose. Maximus dolor, inquit, brevis est. Dici enim nihil potest verius. Sed fortuna fortis; Sed quid sentiat, non videtis. Est, ut dicis, inquit; Dicimus aliquem hilare vivere; Itaque ab his ordiamur. Quodsi ipsam honestatem undique pertectam atque absolutam. Uterque enim summo bono fruitur, id est voluptate. Atqui reperies, inquit, in hoc quidem pertinacem; Haec quo modo conveniant, non sane intellego. Ut optime, secundum naturam affectum esse possit. Quis istud possit, inquit, negare? Scisse enim te quis coarguere possit? Tuo vero id quidem, inquam, arbitratu. Illa tamen simplicia, vestra versuta. Atqui reperies, inquit, in hoc quidem pertinacem; Faceres tu quidem, Torquate, haec omnia; Ac tamen hic mallet non dolere. At multis se probavit. "/>
+        <column name="ID_USER_OPEN_BY" value="12"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-17 09:17:31"/>
+        <column name="DATE_END" value="2022-10-18 09:17:31"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="37"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu sistema está quebrado. Preciso de suporte."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illi enim inter se dissentiunt. Quod quidem iam fit etiam in Academia. Nihil opus est exemplis hoc facere longius. Pauca mutat vel plura sane; Proclivi currit oratio. Duo Reges: constructio interrete. Facete M. Age sane, inquam. Videsne quam sit magna dissensio? ALIO MODO. Quid igitur, inquit, eos responsuros putas? An tu me de L. Quae cum dixisset, finem ille. Istam voluptatem perpetuam quis potest praestare sapienti? Aeque enim contingit omnibus fidibus, ut incontentae sint. Quis hoc dicit? "/>
+        <column name="ID_USER_OPEN_BY" value="11"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-22 14:52:04"/>
+        <column name="DATE_END" value="2022-10-23 14:52:04"/>
+        <column name="ENABLE" valueBoolean="TRUE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="38"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu mouse está pifado. Preciso de suporte."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Avaritiamne minuis? Respondeat totidem verbis. Simus igitur contenti his. Quae in controversiam veniunt, de iis, si placet, disseramus. Immo alio genere; Negat enim summo bono afferre incrementum diem. Aliter autem vobis placet. Duo Reges: constructio interrete. Nemo igitur esse beatus potest. At enim hic etiam dolore. Sed ad bona praeterita redeamus. Quare attende, quaeso. Qualem igitur hominem natura inchoavit? Ita prorsus, inquam; Quid Zeno? Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Sic consequentibus vestris sublatis prima tolluntur. Maximas vero virtutes iacere omnis necesse est voluptate dominante. Sed tamen intellego quid velit. Primum in nostrane potestate est, quid meminerimus? Tum Quintus: Est plane, Piso, ut dicis, inquit. Id est enim, de quo quaerimus. Beatum, inquit. Quid me istud rogas? Quare ad ea primum, si videtur; Sullae consulatum? Hos contra singulos dici est melius. Quae similitudo in genere etiam humano apparet. Non quam nostram quidem, inquit Pomponius iocans; Bonum patria: miserum exilium. Cur iustitia laudatur? Immo videri fortasse. Suo enim quisque studio maxime ducitur. Quid, si etiam iucunda memoria est praeteritorum malorum? Qui ita affectus, beatum esse numquam probabis; Cur igitur, inquam, res tam dissimiles eodem nomine appellas? At, si voluptas esset bonum, desideraret. Nobis aliter videtur, recte secusne, postea; Negare non possum. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Is es profecto tu. Qui non moveatur et offensione turpitudinis et comprobatione honestatis? Quid de Platone aut de Democrito loquar? Eam stabilem appellas. Quo modo autem philosophus loquitur? Quod cum dixissent, ille contra. Quod cum dixissent, ille contra. Vide, quantum, inquam, fallare, Torquate. "/>
+        <column name="ID_USER_OPEN_BY" value="12"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-07 22:30:21"/>
+        <column name="DATE_END" value="2022-10-08 22:30:21"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="39"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu PC está em pane. Preciso de suporte."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facillimum id quidem est, inquam. Bonum patria: miserum exilium. Hoc simile tandem est? Graccho, eius fere, aequalí? Nam ista vestra: Si gravis, brevis; Quae cum dixisset, finem ille. Deprehensus omnem poenam contemnet. Duo Reges: constructio interrete. "/>
+        <column name="ID_USER_OPEN_BY" value="10"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-12 06:00:57"/>
+        <column name="DATE_END" value="2022-10-14 06:00:57"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="40"/>
+        <column name="STATUS" value="3"/>
+        <column name="TITLE" value="Meu colega está queimado. Preciso de socorro."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nimis multa. Sed tamen intellego quid velit. Respondent extrema primis, media utrisque, omnia omnibus. Esse enim quam vellet iniquus iustus poterat inpune. Duo Reges: constructio interrete. Tamen a proposito, inquam, aberramus. Cum audissem Antiochum, Brute, ut solebam, cum M. Itaque ad tempus ad Pisonem omnes. "/>
+        <column name="ID_USER_OPEN_BY" value="9"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-17 16:28:25"/>
+        <column name="DATE_END" value="2022-10-18 16:28:25"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="41"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu monitor está quebrado. Preciso de auxilio."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam beatissimum? Si longus, levis dictata sunt. Odium autem et invidiam facile vitabis. Deprehensus omnem poenam contemnet. Restatis igitur vos; Hoc mihi cum tuo fratre convenit. At multis se probavit. Non potes, nisi retexueris illa. Sed videbimus. Cum id fugiunt, re eadem defendunt, quae Peripatetici, verba. Sine ea igitur iucunde negat posse se vivere? Sed tamen intellego quid velit. Sed ad bona praeterita redeamus. Et ille ridens: Video, inquit, quid agas; Teneo, inquit, finem illi videri nihil dolere. Praeteritis, inquit, gaudeo. Quid ergo attinet gloriose loqui, nisi constanter loquare? Erat enim res aperta. Nulla erit controversia. Quam nemo umquam voluptatem appellavit, appellat; Et quidem, inquit, vehementer errat; Si quidem, inquit, tollerem, sed relinquo. Duo Reges: constructio interrete. Nunc agendum est subtilius. Ego vero isti, inquam, permitto. Simus igitur contenti his. Eam tum adesse, cum dolor omnis absit; Quae diligentissime contra Aristonem dicuntur a Chryippo. Non est ista, inquam, Piso, magna dissensio. Tuo vero id quidem, inquam, arbitratu. Respondent extrema primis, media utrisque, omnia omnibus. Sed quid attinet de rebus tam apertis plura requirere? Quam ob rem tandem, inquit, non satisfacit? Sed ea mala virtuti magnitudine obruebantur. Quae est igitur causa istarum angustiarum? An tu me de L. Haeret in salebra. Quippe: habes enim a rhetoribus; Restatis igitur vos; Nam ista vestra: Si gravis, brevis; Quonam, inquit, modo? Hos contra singulos dici est melius. Quorum sine causa fieri nihil putandum est. Non laboro, inquit, de nomine. Esse enim, nisi eris, non potes. Istam voluptatem perpetuam quis potest praestare sapienti? Quibusnam praeteritis? Bonum integritas corporis: misera debilitas. An haec ab eo non dicuntur? "/>
+        <column name="ID_USER_OPEN_BY" value="6"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-13 19:18:11"/>
+        <column name="DATE_END" value="2022-10-14 19:18:11"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="42"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu monitor está quebrado. Preciso de socorro."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nihil ad rem! Ne sit sane; Egone quaeris, inquit, quid sentiam? ALIO MODO. Non laboro, inquit, de nomine. Duo Reges: constructio interrete. Quis hoc dicit? Hic ambiguo ludimur. Iam in altera philosophiae parte. Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres. Haec quo modo conveniant, non sane intellego. Et quod est munus, quod opus sapientiae? Tria genera bonorum; Sed tamen intellego quid velit. Quare conare, quaeso. Confecta res esset. Satis est ad hoc responsum. Nihilo beatiorem esse Metellum quam Regulum. Illa argumenta propria videamus, cur omnia sint paria peccata. Suo genere perveniant ad extremum; Huius ego nunc auctoritatem sequens idem faciam. Nonne igitur tibi videntur, inquit, mala? "/>
+        <column name="ID_USER_OPEN_BY" value="8"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-23 03:58:44"/>
+        <column name="DATE_END" value="2022-10-25 03:58:44"/>
+        <column name="ENABLE" valueBoolean="TRUE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="43"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu sistema está com problemas. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Videamus animi partes, quarum est conspectus illustrior; Tum Quintus: Est plane, Piso, ut dicis, inquit. Quid de Platone aut de Democrito loquar? Ait enim se, si uratur, Quam hoc suave! dicturum. Duo Reges: constructio interrete. Nemo igitur esse beatus potest. Nihilo magis. Peccata paria. Haeret in salebra. Ne in odium veniam, si amicum destitero tueri. Si longus, levis. Venit ad extremum; "/>
+        <column name="ID_USER_OPEN_BY" value="15"/>
+        <column name="ID_USER_RESPONSIBLE" value="2"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-16 12:01:18"/>
+        <column name="DATE_END" value="2022-10-17 12:01:18"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="44"/>
+        <column name="STATUS" value="5"/>
+        <column name="TITLE" value="Meu sistema está em pane. Preciso de suporte."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod iam a me expectare noli. Quare attende, quaeso. Quid ergo hoc loco intellegit honestum? Quod ea non occurrentia fingunt, vincunt Aristonem; Quorum sine causa fieri nihil putandum est. Duo Reges: constructio interrete. Disserendi artem nullam habuit. Paria sunt igitur. Conferam tecum, quam cuique verso rem subicias; Explanetur igitur. "/>
+        <column name="ID_USER_OPEN_BY" value="11"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-17 05:13:35"/>
+        <column name="DATE_END" value="2022-10-18 05:13:35"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="45"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu mouse está sumido. Preciso de socorro."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ad haec, nisi molestum est, habeo quae velim. Frater et T. Stoici scilicet. Estne, quaeso, inquam, sitienti in bibendo voluptas? Duo Reges: constructio interrete. Multoque hoc melius nos veriusque quam Stoici. Egone quaeris, inquit, quid sentiam? Memini vero, inquam; Quid nunc honeste dicit? Quid vero? Non semper, inquam; Conferam tecum, quam cuique verso rem subicias; Tum Torquatus: Prorsus, inquit, assentior; Non igitur bene. Tu quidem reddes; Quid ergo hoc loco intellegit honestum? Sullae consulatum? Simus igitur contenti his. Nam de isto magna dissensio est. Id Sextilius factum negabat. Que Manilium, ab iisque M. Est, ut dicis, inquit; Minime vero istorum quidem, inquit. Qua tu etiam inprudens utebare non numquam. Equidem, sed audistine modo de Carneade? Equidem e Cn. Si longus, levis. Eam tum adesse, cum dolor omnis absit; Sed potestne rerum maior esse dissensio? Cave putes quicquam esse verius. Dempta enim aeternitate nihilo beatior Iuppiter quam Epicurus; Pauca mutat vel plura sane; Nos commodius agimus. Si enim ad populum me vocas, eum. Hunc vos beatum; Aliter enim nosmet ipsos nosse non possumus. Aliter enim explicari, quod quaeritur, non potest. Beatus sibi videtur esse moriens. Quid censes in Latino fore? Si longus, levis. Illi enim inter se dissentiunt. Quid de Pythagora? Sed ille, ut dixi, vitiose. Quae cum dixisset paulumque institisset, Quid est? Quis hoc dicit? Sed ad bona praeterita redeamus. Solum praeterea formosum, solum liberum, solum civem, stultost; Zenonis est, inquam, hoc Stoici. "/>
+        <column name="ID_USER_OPEN_BY" value="8"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-09 20:09:08"/>
+        <column name="DATE_END" value="2022-10-11 20:09:08"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="46"/>
+        <column name="STATUS" value="3"/>
+        <column name="TITLE" value="Meu colega está quebrado. Preciso de suporte."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum audissem Antiochum, Brute, ut solebam, cum M. Haec dicuntur inconstantissime. Suo genere perveniant ad extremum; Duo Reges: constructio interrete. A mene tu? A mene tu? Non risu potius quam oratione eiciendum? Itaque his sapiens semper vacabit. Ergo, inquit, tibi Q. Respondeat totidem verbis. Equidem e Cn. Id est enim, de quo quaerimus. Id mihi magnum videtur. Sed ad bona praeterita redeamus. Respondeat totidem verbis. Tubulo putas dicere? "/>
+        <column name="ID_USER_OPEN_BY" value="12"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-12 16:30:19"/>
+        <column name="DATE_END" value="2022-10-13 16:30:19"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="47"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu cachorro está pifado. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iam id ipsum absurdum, maximum malum neglegi. Primum quid tu dicis breve? Cave putes quicquam esse verius. Nunc agendum est subtilius. Universa enim illorum ratione cum tota vestra confligendum puto. Si longus, levis dictata sunt. Suo enim quisque studio maxime ducitur. Ego vero isti, inquam, permitto. Et nemo nimium beatus est; Quae hic rei publicae vulnera inponebat, eadem ille sanabat. Non potes, nisi retexueris illa. Primum in nostrane potestate est, quid meminerimus? Ne discipulum abducam, times. Nunc de hominis summo bono quaeritur; Ecce aliud simile dissimile. Id enim natura desiderat. Non autem hoc: igitur ne illud quidem. Quod quidem iam fit etiam in Academia. Age, inquies, ista parva sunt. Duo Reges: constructio interrete. Certe non potest. Istic sum, inquit. Invidiosum nomen est, infame, suspectum. Suam denique cuique naturam esse ad vivendum ducem. Avaritiamne minuis? Solum praeterea formosum, solum liberum, solum civem, stultost; Tubulo putas dicere? Nihilo magis. Age sane, inquam. Duo enim genera quae erant, fecit tria. Aliter autem vobis placet. Satis est ad hoc responsum. Quam ob rem tandem, inquit, non satisfacit? Erat enim res aperta. Quae cum dixisset, finem ille. Paria sunt igitur. Non potes, nisi retexueris illa. Videamus igitur sententias eorum, tum ad verba redeamus. Eadem nunc mea adversum te oratio est. Ubi ut eam caperet aut quando? "/>
+        <column name="ID_USER_OPEN_BY" value="8"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-13 21:37:00"/>
+        <column name="DATE_END" value="2022-10-14 21:37:00"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="48"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu sistema está queimado. Preciso de suporte."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin aliud quid voles, postea. Recte dicis; Perge porro; Duo Reges: constructio interrete. Eam tum adesse, cum dolor omnis absit; Idem iste, inquam, de voluptate quid sentit? Hoc non est positum in nostra actione. Sit sane ista voluptas. At iam decimum annum in spelunca iacet. Igitur ne dolorem quidem. Sed nimis multa. Quae similitudo in genere etiam humano apparet. Praeteritis, inquit, gaudeo. Bonum integritas corporis: misera debilitas. Duarum enim vitarum nobis erunt instituta capienda. Maximus dolor, inquit, brevis est. Omnis enim est natura diligens sui. At ego quem huic anteponam non audeo dicere; Age, inquies, ista parva sunt. Et ille ridens: Video, inquit, quid agas; Tum ille timide vel potius verecunde: Facio, inquit. Cur haec eadem Democritus? Quid ergo hoc loco intellegit honestum? Si quae forte-possumus. Sed quanta sit alias, nunc tantum possitne esse tanta. Quid ad utilitatem tantae pecuniae? Sed ad illum redeo. Omnes enim iucundum motum, quo sensus hilaretur. Equidem, sed audistine modo de Carneade? Vestri haec verecundius, illi fortasse constantius. Sed in rebus apertissimis nimium longi sumus. Duarum enim vitarum nobis erunt instituta capienda. "/>
+        <column name="ID_USER_OPEN_BY" value="10"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-16 19:50:26"/>
+        <column name="DATE_END" value="2022-10-17 19:50:26"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="49"/>
+        <column name="STATUS" value="4"/>
+        <column name="TITLE" value="Meu monitor está em pane. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tubulo putas dicere? At enim hic etiam dolore. Tum Torquatus: Prorsus, inquit, assentior; Quae ista amicitia est? Eiuro, inquit adridens, iniquum, hac quidem de re; Contineo me ab exemplis. Ubi ut eam caperet aut quando? Quid censes in Latino fore? Tollitur beneficium, tollitur gratia, quae sunt vincla concordiae. Quis enim redargueret? Maximus dolor, inquit, brevis est. Quamquam tu hanc copiosiorem etiam soles dicere. Invidiosum nomen est, infame, suspectum. Ut pulsi recurrant? Quid, de quo nulla dissensio est? Quae duo sunt, unum facit. Nullus est igitur cuiusquam dies natalis. Estne, quaeso, inquam, sitienti in bibendo voluptas? Scrupulum, inquam, abeunti; Qua tu etiam inprudens utebare non numquam. Duo Reges: constructio interrete. Audeo dicere, inquit. Satis est ad hoc responsum. Itaque ab his ordiamur. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Ita fit cum gravior, tum etiam splendidior oratio. Bestiarum vero nullum iudicium puto. Cur iustitia laudatur? Illa tamen simplicia, vestra versuta. Quae cum dixisset paulumque institisset, Quid est? Bonum incolumis acies: misera caecitas. Ut aliquid scire se gaudeant? Summum ením bonum exposuit vacuitatem doloris; Disserendi artem nullam habuit. Quamquam tu hanc copiosiorem etiam soles dicere. Quamquam te quidem video minime esse deterritum. Oratio me istius philosophi non offendit; Nemo igitur esse beatus potest. Et quidem, inquit, vehementer errat; Haec quo modo conveniant, non sane intellego. Addidisti ad extremum etiam indoctum fuisse. Hoc non est positum in nostra actione. Quibus ego vehementer assentior. Praeclarae mortes sunt imperatoriae; "/>
+        <column name="ID_USER_OPEN_BY" value="12"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-12 13:51:11"/>
+        <column name="DATE_END" value="2022-10-13 13:51:11"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="50"/>
+        <column name="STATUS" value="3"/>
+        <column name="TITLE" value="Meu PC está quebrado. Preciso de ajuda."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ratio enim nostra consentit, pugnat oratio. Suo genere perveniant ad extremum; Huius ego nunc auctoritatem sequens idem faciam. Qualem igitur hominem natura inchoavit? Proclivi currit oratio. Bonum valitudo: miser morbus. Nunc omni virtuti vitium contrario nomine opponitur. Expectoque quid ad id, quod quaerebam, respondeas. Quare conare, quaeso. Qui est in parvis malis. Quod autem principium officii quaerunt, melius quam Pyrrho; Paria sunt igitur. Velut ego nunc moveor. Duo Reges: constructio interrete. Tamen a proposito, inquam, aberramus. Paria sunt igitur. Quid turpius quam sapientis vitam ex insipientium sermone pendere? Nos cum te, M. Minime vero istorum quidem, inquit. Quis negat? Tecum optime, deinde etiam cum mediocri amico. Indicant pueri, in quibus ut in speculis natura cernitur. Mihi, inquam, qui te id ipsum rogavi? Inde igitur, inquit, ordiendum est. Maximus dolor, inquit, brevis est. Hoc non est positum in nostra actione. Hoc tu nunc in illo probas. Sed nimis multa. "/>
+        <column name="ID_USER_OPEN_BY" value="6"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-12 08:18:20"/>
+        <column name="DATE_END" value="2022-10-13 08:18:20"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="51"/>
+        <column name="STATUS" value="3"/>
+        <column name="TITLE" value="Meu monitor está quebrado. Preciso de ajuda."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui est in parvis malis. Haec quo modo conveniant, non sane intellego. Non est ista, inquam, Piso, magna dissensio. Neutrum vero, inquit ille. Et quidem, inquit, vehementer errat; Satis est ad hoc responsum. Non autem hoc: igitur ne illud quidem. Ille enim occurrentia nescio quae comminiscebatur; Satis est ad hoc responsum. Scisse enim te quis coarguere possit? Duo Reges: constructio interrete. At coluit ipse amicitias. Minime vero istorum quidem, inquit. Quippe: habes enim a rhetoribus; Quid ad utilitatem tantae pecuniae? Istam voluptatem, inquit, Epicurus ignorat? Haec dicuntur fortasse ieiunius; Tria genera bonorum; Tamen a proposito, inquam, aberramus. Bonum incolumis acies: misera caecitas. Iam in altera philosophiae parte. Ita nemo beato beatior. Quid ait Aristoteles reliquique Platonis alumni? An tu me de L. Tubulo putas dicere? Quare ad ea primum, si videtur; Quae cum essent dicta, discessimus. Mihi enim satis est, ipsis non satis. Non quam nostram quidem, inquit Pomponius iocans; Qui non moveatur et offensione turpitudinis et comprobatione honestatis? Quo modo autem philosophus loquitur? Murenam te accusante defenderem. Mihi, inquam, qui te id ipsum rogavi? Sed ea mala virtuti magnitudine obruebantur. Quonam modo? Si longus, levis dictata sunt. Respondeat totidem verbis. Maximus dolor, inquit, brevis est. Nunc haec primum fortasse audientis servire debemus. Si longus, levis. Ut id aliis narrare gestiant? Quod ea non occurrentia fingunt, vincunt Aristonem; Hoc tu nunc in illo probas. Ut id aliis narrare gestiant? Sed ego in hoc resisto; "/>
+        <column name="ID_USER_OPEN_BY" value="9"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-13 19:05:41"/>
+        <column name="DATE_END" value="2022-10-14 19:05:41"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="52"/>
+        <column name="STATUS" value="4"/>
+        <column name="TITLE" value="Meu teclado está quebrado. Preciso de auxilio."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cur deinde Metrodori liberos commendas? Utilitatis causa amicitia est quaesita. Respondeat totidem verbis. Perge porro; At multis malis affectus. Quae cum dixisset paulumque institisset, Quid est? Duo Reges: constructio interrete. Poterat autem inpune; Quo modo autem philosophus loquitur? Hoc ipsum elegantius poni meliusque potuit. Tum ille: Ain tandem? Stoici scilicet. Quae sequuntur igitur? Sit enim idem caecus, debilis. Poterat autem inpune; Hoc est non dividere, sed frangere. Suam denique cuique naturam esse ad vivendum ducem. Et quidem, inquit, vehementer errat; Hoc sic expositum dissimile est superiori. Age sane, inquam. Et ille ridens: Video, inquit, quid agas; Pauca mutat vel plura sane; At ego quem huic anteponam non audeo dicere; Quid autem habent admirationis, cum prope accesseris? Confecta res esset. Ut pulsi recurrant? Sint modo partes vitae beatae. Nihilo beatiorem esse Metellum quam Regulum. Utilitatis causa amicitia est quaesita. Equidem e Cn. Falli igitur possumus. Moriatur, inquit. Falli igitur possumus. Quorum sine causa fieri nihil putandum est. Sed hoc sane concedamus. Primum in nostrane potestate est, quid meminerimus? Praeclare hoc quidem. Sint modo partes vitae beatae. Nunc de hominis summo bono quaeritur; Certe non potest. Istic sum, inquit. Respondent extrema primis, media utrisque, omnia omnibus. Idem adhuc; Gerendus est mos, modo recte sentiat. Gerendus est mos, modo recte sentiat. Gerendus est mos, modo recte sentiat. Prioris generis est docilitas, memoria; Quare conare, quaeso. "/>
+        <column name="ID_USER_OPEN_BY" value="13"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-17 19:31:15"/>
+        <column name="DATE_END" value="2022-10-19 19:31:15"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="53"/>
+        <column name="STATUS" value="4"/>
+        <column name="TITLE" value="Meu cachorro está em pane. Preciso de socorro."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. At enim sequor utilitatem. Et non ex maxima parte de tota iudicabis? Duo Reges: constructio interrete. ALIO MODO. Est, ut dicis, inquam. Qui convenit? Ita relinquet duas, de quibus etiam atque etiam consideret. Sed plane dicit quod intellegit. Sin aliud quid voles, postea. Ille enim occurrentia nescio quae comminiscebatur; Nemo nostrum istius generis asotos iucunde putat vivere. Nunc omni virtuti vitium contrario nomine opponitur. Nam Pyrrho, Aristo, Erillus iam diu abiecti. Haec dicuntur inconstantissime. Bestiarum vero nullum iudicium puto. Itaque fecimus. Quid autem habent admirationis, cum prope accesseris? Praeclare hoc quidem. Gerendus est mos, modo recte sentiat. Sit sane ista voluptas. Scaevolam M. Non semper, inquam; Idemne, quod iucunde? Qua tu etiam inprudens utebare non numquam. Consequentia exquirere, quoad sit id, quod volumus, effectum. Quod cum dixissent, ille contra. Ita multa dicunt, quae vix intellegam. Tu vero, inquam, ducas licet, si sequetur; Honesta oratio, Socratica, Platonis etiam. Num quid tale Democritus? Immo alio genere; Praeteritis, inquit, gaudeo. Nam quid possumus facere melius? "/>
+        <column name="ID_USER_OPEN_BY" value="15"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-17 00:18:26"/>
+        <column name="DATE_END" value="2022-10-19 00:18:26"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="54"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu PC está em pane. Preciso de conselho."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. An eiusdem modi? Invidiosum nomen est, infame, suspectum. Non autem hoc: igitur ne illud quidem. Duo Reges: constructio interrete. Equidem e Cn. Suo enim quisque studio maxime ducitur. At iste non dolendi status non vocatur voluptas. Quid, quod res alia tota est? Idemque diviserunt naturam hominis in animum et corpus. Cur id non ita fit? Quae cum dixisset, finem ille. Non autem hoc: igitur ne illud quidem. Quia nec honesto quic quam honestius nec turpi turpius. Qui ita affectus, beatum esse numquam probabis; Quae contraria sunt his, malane? Honesta oratio, Socratica, Platonis etiam. Nihil opus est exemplis hoc facere longius. Consequens enim est et post oritur, ut dixi. Ut id aliis narrare gestiant? Conferam tecum, quam cuique verso rem subicias; Verum hoc idem saepe faciamus. Quippe: habes enim a rhetoribus; Dat enim intervalla et relaxat. Contineo me ab exemplis. Et quidem, inquit, vehementer errat; Non laboro, inquit, de nomine. Comprehensum, quod cognitum non habet? Egone quaeris, inquit, quid sentiam? Indicant pueri, in quibus ut in speculis natura cernitur. Primum in nostrane potestate est, quid meminerimus? Bonum liberi: misera orbitas. Confecta res esset. Prioris generis est docilitas, memoria; Itaque contra est, ac dicitis; Istic sum, inquit. Cur id non ita fit? Cave putes quicquam esse verius. Qui est in parvis malis. Id mihi magnum videtur. Equidem e Cn. Qui est in parvis malis. Qua tu etiam inprudens utebare non numquam. Age, inquies, ista parva sunt. Istic sum, inquit. Quae duo sunt, unum facit. Quonam, inquit, modo? Ego vero volo in virtute vim esse quam maximam; An nisi populari fama? "/>
+        <column name="ID_USER_OPEN_BY" value="8"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-08 04:34:51"/>
+        <column name="DATE_END" value="2022-10-10 04:34:51"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="55"/>
+        <column name="STATUS" value="4"/>
+        <column name="TITLE" value="Meu colega está com problemas. Preciso de socorro."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prioris generis est docilitas, memoria; Ex rebus enim timiditas, non ex vocabulis nascitur. Urgent tamen et nihil remittunt. Nihil opus est exemplis hoc facere longius. Sed potestne rerum maior esse dissensio? Sed tamen intellego quid velit. Quid enim de amicitia statueris utilitatis causa expetenda vides. Bestiarum vero nullum iudicium puto. Hoc sic expositum dissimile est superiori. Maximas vero virtutes iacere omnis necesse est voluptate dominante. Qui est in parvis malis. Ipse Epicurus fortasse redderet, ut Sextus Peducaeus, Sex. Poterat autem inpune; Urgent tamen et nihil remittunt. Nullus est igitur cuiusquam dies natalis. Quae duo sunt, unum facit. Prioris generis est docilitas, memoria; Quis est tam dissimile homini. Gerendus est mos, modo recte sentiat. Cur igitur, inquam, res tam dissimiles eodem nomine appellas? Quam si explicavisset, non tam haesitaret. At hoc in eo M. Mihi enim satis est, ipsis non satis. Quam ob rem tandem, inquit, non satisfacit? Quid ait Aristoteles reliquique Platonis alumni? Idemne, quod iucunde? Immo alio genere; Ea possunt paria non esse. Sed hoc sane concedamus. Quae duo sunt, unum facit. Duo Reges: constructio interrete. Sit enim idem caecus, debilis. Invidiosum nomen est, infame, suspectum. Laboro autem non sine causa; Quid iudicant sensus? Nos commodius agimus. Itaque hic ipse iam pridem est reiectus; Habent enim et bene longam et satis litigiosam disputationem. Dat enim intervalla et relaxat. Quo igitur, inquit, modo? Sed ad bona praeterita redeamus. Facillimum id quidem est, inquam. Stoici scilicet. Sic enim censent, oportunitatis esse beate vivere. Etiam beatissimum? Cur iustitia laudatur? Sed virtutem ipsam inchoavit, nihil amplius. Sed potestne rerum maior esse dissensio? Minime vero istorum quidem, inquit. Restinguet citius, si ardentem acceperit. Falli igitur possumus. ALIO MODO. Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. "/>
+        <column name="ID_USER_OPEN_BY" value="8"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-22 04:13:04"/>
+        <column name="DATE_END" value="2022-10-23 04:13:04"/>
+        <column name="ENABLE" valueBoolean="TRUE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="56"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu computador está quebrado. Preciso de socorro."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pollicetur certe. Videsne quam sit magna dissensio? Tum mihi Piso: Quid ergo? Age sane, inquam. Iam in altera philosophiae parte. Tum Torquatus: Prorsus, inquit, assentior; At multis malis affectus. Duo Reges: constructio interrete. Quod quidem iam fit etiam in Academia. Quid igitur, inquit, eos responsuros putas? Praeteritis, inquit, gaudeo. Dat enim intervalla et relaxat. Graccho, eius fere, aequalí? Verum hoc idem saepe faciamus. Qui est in parvis malis. Esse enim, nisi eris, non potes. Oratio me istius philosophi non offendit; Sed plane dicit quod intellegit. Quonam, inquit, modo? Huius, Lyco, oratione locuples, rebus ipsis ielunior. Nemo igitur esse beatus potest. Omnes enim iucundum motum, quo sensus hilaretur. Cum audissem Antiochum, Brute, ut solebam, cum M. Quantum Aristoxeni ingenium consumptum videmus in musicis? Quid de Platone aut de Democrito loquar? Quid de Pythagora? Omnia contraria, quos etiam insanos esse vultis. Bonum negas esse divitias, praeposìtum esse dicis? Quonam, inquit, modo? Tum ille timide vel potius verecunde: Facio, inquit. Ille incendat? Huius ego nunc auctoritatem sequens idem faciam. Restatis igitur vos; Quare attende, quaeso. Quo modo autem philosophus loquitur? Non est ista, inquam, Piso, magna dissensio. Inde igitur, inquit, ordiendum est. Quod ea non occurrentia fingunt, vincunt Aristonem; Sequitur disserendi ratio cognitioque naturae; Suo genere perveniant ad extremum; Nescio quo modo praetervolavit oratio. Quae cum essent dicta, discessimus. Sed ad rem redeamus; Praeteritis, inquit, gaudeo. Nihilo magis. At enim hic etiam dolore. "/>
+        <column name="ID_USER_OPEN_BY" value="10"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-10 23:15:49"/>
+        <column name="DATE_END" value="2022-10-11 23:15:49"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="57"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu PC está em pane. Preciso de ajuda."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eam stabilem appellas. Ergo illi intellegunt quid Epicurus dicat, ego non intellego? Non quam nostram quidem, inquit Pomponius iocans; Non autem hoc: igitur ne illud quidem. At ego quem huic anteponam non audeo dicere; Huius, Lyco, oratione locuples, rebus ipsis ielunior. Inquit, dasne adolescenti veniam? Profectus in exilium Tubulus statim nec respondere ausus; Est, ut dicis, inquit; Obsecro, inquit, Torquate, haec dicit Epicurus? Non est igitur voluptas bonum. Stoicos roga. Suo enim quisque studio maxime ducitur. Non autem hoc: igitur ne illud quidem. Aliter enim explicari, quod quaeritur, non potest. Huius ego nunc auctoritatem sequens idem faciam. Illud non continuo, ut aeque incontentae. Hic nihil fuit, quod quaereremus. Quis est tam dissimile homini. Quo igitur, inquit, modo? Dici enim nihil potest verius. De hominibus dici non necesse est. Bonum incolumis acies: misera caecitas. Erat enim Polemonis. Duo Reges: constructio interrete. Quid ergo attinet gloriose loqui, nisi constanter loquare? Beatus sibi videtur esse moriens. Dat enim intervalla et relaxat. Videsne, ut haec concinant? "/>
+        <column name="ID_USER_OPEN_BY" value="14"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-17 21:43:34"/>
+        <column name="DATE_END" value="2022-10-19 21:43:34"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="58"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu monitor está queimado. Preciso de socorro."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis hoc dicit? Summum ením bonum exposuit vacuitatem doloris; Illi enim inter se dissentiunt. Quare attende, quaeso. Non est igitur voluptas bonum. Duo Reges: constructio interrete. "/>
+        <column name="ID_USER_OPEN_BY" value="14"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-15 16:46:15"/>
+        <column name="DATE_END" value="2022-10-16 16:46:15"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="59"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu PC está estragado. Preciso de conselho."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Videamus animi partes, quarum est conspectus illustrior; Summus dolor plures dies manere non potest? Duo Reges: constructio interrete. At enim hic etiam dolore. At multis se probavit. Si longus, levis. Bonum patria: miserum exilium. Si id dicis, vicimus. Iam in altera philosophiae parte. Si longus, levis; Honesta oratio, Socratica, Platonis etiam. Negat esse eam, inquit, propter se expetendam. Recte dicis; Bonum valitudo: miser morbus. Oratio me istius philosophi non offendit; Omnes enim iucundum motum, quo sensus hilaretur. Efficiens dici potest. Estne, quaeso, inquam, sitienti in bibendo voluptas? Tu vero, inquam, ducas licet, si sequetur; Stoicos roga. Post enim Chrysippum eum non sane est disputatum. "/>
+        <column name="ID_USER_OPEN_BY" value="14"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-15 12:55:03"/>
+        <column name="DATE_END" value="2022-10-17 12:55:03"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="60"/>
+        <column name="STATUS" value="5"/>
+        <column name="TITLE" value="Meu cachorro está estragado. Preciso de ajuda."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae est igitur causa istarum angustiarum? Quid adiuvas? Duo Reges: constructio interrete. Quamquam te quidem video minime esse deterritum. Quae in controversiam veniunt, de iis, si placet, disseramus. Et quod est munus, quod opus sapientiae? Frater et T. Quorum altera prosunt, nocent altera. Sit sane ista voluptas. Si longus, levis; Negare non possum. Non est ista, inquam, Piso, magna dissensio. Itaque contra est, ac dicitis; Sic enim censent, oportunitatis esse beate vivere. Maximus dolor, inquit, brevis est. Ut pulsi recurrant? Restatis igitur vos; Quorum sine causa fieri nihil putandum est. Quonam, inquit, modo? Quodcumque in mentem incideret, et quodcumque tamquam occurreret. Iam in altera philosophiae parte. Minime vero istorum quidem, inquit. "/>
+        <column name="ID_USER_OPEN_BY" value="15"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-12 08:27:27"/>
+        <column name="DATE_END" value="2022-10-13 08:27:27"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="61"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu mouse está estragado. Preciso de ajuda."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Poterat autem inpune; Haec para/doca illi, nos admirabilia dicamus. Omnia peccata paria dicitis. Tria genera bonorum; Qui convenit? Magna laus. Quid sequatur, quid repugnet, vident. Sedulo, inquam, faciam. Illud dico, ea, quae dicat, praeclare inter se cohaerere. Ergo illi intellegunt quid Epicurus dicat, ego non intellego? Dici enim nihil potest verius. Ne discipulum abducam, times. Sed tamen intellego quid velit. Moriatur, inquit. Bestiarum vero nullum iudicium puto. Polycratem Samium felicem appellabant. Quis hoc dicit? Quid vero? Prodest, inquit, mihi eo esse animo. Tum ille timide vel potius verecunde: Facio, inquit. Videamus animi partes, quarum est conspectus illustrior; Immo videri fortasse. Sed ego in hoc resisto; Beatum, inquit. Istam voluptatem perpetuam quis potest praestare sapienti? Non est igitur voluptas bonum. Quare conare, quaeso. Summae mihi videtur inscitiae. Minime vero istorum quidem, inquit. Immo alio genere; Quippe: habes enim a rhetoribus; Eadem nunc mea adversum te oratio est. Dic in quovis conventu te omnia facere, ne doleas. Polycratem Samium felicem appellabant. Deinde dolorem quem maximum? Duo Reges: constructio interrete. Quia dolori non voluptas contraria est, sed doloris privatio. Solum praeterea formosum, solum liberum, solum civem, stultost; "/>
+        <column name="ID_USER_OPEN_BY" value="7"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-14 02:24:09"/>
+        <column name="DATE_END" value="2022-10-15 02:24:09"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="62"/>
+        <column name="STATUS" value="4"/>
+        <column name="TITLE" value="Meu teclado está com problemas. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duo enim genera quae erant, fecit tria. Sed haec nihil sane ad rem; Ita prorsus, inquam; Uterque enim summo bono fruitur, id est voluptate. Tibi hoc incredibile, quod beatissimum. Sed ad bona praeterita redeamus. Sed quanta sit alias, nunc tantum possitne esse tanta. Sit hoc ultimum bonorum, quod nunc a me defenditur; Torquatus, is qui consul cum Cn. Habent enim et bene longam et satis litigiosam disputationem. Nos cum te, M. Avaritiamne minuis? Quid enim est a Chrysippo praetermissum in Stoicis? Sic enim censent, oportunitatis esse beate vivere. Sed ad haec, nisi molestum est, habeo quae velim. Duo Reges: constructio interrete. Quis est tam dissimile homini. Egone quaeris, inquit, quid sentiam? De illis, cum volemus. Falli igitur possumus. Ita multa dicunt, quae vix intellegam. Sed ille, ut dixi, vitiose. Murenam te accusante defenderem. Paria sunt igitur. Expectoque quid ad id, quod quaerebam, respondeas. Mihi enim satis est, ipsis non satis. Huius, Lyco, oratione locuples, rebus ipsis ielunior. Falli igitur possumus. "/>
+        <column name="ID_USER_OPEN_BY" value="13"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-15 12:57:05"/>
+        <column name="DATE_END" value="2022-10-17 12:57:05"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="63"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu sistema está quebrado. Preciso de ajuda."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praeteritis, inquit, gaudeo. Nihilo beatiorem esse Metellum quam Regulum. Dici enim nihil potest verius. Compensabatur, inquit, cum summis doloribus laetitia. Quid enim possumus hoc agere divinius? Est, ut dicis, inquam. Beatus sibi videtur esse moriens. Sic enim censent, oportunitatis esse beate vivere. Quam ob rem tandem, inquit, non satisfacit? Idemne potest esse dies saepius, qui semel fuit? Qui est in parvis malis. Nam quid possumus facere melius? Mihi enim erit isdem istis fortasse iam utendum. Eademne, quae restincta siti? Tum ille: Ain tandem? Stoici scilicet. Gloriosa ostentatio in constituendo summo bono. Si quae forte-possumus. Conferam tecum, quam cuique verso rem subicias; Ego vero volo in virtute vim esse quam maximam; Quid nunc honeste dicit? Quod vestri non item. Si longus, levis. Quorum altera prosunt, nocent altera. Nihil opus est exemplis hoc facere longius. Certe, nisi voluptatem tanti aestimaretis. Quid enim possumus hoc agere divinius? Idem iste, inquam, de voluptate quid sentit? Quod vestri non item. Ita enim vivunt quidam, ut eorum vita refellatur oratio. Egone quaeris, inquit, quid sentiam? Duo Reges: constructio interrete. Non potes, nisi retexueris illa. Negare non possum. Quid ait Aristoteles reliquique Platonis alumni? Praeclare hoc quidem. Quid de Platone aut de Democrito loquar? Quae cum essent dicta, discessimus. Restatis igitur vos; Si quicquam extra virtutem habeatur in bonis. Nunc haec primum fortasse audientis servire debemus. "/>
+        <column name="ID_USER_OPEN_BY" value="9"/>
+        <column name="ID_USER_RESPONSIBLE" value="2"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-12 17:17:32"/>
+        <column name="DATE_END" value="2022-10-14 17:17:32"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="64"/>
+        <column name="STATUS" value="5"/>
+        <column name="TITLE" value="Meu colega está queimado. Preciso de um companheiro."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo instituto veterum, quo etiam Stoici utuntur, hinc capiamus exordium. Quo modo? Hic ambiguo ludimur. Sed ad bona praeterita redeamus. An nisi populari fama? Duo Reges: constructio interrete. Sed haec in pueris; Quamquam te quidem video minime esse deterritum. Sedulo, inquam, faciam. Ecce aliud simile dissimile. Nos cum te, M. Hoc ipsum elegantius poni meliusque potuit. Ad eas enim res ab Epicuro praecepta dantur. Erat enim res aperta. Moriatur, inquit. Quo modo? Ne discipulum abducam, times. "/>
+        <column name="ID_USER_OPEN_BY" value="9"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-07 20:17:38"/>
+        <column name="DATE_END" value="2022-10-08 20:17:38"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="65"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu cachorro está quebrado. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velut ego nunc moveor. Sed ad illum redeo. Et nemo nimium beatus est; Videsne quam sit magna dissensio? Duo Reges: constructio interrete. Quid adiuvas? Faceres tu quidem, Torquate, haec omnia; Tria genera bonorum; Age sane, inquam. Nonne videmus quanta perturbatio rerum omnium consequatur, quanta confusio? Sumenda potius quam expetenda. Minime vero, inquit ille, consentit. Illi enim inter se dissentiunt. Ille incendat? Quae sequuntur igitur? Quid ergo? Equidem, sed audistine modo de Carneade? Omnia peccata paria dicitis. Esse enim, nisi eris, non potes. Quid adiuvas? Hoc simile tandem est? Zenonis est, inquam, hoc Stoici. Rationis enim perfectio est virtus; Qui ita affectus, beatum esse numquam probabis; Peccata paria. Quamquam tu hanc copiosiorem etiam soles dicere. Ea possunt paria non esse. Hunc vos beatum; Proclivi currit oratio. Qui est in parvis malis. Quorum altera prosunt, nocent altera. Et quod est munus, quod opus sapientiae? Ut id aliis narrare gestiant? An eiusdem modi? Illud non continuo, ut aeque incontentae. Tum mihi Piso: Quid ergo? Suo genere perveniant ad extremum; Ratio quidem vestra sic cogit. Id Sextilius factum negabat. Eadem nunc mea adversum te oratio est. Minime vero istorum quidem, inquit. Paulum, cum regem Persem captum adduceret, eodem flumine invectio? Iam contemni non poteris. In schola desinis. Quae cum essent dicta, discessimus. Ratio quidem vestra sic cogit. An vero, inquit, quisquam potest probare, quod perceptfum, quod. Tuo vero id quidem, inquam, arbitratu. Eaedem res maneant alio modo. At eum nihili facit; Quod iam a me expectare noli. Quis hoc dicit? Poterat autem inpune; Omnes enim iucundum motum, quo sensus hilaretur. Nos vero, inquit ille; Nondum autem explanatum satis, erat, quid maxime natura vellet. Quid est, quod ab ea absolvi et perfici debeat? Nunc haec primum fortasse audientis servire debemus. Poterat autem inpune; Quantum Aristoxeni ingenium consumptum videmus in musicis? "/>
+        <column name="ID_USER_OPEN_BY" value="9"/>
+        <column name="ID_USER_RESPONSIBLE" value="2"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-23 13:49:04"/>
+        <column name="DATE_END" value="2022-10-25 13:49:04"/>
+        <column name="ENABLE" valueBoolean="TRUE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="66"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu computador está estragado. Preciso de ajuda."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nos commodius agimus. Ne discipulum abducam, times. Nunc de hominis summo bono quaeritur; Respondent extrema primis, media utrisque, omnia omnibus. Ergo hoc quidem apparet, nos ad agendum esse natos. "/>
+        <column name="ID_USER_OPEN_BY" value="13"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-08 13:46:57"/>
+        <column name="DATE_END" value="2022-10-10 13:46:57"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="67"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu monitor está em pane. Preciso de conselho."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. At multis se probavit. Duo Reges: constructio interrete. Sed tamen intellego quid velit. Cur, nisi quod turpis oratio est? Ad eas enim res ab Epicuro praecepta dantur. Explanetur igitur. Quid est igitur, inquit, quod requiras? Ita prorsus, inquam; Tecum optime, deinde etiam cum mediocri amico. Nos commodius agimus. Nos cum te, M. Tria genera bonorum; Hunc vos beatum; Ego vero isti, inquam, permitto. Quamquam haec quidem praeposita recte et reiecta dicere licebit. Dici enim nihil potest verius. Nihil illinc huc pervenit. Sed ille, ut dixi, vitiose. Sed fac ista esse non inportuna; Haec dicuntur inconstantissime. Res enim concurrent contrariae. Collige omnia, quae soletis: Praesidium amicorum. Dat enim intervalla et relaxat. Ac tamen hic mallet non dolere. Duo enim genera quae erant, fecit tria. Erat enim Polemonis. Haec quo modo conveniant, non sane intellego. Quod equidem non reprehendo; Quod cum dixissent, ille contra. An nisi populari fama? An hoc usque quaque, aliter in vita? Scrupulum, inquam, abeunti; Negat esse eam, inquit, propter se expetendam. Sed haec nihil sane ad rem; Maximus dolor, inquit, brevis est. Ergo, inquit, tibi Q. Cum audissem Antiochum, Brute, ut solebam, cum M. Gerendus est mos, modo recte sentiat. Quae duo sunt, unum facit. Quantum Aristoxeni ingenium consumptum videmus in musicis? "/>
+        <column name="ID_USER_OPEN_BY" value="12"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-15 18:33:24"/>
+        <column name="DATE_END" value="2022-10-17 18:33:24"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="68"/>
+        <column name="STATUS" value="4"/>
+        <column name="TITLE" value="Meu teclado está sumido. Preciso de um companheiro."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Claudii libidini, qui tum erat summo ne imperio, dederetur. Sed ille, ut dixi, vitiose. Nulla erit controversia. At multis se probavit. Sed haec omittamus; Quis istud, quaeso, nesciebat? Ut pulsi recurrant? Itaque contra est, ac dicitis; Cave putes quicquam esse verius. Quonam modo? Quid de Pythagora? Quid igitur, inquit, eos responsuros putas? Sed ille, ut dixi, vitiose. Duo Reges: constructio interrete. Equidem e Cn. Videsne, ut haec concinant? Ita credo. Hoc Hieronymus summum bonum esse dixit. Praeteritis, inquit, gaudeo. Moriatur, inquit. Nosti, credo, illud: Nemo pius est, qui pietatem-; Philosophi autem in suis lectulis plerumque moriuntur. Ea possunt paria non esse. Avaritiamne minuis? Quid de Platone aut de Democrito loquar? Sed vos squalidius, illorum vides quam niteat oratio. Egone non intellego, quid sit don Graece, Latine voluptas? Tum Torquatus: Prorsus, inquit, assentior; Sed quid sentiat, non videtis. Quod quidem nobis non saepe contingit. "/>
+        <column name="ID_USER_OPEN_BY" value="14"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-22 12:57:39"/>
+        <column name="DATE_END" value="2022-10-24 12:57:39"/>
+        <column name="ENABLE" valueBoolean="TRUE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="69"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu PC está queimado. Preciso de um companheiro."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eadem nunc mea adversum te oratio est. Duo Reges: constructio interrete. Quo igitur, inquit, modo? Scisse enim te quis coarguere possit? Nam ante Aristippus, et ille melius. Sed ad bona praeterita redeamus. Si quae forte-possumus. Eademne, quae restincta siti? Honesta oratio, Socratica, Platonis etiam. Illa tamen simplicia, vestra versuta. Audeo dicere, inquit. Idem iste, inquam, de voluptate quid sentit? Hoc loco tenere se Triarius non potuit. At hoc in eo M. Nobis aliter videtur, recte secusne, postea; Minime vero istorum quidem, inquit. Quid de Pythagora? Age sane, inquam. Si longus, levis dictata sunt. Quae cum dixisset paulumque institisset, Quid est? Omnes enim iucundum motum, quo sensus hilaretur. Haec quo modo conveniant, non sane intellego. Id est enim, de quo quaerimus. Ut id aliis narrare gestiant? "/>
+        <column name="ID_USER_OPEN_BY" value="8"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-08 15:14:12"/>
+        <column name="DATE_END" value="2022-10-10 15:14:12"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="70"/>
+        <column name="STATUS" value="5"/>
+        <column name="TITLE" value="Meu mouse está estragado. Preciso de suporte."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Teneo, inquit, finem illi videri nihil dolere. Primum quid tu dicis breve? Res enim concurrent contrariae. Putabam equidem satis, inquit, me dixisse. Duo Reges: constructio interrete. An hoc usque quaque, aliter in vita? Cur deinde Metrodori liberos commendas? Cave putes quicquam esse verius. Quae quidem vel cum periculo est quaerenda vobis; Quid vero? Sequitur disserendi ratio cognitioque naturae; Nonne videmus quanta perturbatio rerum omnium consequatur, quanta confusio? Immo alio genere; Qualem igitur hominem natura inchoavit? Res enim concurrent contrariae. Sed ille, ut dixi, vitiose. Nam de isto magna dissensio est. Quid autem habent admirationis, cum prope accesseris? Aliter homines, aliter philosophos loqui putas oportere? Facillimum id quidem est, inquam. Facile est hoc cernere in primis puerorum aetatulis. Praeteritis, inquit, gaudeo. At ille pellit, qui permulcet sensum voluptate. Quibusnam praeteritis? Ad eos igitur converte te, quaeso. Prodest, inquit, mihi eo esse animo. "/>
+        <column name="ID_USER_OPEN_BY" value="12"/>
+        <column name="ID_USER_RESPONSIBLE" value="2"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-20 03:45:41"/>
+        <column name="DATE_END" value="2022-10-21 03:45:41"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="71"/>
+        <column name="STATUS" value="3"/>
+        <column name="TITLE" value="Meu colega está quebrado. Preciso de auxilio."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc est non dividere, sed frangere. Si quicquam extra virtutem habeatur in bonis. Minime vero istorum quidem, inquit. Cur post Tarentum ad Archytam? Duo Reges: constructio interrete. Ita enim vivunt quidam, ut eorum vita refellatur oratio. Que Manilium, ab iisque M. Iam id ipsum absurdum, maximum malum neglegi. Si longus, levis; Quid, de quo nulla dissensio est? Poterat autem inpune; Aliter enim nosmet ipsos nosse non possumus. Paria sunt igitur. Bonum incolumis acies: misera caecitas. De illis, cum volemus. An eiusdem modi? At certe gravius. Eadem nunc mea adversum te oratio est. Quare ad ea primum, si videtur; Aliter enim explicari, quod quaeritur, non potest. Quod vestri non item. Haec quo modo conveniant, non sane intellego. Quis negat? Tu vero, inquam, ducas licet, si sequetur; Utilitatis causa amicitia est quaesita. Non est igitur voluptas bonum. Quod ea non occurrentia fingunt, vincunt Aristonem; Dicimus aliquem hilare vivere; Poterat autem inpune; Tum Torquatus: Prorsus, inquit, assentior; Est, ut dicis, inquit; Quis est tam dissimile homini. Tecum optime, deinde etiam cum mediocri amico. Quid est igitur, inquit, quod requiras? Quid est igitur, inquit, quod requiras? "/>
+        <column name="ID_USER_OPEN_BY" value="10"/>
+        <column name="ID_USER_RESPONSIBLE" value="2"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-10 12:16:01"/>
+        <column name="DATE_END" value="2022-10-11 12:16:01"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="72"/>
+        <column name="STATUS" value="5"/>
+        <column name="TITLE" value="Meu sistema está com problemas. Preciso de socorro."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec dicuntur fortasse ieiunius; Illi enim inter se dissentiunt. Igitur ne dolorem quidem. Quid dubitas igitur mutare principia naturae? Sine ea igitur iucunde negat posse se vivere? Qualem igitur hominem natura inchoavit? Duo Reges: constructio interrete. Num quid tale Democritus? Res enim concurrent contrariae. Quod quidem iam fit etiam in Academia. "/>
+        <column name="ID_USER_OPEN_BY" value="8"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-20 13:08:38"/>
+        <column name="DATE_END" value="2022-10-22 13:08:38"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="73"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu cachorro está sumido. Preciso de um companheiro."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tu quidem reddes; Sed residamus, inquit, si placet. Hoc ipsum elegantius poni meliusque potuit. Non est ista, inquam, Piso, magna dissensio. Bonum integritas corporis: misera debilitas. Duo Reges: constructio interrete. Cur post Tarentum ad Archytam? Sed virtutem ipsam inchoavit, nihil amplius. Beatus sibi videtur esse moriens. Non potes, nisi retexueris illa. Nullus est igitur cuiusquam dies natalis. Quam nemo umquam voluptatem appellavit, appellat; Unum est sine dolore esse, alterum cum voluptate. Recte, inquit, intellegis. Tibi hoc incredibile, quod beatissimum. Erat enim Polemonis. Illum mallem levares, quo optimum atque humanissimum virum, Cn. Est enim effectrix multarum et magnarum voluptatum. Quare ad ea primum, si videtur; Non potes, nisi retexueris illa. Illud non continuo, ut aeque incontentae. Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur. Si longus, levis. Que Manilium, ab iisque M. Graece donan, Latine voluptatem vocant. Rationis enim perfectio est virtus; Tu quidem reddes; Sed ego in hoc resisto; Ea possunt paria non esse. Urgent tamen et nihil remittunt. Quid enim? Quod vestri non item. At iam decimum annum in spelunca iacet. Nihilo magis. Negat esse eam, inquit, propter se expetendam. "/>
+        <column name="ID_USER_OPEN_BY" value="13"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-12 06:39:22"/>
+        <column name="DATE_END" value="2022-10-13 06:39:22"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="74"/>
+        <column name="STATUS" value="4"/>
+        <column name="TITLE" value="Meu PC está pifado. Preciso de socorro."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis Aristidem non mortuum diligit? Est, ut dicis, inquam. Quod totum contra est. Quis enim redargueret? Quid iudicant sensus? Quid de Platone aut de Democrito loquar? Duo Reges: constructio interrete. Ille enim occurrentia nescio quae comminiscebatur; Quae diligentissime contra Aristonem dicuntur a Chryippo. Tecum optime, deinde etiam cum mediocri amico. In schola desinis. Quare attende, quaeso. Si longus, levis. Ergo, inquit, tibi Q. Peccata paria. Idem adhuc; "/>
+        <column name="ID_USER_OPEN_BY" value="14"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-14 04:49:00"/>
+        <column name="DATE_END" value="2022-10-15 04:49:00"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="75"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu PC está sumido. Preciso de socorro."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ratio quidem vestra sic cogit. Scrupulum, inquam, abeunti; Et quod est munus, quod opus sapientiae? Unum est sine dolore esse, alterum cum voluptate. Duo Reges: constructio interrete. Sint modo partes vitae beatae. Tubulo putas dicere? Eademne, quae restincta siti? Aeque enim contingit omnibus fidibus, ut incontentae sint. Quis enim redargueret? Restatis igitur vos; Verum hoc idem saepe faciamus. Sed ea mala virtuti magnitudine obruebantur. Iam contemni non poteris. Tum Triarius: Posthac quidem, inquit, audacius. Equidem, sed audistine modo de Carneade? Inde igitur, inquit, ordiendum est. Esse enim, nisi eris, non potes. Quis istud possit, inquit, negare? Huius, Lyco, oratione locuples, rebus ipsis ielunior. Iam enim adesse poterit. Idemne, quod iucunde? Quid vero? Non potes, nisi retexueris illa. Quid ergo hoc loco intellegit honestum? Facete M. Primum divisit ineleganter; Aliena dixit in physicis nec ea ipsa, quae tibi probarentur; Illi enim inter se dissentiunt. An nisi populari fama? Itaque his sapiens semper vacabit. Animum autem reliquis rebus ita perfecit, ut corpus; Unum est sine dolore esse, alterum cum voluptate. Hic nihil fuit, quod quaereremus. Numquam facies. Si longus, levis dictata sunt. Nam quid possumus facere melius? Efficiens dici potest. Peccata paria. Memini vero, inquam; "/>
+        <column name="ID_USER_OPEN_BY" value="15"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-09 14:01:04"/>
+        <column name="DATE_END" value="2022-10-11 14:01:04"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="76"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu monitor está queimado. Preciso de socorro."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ad bona praeterita redeamus. Deinde disputat, quod cuiusque generis animantium statui deceat extremum. Sic consequentibus vestris sublatis prima tolluntur. Sed quot homines, tot sententiae; Duo Reges: constructio interrete. Quod cum dixissent, ille contra. Refert tamen, quo modo. Ut pulsi recurrant? Sit enim idem caecus, debilis. Ita prorsus, inquam; Negat enim summo bono afferre incrementum diem. Tamen a proposito, inquam, aberramus. Quonam, inquit, modo? At enim hic etiam dolore. Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Id est enim, de quo quaerimus. Nunc de hominis summo bono quaeritur; Deinde dolorem quem maximum? Quis istud possit, inquit, negare? Egone non intellego, quid sit don Graece, Latine voluptas? Bonum integritas corporis: misera debilitas. Pauca mutat vel plura sane; Eademne, quae restincta siti? Apud ceteros autem philosophos, qui quaesivit aliquid, tacet; Tu vero, inquam, ducas licet, si sequetur; Quid, quod res alia tota est? Nunc vides, quid faciat. Avaritiamne minuis? Compensabatur, inquit, cum summis doloribus laetitia. Tu enim ista lenius, hic Stoicorum more nos vexat. Si quae forte-possumus. Quis hoc dicit? Deprehensus omnem poenam contemnet. Si enim ad populum me vocas, eum. "/>
+        <column name="ID_USER_OPEN_BY" value="14"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-19 03:37:35"/>
+        <column name="DATE_END" value="2022-10-20 03:37:35"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="77"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu sistema está pifado. Preciso de conselho."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cave putes quicquam esse verius. Age sane, inquam. Refert tamen, quo modo. Sed hoc sane concedamus. Primum divisit ineleganter; Sedulo, inquam, faciam. Deinde dolorem quem maximum? Quid sequatur, quid repugnet, vident. Tanta vis admonitionis inest in locis; Sic enim censent, oportunitatis esse beate vivere. Graece donan, Latine voluptatem vocant. Sed tamen intellego quid velit. Sed haec quidem liberius ab eo dicuntur et saepius. Is es profecto tu. Respondeat totidem verbis. Sed haec omittamus; Quippe: habes enim a rhetoribus; Sed ad bona praeterita redeamus. Sint modo partes vitae beatae. ALIO MODO. Non igitur bene. An potest cupiditas finiri? Hunc vos beatum; Duo Reges: constructio interrete. Id est enim, de quo quaerimus. Dat enim intervalla et relaxat. Explanetur igitur. Aliter enim nosmet ipsos nosse non possumus. Age sane, inquam. Quo tandem modo? "/>
+        <column name="ID_USER_OPEN_BY" value="9"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-08 21:29:48"/>
+        <column name="DATE_END" value="2022-10-10 21:29:48"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="78"/>
+        <column name="STATUS" value="5"/>
+        <column name="TITLE" value="Meu mouse está pifado. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cur iustitia laudatur? Duo Reges: constructio interrete. At enim sequor utilitatem. Quis enim redargueret? At eum nihili facit; Videamus animi partes, quarum est conspectus illustrior; Quis hoc dicit? Restatis igitur vos; At eum nihili facit; Prave, nequiter, turpiter cenabat; Minime vero, inquit ille, consentit. Sed haec omittamus; Esse enim quam vellet iniquus iustus poterat inpune. Quantum Aristoxeni ingenium consumptum videmus in musicis? "/>
+        <column name="ID_USER_OPEN_BY" value="6"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-21 20:54:32"/>
+        <column name="DATE_END" value="2022-10-22 20:54:32"/>
+        <column name="ENABLE" valueBoolean="TRUE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="79"/>
+        <column name="STATUS" value="3"/>
+        <column name="TITLE" value="Meu teclado está pifado. Preciso de ajuda."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si longus, levis; Nunc haec primum fortasse audientis servire debemus. Quod autem ratione actum est, id officium appellamus. Quae ista amicitia est? Erat enim Polemonis. Nos vero, inquit ille; Nemo igitur esse beatus potest. Atqui reperies, inquit, in hoc quidem pertinacem; Refert tamen, quo modo. Quid ad utilitatem tantae pecuniae? Paria sunt igitur. Cur post Tarentum ad Archytam? Duo Reges: constructio interrete. Ne discipulum abducam, times. Nam ista vestra: Si gravis, brevis; Idem iste, inquam, de voluptate quid sentit? Suo enim quisque studio maxime ducitur. Non autem hoc: igitur ne illud quidem. Si longus, levis; Vide, quantum, inquam, fallare, Torquate. Immo videri fortasse. Quodcumque in mentem incideret, et quodcumque tamquam occurreret. Omnia contraria, quos etiam insanos esse vultis. Nam ante Aristippus, et ille melius. Apparet statim, quae sint officia, quae actiones. Sed fortuna fortis; Quid est, quod ab ea absolvi et perfici debeat? Omnia contraria, quos etiam insanos esse vultis. Ego vero isti, inquam, permitto. Eademne, quae restincta siti? Tamen a proposito, inquam, aberramus. Hoc simile tandem est? Bonum integritas corporis: misera debilitas. Simus igitur contenti his. Nos cum te, M. Expressa vero in iis aetatibus, quae iam confirmatae sunt. Scrupulum, inquam, abeunti; Sit enim idem caecus, debilis. Invidiosum nomen est, infame, suspectum. Summae mihi videtur inscitiae. Quid sequatur, quid repugnet, vident. Deinde disputat, quod cuiusque generis animantium statui deceat extremum. Suo enim quisque studio maxime ducitur. Si enim ad populum me vocas, eum. Quis hoc dicit? Utilitatis causa amicitia est quaesita. Illud dico, ea, quae dicat, praeclare inter se cohaerere. Restinguet citius, si ardentem acceperit. Hunc vos beatum; Deinde dolorem quem maximum? "/>
+        <column name="ID_USER_OPEN_BY" value="13"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-19 20:26:05"/>
+        <column name="DATE_END" value="2022-10-21 20:26:05"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="80"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu sistema está com problemas. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qualem igitur hominem natura inchoavit? Nemo igitur esse beatus potest. Nihilo beatiorem esse Metellum quam Regulum. Rationis enim perfectio est virtus; Quia dolori non voluptas contraria est, sed doloris privatio. ALIO MODO. Sed haec nihil sane ad rem; Restinguet citius, si ardentem acceperit. Duo Reges: constructio interrete. "/>
+        <column name="ID_USER_OPEN_BY" value="7"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-16 12:07:57"/>
+        <column name="DATE_END" value="2022-10-18 12:07:57"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="81"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu monitor está estragado. Preciso de um companheiro."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum praesertim illa perdiscere ludus esset. Qualem igitur hominem natura inchoavit? Erat enim res aperta. Sin aliud quid voles, postea. Vide, quaeso, rectumne sit. Duo Reges: constructio interrete. Itaque his sapiens semper vacabit. Hoc Hieronymus summum bonum esse dixit. Quod cum dixissent, ille contra. Eam tum adesse, cum dolor omnis absit; Quo igitur, inquit, modo? Quid de Platone aut de Democrito loquar? Nos commodius agimus. Eaedem res maneant alio modo. Comprehensum, quod cognitum non habet? Eadem nunc mea adversum te oratio est. Gerendus est mos, modo recte sentiat. Quis non odit sordidos, vanos, leves, futtiles? Hoc ipsum elegantius poni meliusque potuit. Quid est enim aliud esse versutum? Ecce aliud simile dissimile. Huius ego nunc auctoritatem sequens idem faciam. Neutrum vero, inquit ille. Prioris generis est docilitas, memoria; De illis, cum volemus. Que Manilium, ab iisque M. Facillimum id quidem est, inquam. Sin aliud quid voles, postea. Quid censes in Latino fore? "/>
+        <column name="ID_USER_OPEN_BY" value="14"/>
+        <column name="ID_USER_RESPONSIBLE" value="2"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-16 13:58:45"/>
+        <column name="DATE_END" value="2022-10-18 13:58:45"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="82"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu colega está quebrado. Preciso de suporte."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Satis est ad hoc responsum. Si longus, levis; Obsecro, inquit, Torquate, haec dicit Epicurus? Aufert enim sensus actionemque tollit omnem. Qui est in parvis malis. Itaque fecimus. Sint modo partes vitae beatae. Respondeat totidem verbis. Iam in altera philosophiae parte. Apparet statim, quae sint officia, quae actiones. Haec dicuntur inconstantissime. At, illa, ut vobis placet, partem quandam tuetur, reliquam deserit. Gloriosa ostentatio in constituendo summo bono. Non est igitur voluptas bonum. Itaque hic ipse iam pridem est reiectus; Haec dicuntur fortasse ieiunius; Nihil enim iam habes, quod ad corpus referas; Nihil ad rem! Ne sit sane; Philosophi autem in suis lectulis plerumque moriuntur. Aliter enim explicari, quod quaeritur, non potest. Duo Reges: constructio interrete. Sed residamus, inquit, si placet. Quis non odit sordidos, vanos, leves, futtiles? Hic ambiguo ludimur. Sequitur disserendi ratio cognitioque naturae; Ecce aliud simile dissimile. Nummus in Croesi divitiis obscuratur, pars est tamen divitiarum. Etiam beatissimum? Nullus est igitur cuiusquam dies natalis. A mene tu? Quis istud possit, inquit, negare? A mene tu? Restatis igitur vos; At certe gravius. Non autem hoc: igitur ne illud quidem. Qui ita affectus, beatum esse numquam probabis; Cur deinde Metrodori liberos commendas? Et non ex maxima parte de tota iudicabis? Istam voluptatem, inquit, Epicurus ignorat? Nihil opus est exemplis hoc facere longius. Quamquam id quidem, infinitum est in hac urbe; Certe non potest. Beatus sibi videtur esse moriens. "/>
+        <column name="ID_USER_OPEN_BY" value="8"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-18 06:15:24"/>
+        <column name="DATE_END" value="2022-10-19 06:15:24"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="83"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu monitor está pifado. Preciso de um companheiro."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Comprehensum, quod cognitum non habet? Memini me adesse P. Sed fac ista esse non inportuna; Quae contraria sunt his, malane? Quis hoc dicit? Audeo dicere, inquit. Quid igitur, inquit, eos responsuros putas? Mihi, inquam, qui te id ipsum rogavi? Summum a vobis bonum voluptas dicitur. Idemne potest esse dies saepius, qui semel fuit? Cur id non ita fit? Equidem e Cn. Quae est igitur causa istarum angustiarum? Non igitur bene. Laboro autem non sine causa; Si quae forte-possumus. Tum ille: Ain tandem? Sed tamen intellego quid velit. Ut proverbia non nulla veriora sint quam vestra dogmata. Sed tamen intellego quid velit. Quod quidem nobis non saepe contingit. Quorum sine causa fieri nihil putandum est. At hoc in eo M. Quae autem natura suae primae institutionis oblita est? Tu quidem reddes; Apparet statim, quae sint officia, quae actiones. Non est ista, inquam, Piso, magna dissensio. Reguli reiciendam; Aliter enim explicari, quod quaeritur, non potest. Quam illa ardentis amores excitaret sui! Cur tandem? Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. Collatio igitur ista te nihil iuvat. Quodsi ipsam honestatem undique pertectam atque absolutam. Et quidem, inquit, vehementer errat; Deinde dolorem quem maximum? Itaque his sapiens semper vacabit. Quod autem satis est, eo quicquid accessit, nimium est; An eiusdem modi? Poterat autem inpune; Confecta res esset. Duo Reges: constructio interrete. Quae similitudo in genere etiam humano apparet. An tu me de L. Itaque contra est, ac dicitis; Haec dicuntur inconstantissime. Sin aliud quid voles, postea. Memini vero, inquam; Quod iam a me expectare noli. Memini me adesse P. Graece donan, Latine voluptatem vocant. Iam id ipsum absurdum, maximum malum neglegi. Videamus animi partes, quarum est conspectus illustrior; Quae cum dixisset paulumque institisset, Quid est? Omnis enim est natura diligens sui. Sed haec omittamus; Facillimum id quidem est, inquam. Quamquam id quidem licebit iis existimare, qui legerint. Qui convenit? Primum divisit ineleganter; "/>
+        <column name="ID_USER_OPEN_BY" value="9"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-20 01:54:47"/>
+        <column name="DATE_END" value="2022-10-21 01:54:47"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="84"/>
+        <column name="STATUS" value="4"/>
+        <column name="TITLE" value="Meu sistema está queimado. Preciso de suporte."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. An eiusdem modi? Etiam beatissimum? Non quam nostram quidem, inquit Pomponius iocans; Eam tum adesse, cum dolor omnis absit; At coluit ipse amicitias. Duo Reges: constructio interrete. Sed ad bona praeterita redeamus. Restatis igitur vos; Aliter homines, aliter philosophos loqui putas oportere? Conferam tecum, quam cuique verso rem subicias; Quid me istud rogas? Sedulo, inquam, faciam. Cur, nisi quod turpis oratio est? A mene tu? Age sane, inquam. Memini vero, inquam; Ut id aliis narrare gestiant? Quodsi ipsam honestatem undique pertectam atque absolutam. Venit ad extremum; Ostendit pedes et pectus. Non laboro, inquit, de nomine. Polycratem Samium felicem appellabant. Teneo, inquit, finem illi videri nihil dolere. Primum divisit ineleganter; Pauca mutat vel plura sane; Sed mehercule pergrata mihi oratio tua. Quam ob rem tandem, inquit, non satisfacit? Bestiarum vero nullum iudicium puto. Praeteritis, inquit, gaudeo. Quod non faceret, si in voluptate summum bonum poneret. Age sane, inquam. Haeret in salebra. Haeret in salebra. Pauca mutat vel plura sane; Nos commodius agimus. "/>
+        <column name="ID_USER_OPEN_BY" value="6"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-11 10:27:23"/>
+        <column name="DATE_END" value="2022-10-13 10:27:23"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="85"/>
+        <column name="STATUS" value="4"/>
+        <column name="TITLE" value="Meu colega está pifado. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="3"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iam in altera philosophiae parte. Quae cum essent dicta, discessimus. Sed mehercule pergrata mihi oratio tua. Poterat autem inpune; Non est ista, inquam, Piso, magna dissensio. Duo Reges: constructio interrete. Prave, nequiter, turpiter cenabat; Sic enim censent, oportunitatis esse beate vivere. Atqui reperies, inquit, in hoc quidem pertinacem; "/>
+        <column name="ID_USER_OPEN_BY" value="6"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-22 06:08:57"/>
+        <column name="DATE_END" value="2022-10-24 06:08:57"/>
+        <column name="ENABLE" valueBoolean="TRUE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="86"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu teclado está com problemas. Preciso de conselho."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Recte, inquit, intellegis. Eam stabilem appellas. Gerendus est mos, modo recte sentiat. Quid nunc honeste dicit? Maximus dolor, inquit, brevis est. Sed ad rem redeamus; Memini vero, inquam; Sed plane dicit quod intellegit. Qui convenit? Sit enim idem caecus, debilis. Nihil ad rem! Ne sit sane; Nemo igitur esse beatus potest. Ostendit pedes et pectus. Nos commodius agimus. At certe gravius. Deprehensus omnem poenam contemnet. Igitur ne dolorem quidem. Bestiarum vero nullum iudicium puto. Quo studio Aristophanem putamus aetatem in litteris duxisse? Sed virtutem ipsam inchoavit, nihil amplius. At iam decimum annum in spelunca iacet. Non autem hoc: igitur ne illud quidem. Quorum sine causa fieri nihil putandum est. At hoc in eo M. Videmus igitur ut conquiescere ne infantes quidem possint. Nihil ad rem! Ne sit sane; Quonam modo? Sed ad haec, nisi molestum est, habeo quae velim. Duo enim genera quae erant, fecit tria. Sed ad bona praeterita redeamus. Primum Theophrasti, Strato, physicum se voluit; Tollenda est atque extrahenda radicitus. Sint modo partes vitae beatae. Duo enim genera quae erant, fecit tria. Duo Reges: constructio interrete. Quia dolori non voluptas contraria est, sed doloris privatio. Quid, si etiam iucunda memoria est praeteritorum malorum? Hoc est non dividere, sed frangere. "/>
+        <column name="ID_USER_OPEN_BY" value="11"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-19 17:03:09"/>
+        <column name="DATE_END" value="2022-10-21 17:03:09"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="87"/>
+        <column name="STATUS" value="3"/>
+        <column name="TITLE" value="Meu sistema está queimado. Preciso de um companheiro."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cur, nisi quod turpis oratio est? Non est igitur summum malum dolor. Sed hoc sane concedamus. Quo modo? Audeo dicere, inquit. At ille pellit, qui permulcet sensum voluptate. Obsecro, inquit, Torquate, haec dicit Epicurus? Duo Reges: constructio interrete. Equidem e Cn. Quid de Platone aut de Democrito loquar? Sit enim idem caecus, debilis. Nec vero alia sunt quaerenda contra Carneadeam illam sententiam. An potest cupiditas finiri? Ergo, inquit, tibi Q. Iam enim adesse poterit. "/>
+        <column name="ID_USER_OPEN_BY" value="11"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-18 10:47:10"/>
+        <column name="DATE_END" value="2022-10-20 10:47:10"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="88"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu monitor está com problemas. Preciso de um companheiro."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prioris generis est docilitas, memoria; Id enim natura desiderat. Quod autem principium officii quaerunt, melius quam Pyrrho; Haeret in salebra. Reguli reiciendam; At ille pellit, qui permulcet sensum voluptate. Sed tamen intellego quid velit. Dic in quovis conventu te omnia facere, ne doleas. Non semper, inquam; Tollenda est atque extrahenda radicitus. Quo tandem modo? Cur deinde Metrodori liberos commendas? Simus igitur contenti his. Sed plane dicit quod intellegit. Duo Reges: constructio interrete. Quo modo? Quid de Pythagora? Nihil opus est exemplis hoc facere longius. Recte, inquit, intellegis. Tu quidem reddes; Certe, nisi voluptatem tanti aestimaretis. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Sed ego in hoc resisto; Id mihi magnum videtur. Verum hoc idem saepe faciamus. An eiusdem modi? Bestiarum vero nullum iudicium puto. Haec dicuntur inconstantissime. A mene tu? Nam de isto magna dissensio est. Hic ambiguo ludimur. Fortemne possumus dicere eundem illum Torquatum? Non est igitur voluptas bonum. Quod autem satis est, eo quicquid accessit, nimium est; Qui non moveatur et offensione turpitudinis et comprobatione honestatis? Quo modo autem philosophus loquitur? Quae cum dixisset paulumque institisset, Quid est? Confecta res esset. Tibi hoc incredibile, quod beatissimum. "/>
+        <column name="ID_USER_OPEN_BY" value="12"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-21 21:45:02"/>
+        <column name="DATE_END" value="2022-10-23 21:45:02"/>
+        <column name="ENABLE" valueBoolean="TRUE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="89"/>
+        <column name="STATUS" value="5"/>
+        <column name="TITLE" value="Meu cachorro está estragado. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Quod quidem iam fit etiam in Academia. Sed in rebus apertissimis nimium longi sumus. Post enim Chrysippum eum non sane est disputatum. Duo Reges: constructio interrete. Sed erat aequius Triarium aliquid de dissensione nostra iudicare. ALIO MODO. Eadem fortitudinis ratio reperietur. Qualem igitur hominem natura inchoavit? Poterat autem inpune; Cyrenaici quidem non recusant; Primum divisit ineleganter; Equidem e Cn. Quae similitudo in genere etiam humano apparet. Frater et T. Illi enim inter se dissentiunt. Primum divisit ineleganter; Cur id non ita fit? Istam voluptatem perpetuam quis potest praestare sapienti? Non est igitur voluptas bonum. Ut aliquid scire se gaudeant? Tu quidem reddes; Quonam, inquit, modo? Bonum valitudo: miser morbus. Si longus, levis dictata sunt. Quaerimus enim finem bonorum. Aliud igitur esse censet gaudere, aliud non dolere. Ut aliquid scire se gaudeant? Diodorus, eius auditor, adiungit ad honestatem vacuitatem doloris. Ea possunt paria non esse. Beatum, inquit. Suo genere perveniant ad extremum; Sit sane ista voluptas. Itaque ad tempus ad Pisonem omnes. Cur deinde Metrodori liberos commendas? Erat enim res aperta. At multis se probavit. Non laboro, inquit, de nomine. Immo alio genere; Vide, quantum, inquam, fallare, Torquate. Omnis enim est natura diligens sui. Illa videamus, quae a te de amicitia dicta sunt. Tanta vis admonitionis inest in locis; "/>
+        <column name="ID_USER_OPEN_BY" value="7"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-17 11:45:26"/>
+        <column name="DATE_END" value="2022-10-19 11:45:26"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="90"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu teclado está queimado. Preciso de conselho."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non est igitur summum malum dolor. Immo videri fortasse. Sed quod proximum fuit non vidit. Summum ením bonum exposuit vacuitatem doloris; Duo Reges: constructio interrete. Aliter homines, aliter philosophos loqui putas oportere? Cur deinde Metrodori liberos commendas? Sin aliud quid voles, postea. Suo genere perveniant ad extremum; Quare ad ea primum, si videtur; Beatus sibi videtur esse moriens. Cum audissem Antiochum, Brute, ut solebam, cum M. Iam enim adesse poterit. Deprehensus omnem poenam contemnet. Oratio me istius philosophi non offendit; At multis malis affectus. Quid igitur, inquit, eos responsuros putas? Quid de Platone aut de Democrito loquar? Summum ením bonum exposuit vacuitatem doloris; Utilitatis causa amicitia est quaesita. Poterat autem inpune; Id est enim, de quo quaerimus. Quid est igitur, inquit, quod requiras? Quae hic rei publicae vulnera inponebat, eadem ille sanabat. Quid sequatur, quid repugnet, vident. Cur id non ita fit? Est enim effectrix multarum et magnarum voluptatum. Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. In schola desinis. Quid sequatur, quid repugnet, vident. Ad eos igitur converte te, quaeso. Bonum incolumis acies: misera caecitas. Sed nimis multa. Quae duo sunt, unum facit. Haec quo modo conveniant, non sane intellego. Ex rebus enim timiditas, non ex vocabulis nascitur. Scrupulum, inquam, abeunti; Audeo dicere, inquit. Quare attende, quaeso. Primum quid tu dicis breve? Est, ut dicis, inquam. Eadem fortitudinis ratio reperietur. Sed plane dicit quod intellegit. "/>
+        <column name="ID_USER_OPEN_BY" value="9"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-23 18:30:27"/>
+        <column name="DATE_END" value="2022-10-25 18:30:27"/>
+        <column name="ENABLE" valueBoolean="TRUE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="91"/>
+        <column name="STATUS" value="4"/>
+        <column name="TITLE" value="Meu PC está com problemas. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Restatis igitur vos; At multis malis affectus. Conferam avum tuum Drusum cum C. De vacuitate doloris eadem sententia erit. Sed haec in pueris; Quaerimus enim finem bonorum. Istam voluptatem perpetuam quis potest praestare sapienti? Mihi, inquam, qui te id ipsum rogavi? Bonum incolumis acies: misera caecitas. Itaque hic ipse iam pridem est reiectus; Hoc sic expositum dissimile est superiori. Sed ille, ut dixi, vitiose. Praeclare hoc quidem. Duo Reges: constructio interrete. Mihi enim satis est, ipsis non satis. Sin aliud quid voles, postea. Negat enim summo bono afferre incrementum diem. At certe gravius. Sed ad bona praeterita redeamus. Idem iste, inquam, de voluptate quid sentit? Tu vero, inquam, ducas licet, si sequetur; Contemnit enim disserendi elegantiam, confuse loquitur. Suo genere perveniant ad extremum; Quonam, inquit, modo? Idem iste, inquam, de voluptate quid sentit? Est, ut dicis, inquam. Collatio igitur ista te nihil iuvat. Ubi ut eam caperet aut quando? De vacuitate doloris eadem sententia erit. Tu enim ista lenius, hic Stoicorum more nos vexat. Qui est in parvis malis. Inquit, dasne adolescenti veniam? Tollenda est atque extrahenda radicitus. Utram tandem linguam nescio? Quaerimus enim finem bonorum. Sed ille, ut dixi, vitiose. "/>
+        <column name="ID_USER_OPEN_BY" value="6"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-10 13:20:43"/>
+        <column name="DATE_END" value="2022-10-11 13:20:43"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="92"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu computador está pifado. Preciso de conselho."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim semper illud extra est, quod arte comprehenditur. Non est ista, inquam, Piso, magna dissensio. Cyrenaici quidem non recusant; Duo Reges: constructio interrete. Non laboro, inquit, de nomine. Cave putes quicquam esse verius. Vide, quantum, inquam, fallare, Torquate. At certe gravius. Quis istud possit, inquit, negare? Primum Theophrasti, Strato, physicum se voluit; Quid de Platone aut de Democrito loquar? Istam voluptatem perpetuam quis potest praestare sapienti? "/>
+        <column name="ID_USER_OPEN_BY" value="8"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-12 15:43:17"/>
+        <column name="DATE_END" value="2022-10-13 15:43:17"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="93"/>
+        <column name="STATUS" value="3"/>
+        <column name="TITLE" value="Meu monitor está sumido. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Restatis igitur vos; Sint ista Graecorum; Quam ob rem tandem, inquit, non satisfacit? Sed ille, ut dixi, vitiose. Nihil sane. Duo Reges: constructio interrete. In schola desinis. Potius inflammat, ut coercendi magis quam dedocendi esse videantur. Honesta oratio, Socratica, Platonis etiam. Non igitur bene. Quae similitudo in genere etiam humano apparet. An tu me de L. Hoc tu nunc in illo probas. Vestri haec verecundius, illi fortasse constantius. Negare non possum. Bonum liberi: misera orbitas. Qua tu etiam inprudens utebare non numquam. Videsne quam sit magna dissensio? Sin aliud quid voles, postea. Itaque hic ipse iam pridem est reiectus; Eam tum adesse, cum dolor omnis absit; "/>
+        <column name="ID_USER_OPEN_BY" value="9"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-22 18:55:00"/>
+        <column name="DATE_END" value="2022-10-24 18:55:00"/>
+        <column name="ENABLE" valueBoolean="TRUE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="94"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu monitor está pifado. Preciso de ajuda."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bonum patria: miserum exilium. Quae quidem sapientes sequuntur duce natura tamquam videntes; Neque solum ea communia, verum etiam paria esse dixerunt. Multoque hoc melius nos veriusque quam Stoici. Duo Reges: constructio interrete. Id mihi magnum videtur. Si enim ad populum me vocas, eum. Utilitatis causa amicitia est quaesita. Memini me adesse P. At hoc in eo M. Sed ille, ut dixi, vitiose. Iam contemni non poteris. Est, ut dicis, inquit; Immo alio genere; Quonam, inquit, modo? Mihi enim satis est, ipsis non satis. Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Sed ad bona praeterita redeamus. Quod iam a me expectare noli. Duo enim genera quae erant, fecit tria. Traditur, inquit, ab Epicuro ratio neglegendi doloris. Nihilo magis. Hoc simile tandem est? Tibi hoc incredibile, quod beatissimum. Qua tu etiam inprudens utebare non numquam. Ecce aliud simile dissimile. Expressa vero in iis aetatibus, quae iam confirmatae sunt. Eam tum adesse, cum dolor omnis absit; Quae contraria sunt his, malane? An vero, inquit, quisquam potest probare, quod perceptfum, quod. Quippe: habes enim a rhetoribus; Deprehensus omnem poenam contemnet. Itaque hic ipse iam pridem est reiectus; Nam de isto magna dissensio est. Tecum optime, deinde etiam cum mediocri amico. Quod autem satis est, eo quicquid accessit, nimium est; Is es profecto tu. Quibusnam praeteritis? Respondent extrema primis, media utrisque, omnia omnibus. Cur id non ita fit? Hoc non est positum in nostra actione. "/>
+        <column name="ID_USER_OPEN_BY" value="13"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-13 21:41:47"/>
+        <column name="DATE_END" value="2022-10-15 21:41:47"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="95"/>
+        <column name="STATUS" value="1"/>
+        <column name="TITLE" value="Meu sistema está sumido. Preciso de dinheiro."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Explanetur igitur. Quae hic rei publicae vulnera inponebat, eadem ille sanabat. Hunc vos beatum; Tum ille: Ain tandem? Quod totum contra est. Bonum valitudo: miser morbus. Iam in altera philosophiae parte. Memini vero, inquam; Quid nunc honeste dicit? Quid enim est a Chrysippo praetermissum in Stoicis? Inde igitur, inquit, ordiendum est. Tu quidem reddes; Pauca mutat vel plura sane; Idemne, quod iucunde? Aliter enim explicari, quod quaeritur, non potest. Tu vero, inquam, ducas licet, si sequetur; Et quod est munus, quod opus sapientiae? Et harum quidem rerum facilis est et expedita distinctio. Ille enim occurrentia nescio quae comminiscebatur; Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Tu vero, inquam, ducas licet, si sequetur; Illis videtur, qui illud non dubitant bonum dicere -; Tum Quintus: Est plane, Piso, ut dicis, inquit. Tum Torquatus: Prorsus, inquit, assentior; Age, inquies, ista parva sunt. Duo Reges: constructio interrete. Pauca mutat vel plura sane; Iam in altera philosophiae parte. Si longus, levis dictata sunt. Ac tamen hic mallet non dolere. Murenam te accusante defenderem. Sed residamus, inquit, si placet. "/>
+        <column name="ID_USER_OPEN_BY" value="12"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-12 22:53:57"/>
+        <column name="DATE_END" value="2022-10-13 22:53:57"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="96"/>
+        <column name="STATUS" value="0"/>
+        <column name="TITLE" value="Meu teclado está queimado. Preciso de ajuda."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Avaritiamne minuis? Sin aliud quid voles, postea. Quid est enim aliud esse versutum? Equidem, sed audistine modo de Carneade? Quodsi ipsam honestatem undique pertectam atque absolutam. Haec quo modo conveniant, non sane intellego. Hoc simile tandem est? Claudii libidini, qui tum erat summo ne imperio, dederetur. Quae cum dixisset paulumque institisset, Quid est? Si quicquam extra virtutem habeatur in bonis. Haec para/doca illi, nos admirabilia dicamus. Primum in nostrane potestate est, quid meminerimus? Sit enim idem caecus, debilis. Qui convenit? Quo igitur, inquit, modo? Tu quidem reddes; Hic ambiguo ludimur. Quonam modo? Sequitur disserendi ratio cognitioque naturae; At enim hic etiam dolore. Si mala non sunt, iacet omnis ratio Peripateticorum. Habes, inquam, Cato, formam eorum, de quibus loquor, philosophorum. Facillimum id quidem est, inquam. Quid sequatur, quid repugnet, vident. Haec dicuntur inconstantissime. Ita prorsus, inquam; At coluit ipse amicitias. Istam voluptatem, inquit, Epicurus ignorat? Iam contemni non poteris. Eadem nunc mea adversum te oratio est. Audeo dicere, inquit. Sed ne, dum huic obsequor, vobis molestus sim. Summum ením bonum exposuit vacuitatem doloris; Haec para/doca illi, nos admirabilia dicamus. Duo Reges: constructio interrete. Si quidem, inquit, tollerem, sed relinquo. Philosophi autem in suis lectulis plerumque moriuntur. Invidiosum nomen est, infame, suspectum. Fortasse id optimum, sed ubi illud: Plus semper voluptatis? "/>
+        <column name="ID_USER_OPEN_BY" value="7"/>
+        <column name="ID_USER_RESPONSIBLE" value="4"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-09 05:19:24"/>
+        <column name="DATE_END" value="2022-10-11 05:19:24"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="97"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu mouse está pifado. Preciso de auxilio."/>
+        <column name="PRIORITY" value="0"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sedulo, inquam, faciam. Innumerabilia dici possunt in hanc sententiam, sed non necesse est. Age sane, inquam. Duo enim genera quae erant, fecit tria. Duo Reges: constructio interrete. Vide, quaeso, rectumne sit. Summum ením bonum exposuit vacuitatem doloris; Verum hoc idem saepe faciamus. Sin aliud quid voles, postea. Hunc vos beatum; Negat esse eam, inquit, propter se expetendam. Beatus sibi videtur esse moriens. Quae cum dixisset, finem ille. Sint ista Graecorum; Illa videamus, quae a te de amicitia dicta sunt. Quam nemo umquam voluptatem appellavit, appellat; Illi enim inter se dissentiunt. Sed ego in hoc resisto; Quid autem habent admirationis, cum prope accesseris? Sed fortuna fortis; Numquam facies. Gloriosa ostentatio in constituendo summo bono. Comprehensum, quod cognitum non habet? De vacuitate doloris eadem sententia erit. Et ille ridens: Video, inquit, quid agas; Tum mihi Piso: Quid ergo? Scrupulum, inquam, abeunti; Traditur, inquit, ab Epicuro ratio neglegendi doloris. Recte dicis; Quorum altera prosunt, nocent altera. At certe gravius. Sit enim idem caecus, debilis. Haeret in salebra. Nunc vides, quid faciat. Quid ad utilitatem tantae pecuniae? In schola desinis. Beatus sibi videtur esse moriens. Venit ad extremum; Quantum Aristoxeni ingenium consumptum videmus in musicis? Estne, quaeso, inquam, sitienti in bibendo voluptas? Ita relinquet duas, de quibus etiam atque etiam consideret. Cui Tubuli nomen odio non est? Hoc Hieronymus summum bonum esse dixit. Beatus sibi videtur esse moriens. Non est igitur voluptas bonum. Tum ille: Ain tandem? Haec para/doca illi, nos admirabilia dicamus. Beatus autem esse in maximarum rerum timore nemo potest. Laboro autem non sine causa; Eaedem res maneant alio modo. Sit enim idem caecus, debilis. "/>
+        <column name="ID_USER_OPEN_BY" value="10"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="2"/>
+        <column name="DATE_START" value="2022-10-20 18:15:36"/>
+        <column name="DATE_END" value="2022-10-22 18:15:36"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="98"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu mouse está estragado. Preciso de auxilio."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ea possunt paria non esse. Nunc haec primum fortasse audientis servire debemus. Minime vero, inquit ille, consentit. Duo Reges: constructio interrete. Res enim concurrent contrariae. Idemne potest esse dies saepius, qui semel fuit? Dicimus aliquem hilare vivere; Ita enim vivunt quidam, ut eorum vita refellatur oratio. "/>
+        <column name="ID_USER_OPEN_BY" value="15"/>
+        <column name="ID_USER_RESPONSIBLE" value="5"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-20 18:06:48"/>
+        <column name="DATE_END" value="2022-10-21 18:06:48"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="99"/>
+        <column name="STATUS" value="2"/>
+        <column name="TITLE" value="Meu sistema está pifado. Preciso de conselho."/>
+        <column name="PRIORITY" value="2"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod equidem non reprehendo; Aliter homines, aliter philosophos loqui putas oportere? Quamquam te quidem video minime esse deterritum. Nemo igitur esse beatus potest. Duo Reges: constructio interrete. Quis est tam dissimile homini. Quod equidem non reprehendo; Quid dubitas igitur mutare principia naturae? Habent enim et bene longam et satis litigiosam disputationem. Ergo illi intellegunt quid Epicurus dicat, ego non intellego? Sed in rebus apertissimis nimium longi sumus. Haec igitur Epicuri non probo, inquam. Utilitatis causa amicitia est quaesita. Summae mihi videtur inscitiae. Non potes, nisi retexueris illa. Quodsi ipsam honestatem undique pertectam atque absolutam. At enim hic etiam dolore. Maximus dolor, inquit, brevis est. Quonam, inquit, modo? Collatio igitur ista te nihil iuvat. Nunc agendum est subtilius. Tu quidem reddes; Claudii libidini, qui tum erat summo ne imperio, dederetur. Minime vero istorum quidem, inquit. Age sane, inquam. Sed fortuna fortis; Ut proverbia non nulla veriora sint quam vestra dogmata. Age sane, inquam. Sed hoc sane concedamus. Explanetur igitur. Avaritiamne minuis? De illis, cum volemus. Ea possunt paria non esse. Inquit, dasne adolescenti veniam? Sed quae tandem ista ratio est? Hoc loco tenere se Triarius non potuit. "/>
+        <column name="ID_USER_OPEN_BY" value="13"/>
+        <column name="ID_USER_RESPONSIBLE" value="1"/>
+        <column name="ID_AREA" value="1"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-12 13:08:50"/>
+        <column name="DATE_END" value="2022-10-13 13:08:50"/>
+        <column name="ENABLE" valueBoolean="FALSE"/>
+    </insert>
+    
+    <insert tableName="TBL_TICKET">
+        <column name="ID" value="100"/>
+        <column name="STATUS" value="4"/>
+        <column name="TITLE" value="Meu cachorro está estragado. Preciso de um companheiro."/>
+        <column name="PRIORITY" value="1"/>
+        <column name="DESCRIPTION" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Estne, quaeso, inquam, sitienti in bibendo voluptas? Quae diligentissime contra Aristonem dicuntur a Chryippo. Quid sequatur, quid repugnet, vident. Duo Reges: constructio interrete. Non potes, nisi retexueris illa. Cui Tubuli nomen odio non est? Idemne potest esse dies saepius, qui semel fuit? Philosophi autem in suis lectulis plerumque moriuntur. Hic nihil fuit, quod quaereremus. Quis enim redargueret? Tecum optime, deinde etiam cum mediocri amico. Atqui reperies, inquit, in hoc quidem pertinacem; Cum praesertim illa perdiscere ludus esset. Haec igitur Epicuri non probo, inquam. Haec quo modo conveniant, non sane intellego. Tecum optime, deinde etiam cum mediocri amico. "/>
+        <column name="ID_USER_OPEN_BY" value="11"/>
+        <column name="ID_USER_RESPONSIBLE" value="3"/>
+        <column name="ID_AREA" value="2"/>
+        <column name="ID_CLASSIFICATION" value="1"/>
+        <column name="DATE_START" value="2022-10-23 16:17:21"/>
+        <column name="DATE_END" value="2022-10-24 16:17:21"/>
+        <column name="ENABLE" valueBoolean="TRUE"/>
+    </insert>
+    
+    </changeSet>
+
+</databaseChangeLog>

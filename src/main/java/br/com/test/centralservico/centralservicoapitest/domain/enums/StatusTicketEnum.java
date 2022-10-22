@@ -16,7 +16,7 @@ public enum StatusTicketEnum {
 
     private final int value;
 
-    private StatusTicketEnum(String description, int value) {
+    StatusTicketEnum(String description, int value) {
 
         this.description = description;
 
@@ -31,16 +31,6 @@ public enum StatusTicketEnum {
                 return status;
 
         return NOT_FOUND;
-
-    }
-
-    public static void main(String[] args) {
-
-        System.out.println(getDescByValue(6));
-
-        for(StatusTicketEnum status: StatusTicketEnum.values()) {
-            System.out.println(status + " = " + status.value);
-        }
 
     }
 

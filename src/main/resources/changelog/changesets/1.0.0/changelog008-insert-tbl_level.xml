@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+
+    <changeSet author="Team-CS-devs" id="TBL_LEVEL-2022-10-22-insert">
+
+        <insert tableName="TBL_LEVEL">
+            <column name="ID" value="1"/>
+            <column name="LEVEL_CODE" value="Adm01"/>
+            <column name="LEVEL_NAME" value="Administrador"/>
+            <column name="DESCRIPTION" value="Cargo de administrador geral."/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+        <insert tableName="TBL_LEVEL">
+            <column name="ID" value="2"/>
+            <column name="LEVEL_CODE" value="Fun01"/>
+            <column name="LEVEL_NAME" value="Atendente"/>
+            <column name="DESCRIPTION" value="Cargo de atendente."/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+        <insert tableName="TBL_LEVEL">
+            <column name="ID" value="3"/>
+            <column name="LEVEL_CODE" value="User01"/>
+            <column name="LEVEL_NAME" value="Usuário"/>
+            <column name="DESCRIPTION" value="O dito cujo."/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

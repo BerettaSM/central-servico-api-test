@@ -14,7 +14,7 @@ public enum PriorityTicketEnum {
 
     private final int value;
 
-    private PriorityTicketEnum(String description, int value) {
+    PriorityTicketEnum(String description, int value) {
         this.description = description;
         this.value = value;
     }

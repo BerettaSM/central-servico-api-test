@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+
+    <changeSet author="Team-CS-devs" id="TBL_USER-2022-10-22-insert">
+
+        <insert tableName="TBL_USER">
+            <column name="ID" value="1"/>
+            <column name="FULL_NAME" value="Ramon Saviato"/>
+            <column name="ID_LEVEL" value="1"/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+        <insert tableName="TBL_USER">
+            <column name="ID" value="2"/>
+            <column name="FULL_NAME" value="Frank Matos"/>
+            <column name="ID_LEVEL" value="1"/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+        <insert tableName="TBL_USER">
+            <column name="ID" value="3"/>
+            <column name="FULL_NAME" value="Lady França"/>
+            <column name="ID_LEVEL" value="1"/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+        <insert tableName="TBL_USER">
+            <column name="ID" value="4"/>
+            <column name="FULL_NAME" value="Warley Nobre"/>
+            <column name="ID_LEVEL" value="1"/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+        <insert tableName="TBL_USER">
+            <column name="ID" value="5"/>
+            <column name="FULL_NAME" value="Anderson Silva"/>
+            <column name="ID_LEVEL" value="1"/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+        <insert tableName="TBL_USER">
+            <column name="ID" value="6"/>
+            <column name="FULL_NAME" value="João da Silva"/>
+            <column name="ID_LEVEL" value="2"/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+        <insert tableName="TBL_USER">
+            <column name="ID" value="7"/>
+            <column name="FULL_NAME" value="Josisnelson Pereira"/>
+            <column name="ID_LEVEL" value="2"/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+        <insert tableName="TBL_USER">
+            <column name="ID" value="8"/>
+            <column name="FULL_NAME" value="Hemengarda Fiorentino"/>
+            <column name="ID_LEVEL" value="2"/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+        <insert tableName="TBL_USER">
+            <column name="ID" value="9"/>
+            <column name="FULL_NAME" value="Mariscleuza Souza"/>
+            <column name="ID_LEVEL" value="2"/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+        <insert tableName="TBL_USER">
+            <column name="ID" value="10"/>
+            <column name="FULL_NAME" value="Creuza de Gezuis"/>
+            <column name="ID_LEVEL" value="2"/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+        <insert tableName="TBL_USER">
+            <column name="ID" value="11"/>
+            <column name="FULL_NAME" value="Joscleusson Martins"/>
+            <column name="ID_LEVEL" value="2"/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+        <insert tableName="TBL_USER">
+            <column name="ID" value="12"/>
+            <column name="FULL_NAME" value="João das Neves"/>
+            <column name="ID_LEVEL" value="2"/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+        <insert tableName="TBL_USER">
+            <column name="ID" value="13"/>
+            <column name="FULL_NAME" value="Walter Branco"/>
+            <column name="ID_LEVEL" value="2"/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+        <insert tableName="TBL_USER">
+            <column name="ID" value="14"/>
+            <column name="FULL_NAME" value="Klascomenau Pires"/>
+            <column name="ID_LEVEL" value="2"/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+        <insert tableName="TBL_USER">
+            <column name="ID" value="15"/>
+            <column name="FULL_NAME" value="Juanda Gomes"/>
+            <column name="ID_LEVEL" value="2"/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
