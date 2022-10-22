@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+    <changeSet author="Team-CS-devs" id="TBL_USER-2022-05-21-create-table">
+
+        <createTable tableName="TBL_USER" remarks="Table to save the USERS.">
+
+            <column name="ID" type="integer" autoIncrement="true" remarks="Table Id.">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_ID_USER"/>
+            </column>
+
+            <column name="FULL_NAME" type="VARCHAR(50 ${char})" remarks="User full name.">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="ID_LEVEL" type="integer" remarks="FK for TBL_LEVEL.">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="ENABLE" type="BOOLEAN" remarks="Set if this user is enable.">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+        <addForeignKeyConstraint
+                baseColumnNames="ID_LEVEL"
+                baseTableName="TBL_USER"
+                constraintName="FK_USER_TO_LEVEL"
+                deferrable="false"
+                initiallyDeferred="false"
+                onDelete="RESTRICT"
+                onUpdate="RESTRICT"
+                referencedColumnNames="ID"
+                referencedTableName="TBL_LEVEL"
+                validate="true"/>
+
+    </changeSet>
+</databaseChangeLog>

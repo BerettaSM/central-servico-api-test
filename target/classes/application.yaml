@@ -1,0 +1,24 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    username: cs-db
+    password: cs-db
+    url: jdbc:mysql://localhost:3306/cs-db?createDatabaseIfNotExist=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 100
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  liquibase:
+    enabled: true
+    change-log: classpath:/changelog/databaseChangelog.xml
+  liquibase-heart-beat-aware-lock:
+    change-log-lock-wait-time: PT2M
+    change-log-lock-poll-rate: PT1S

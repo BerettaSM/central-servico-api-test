@@ -1,0 +1,21 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <include file="changelog001-create-table-tbl_level.xml" relativeToChangelogFile="true"/>
+
+    <include file="changelog002-create-table-tbl_classification.xml" relativeToChangelogFile="true"/>
+
+    <include file="changelog003-create-table-tbl_area.xml" relativeToChangelogFile="true"/>
+
+    <include file="changelog004-create-table-tbl_user.xml" relativeToChangelogFile="true"/>
+
+    <include file="changelog005-create-table-tbl_ticket.xml" relativeToChangelogFile="true"/>
+
+    <include file="changelog006-insert-tbl_classification.xml" relativeToChangelogFile="true"/>
+
+    <include file="changelog007-insert-tbl_area.xml" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>

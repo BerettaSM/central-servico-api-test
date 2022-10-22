@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+    <changeSet author="Team-CS-devs" id="TBL_CLASSIFICATION-2022-05-21-create-table">
+
+        <createTable tableName="TBL_CLASSIFICATION" remarks="Table to save the CLASSIFICATIONS.">
+
+            <column name="ID" type="integer" autoIncrement="true" remarks="Table Id.">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_ID_CLASSIFICATION"/>
+            </column>
+
+            <column name="DESCRIPTION" type="VARCHAR(50 ${char})" remarks="Classification description.">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="ADD_TIME" type="NUMERIC" remarks="Time to add, in hours.">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="ENABLE" type="BOOLEAN" remarks="Set if this classification is enable.">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>

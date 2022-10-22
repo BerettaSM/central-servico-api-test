@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+    <changeSet author="Team-CS-devs" id="TBL_CLASSIFICATION-2022-05-22-insert">
+        <insert tableName="TBL_AREA">
+            <column name="ID" value="1"/>
+            <column name="DESCRIPTION" value="Time de Sustentação N1"/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+        <insert tableName="TBL_AREA">
+            <column name="ID" value="2"/>
+            <column name="DESCRIPTION" value="Time de Sustentação N2"/>
+            <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+    <changeSet author="Team-CS-devs" id="TBL_LEVEL-2022-05-21-create-table">
+
+        <createTable tableName="TBL_LEVEL" remarks="Table to save the Users LEVELS.">
+
+            <column name="ID" type="integer" autoIncrement="true" remarks="Table Id.">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_ID_LEVEL"/>
+            </column>
+
+            <column name="LEVEL_CODE" type="VARCHAR(8 ${char})" remarks="Level code.">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="LEVEL_NAME" type="VARCHAR(50 ${char})" remarks="Level name.">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="DESCRIPTION" type="VARCHAR(50 ${char})" remarks="Level description.">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="ENABLE" type="BOOLEAN" remarks="Set if this level is enable.">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

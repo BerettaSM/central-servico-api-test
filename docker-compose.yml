@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    container_name: cs-db
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: 'cs-db'
+      MYSQL_USER: 'cs-db'
+      MYSQL_PASSWORD: 'cs-db'
+      MYSQL_ROOT_PASSWORD: 'cs-db'
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./others/volumes/mysql:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysql" ,"-h", "mysql", "-P", "3306", "-u", "root", "-e", "SELECT 1", "cache"]
+      interval: 20s
+      timeout: 5s
+      retries: 5
