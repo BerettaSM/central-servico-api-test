@@ -6,7 +6,6 @@ import br.com.test.centralservico.centralservicoapitest.domain.enums.StatusTicke
 import br.com.test.centralservico.centralservicoapitest.domain.model.Ticket;
 import br.com.test.centralservico.centralservicoapitest.persistence.TicketRepository;
 import br.com.test.centralservico.centralservicoapitest.service.TicketService;
-import br.com.test.centralservico.centralservicoapitest.service.UserService;
 import br.com.test.centralservico.centralservicoapitest.util.MyDateUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,11 +30,12 @@ public class TicketServiceImpl implements TicketService {
 
         PageRequest pageRequest = PageRequest.of(page, size, Sort.Direction.ASC, "id");
 
-        if(status == 0)
+        if(status == StatusTicketEnum.NOT_FOUND.getValue())
             tickets = new PageImpl<>(ticketRepository.findAll(), pageRequest, size);
 
         else
             tickets = new PageImpl<>(ticketRepository.findAllByStatus(status), pageRequest, size);
+
 
         return tickets.map(new Function<Ticket, TicketDto>() {
 
