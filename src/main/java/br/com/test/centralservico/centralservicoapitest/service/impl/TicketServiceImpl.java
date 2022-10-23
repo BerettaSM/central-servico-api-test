@@ -1,11 +1,9 @@
 package br.com.test.centralservico.centralservicoapitest.service.impl;
 
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketDto;
-import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketRequestDto;
 import br.com.test.centralservico.centralservicoapitest.domain.enums.PriorityTicketEnum;
 import br.com.test.centralservico.centralservicoapitest.domain.enums.StatusTicketEnum;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Ticket;
-import br.com.test.centralservico.centralservicoapitest.domain.model.User;
 import br.com.test.centralservico.centralservicoapitest.persistence.TicketRepository;
 import br.com.test.centralservico.centralservicoapitest.service.TicketService;
 import br.com.test.centralservico.centralservicoapitest.service.UserService;
@@ -26,8 +24,6 @@ import java.util.function.Function;
 public class TicketServiceImpl implements TicketService {
 
     private final TicketRepository ticketRepository;
-
-    private final UserService userService;
 
     public Page<TicketDto> findAll(int status, int page, int size) {
 
