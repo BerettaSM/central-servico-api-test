@@ -2,10 +2,13 @@ package br.com.test.centralservico.centralservicoapitest.controller;
 
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketDto;
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketRequestDto;
+import br.com.test.centralservico.centralservicoapitest.domain.enums.PriorityTicketEnum;
+import br.com.test.centralservico.centralservicoapitest.domain.model.Area;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Classification;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Ticket;
 import br.com.test.centralservico.centralservicoapitest.domain.model.User;
 import br.com.test.centralservico.centralservicoapitest.exception.ResourceNotFoundException;
+import br.com.test.centralservico.centralservicoapitest.service.AreaService;
 import br.com.test.centralservico.centralservicoapitest.service.ClassificationService;
 import br.com.test.centralservico.centralservicoapitest.service.TicketService;
 import br.com.test.centralservico.centralservicoapitest.service.UserService;
@@ -31,9 +34,11 @@ import java.util.Optional;
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class TicketController {
 
-    private final TicketService ticketService;
+    private final AreaService areaService;
 
     private final UserService userService;
+
+    private final TicketService ticketService;
 
     private final ClassificationService classificationService;
 
@@ -82,11 +87,19 @@ public class TicketController {
         if(classification.isEmpty())
             throw new ResourceNotFoundException("O ticket não possui uma classificação válida.");
 
-        Ticket ticketToSave = ticketRequestDto.getTicket();
+        Optional<Area> area = areaService.findById(ticketRequestDto.getAreaId());
 
-        ticketToSave.setOpenedBy(openedBy.get());
+        if(area.isEmpty())
+            throw new ResourceNotFoundException("O ticket não possui uma área válida.");
 
-        ticketToSave.setClassification(classification.get());
+        Ticket ticketToSave = Ticket.builder()
+                                    .title(ticketRequestDto.getTitle())
+                                    .description(ticketRequestDto.getDescription())
+                                    .priority(ticketRequestDto.getPriority())
+                                    .openedBy(openedBy.get())
+                                    .classification(classification.get())
+                                    .area(area.get())
+                                    .build();
 
         Optional<TicketDto> savedTicket = ticketService.save(ticketToSave);
 

@@ -1,7 +1,6 @@
 package br.com.test.centralservico.centralservicoapitest.domain.dto;
 
 
-import br.com.test.centralservico.centralservicoapitest.domain.model.Ticket;
 import lombok.Builder;
 import lombok.Data;
 
@@ -9,9 +8,15 @@ import lombok.Data;
 @Data
 public class TicketRequestDto {
 
-    private Ticket ticket;
+    private String title;
+
+    private String description;
+
+    private Integer priority;
 
     private Long userId;
+
+    private Long areaId;
 
     private Long classificationId;
 

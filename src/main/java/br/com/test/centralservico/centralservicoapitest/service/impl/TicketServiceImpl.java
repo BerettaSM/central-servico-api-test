@@ -10,15 +10,12 @@ import br.com.test.centralservico.centralservicoapitest.util.MyDateUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Optional;
-import java.util.function.Function;
 
 @Service
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
@@ -63,8 +60,6 @@ public class TicketServiceImpl implements TicketService {
 
         LocalDateTime endDate = startDate.plusHours(addTime);
 
-        ticket.setId(0L);
-
         ticket.setStatus(StatusTicketEnum.OPEN.getValue());
 
         ticket.setDateStart(MyDateUtils.toFormattedString(startDate));
@@ -104,11 +99,11 @@ public class TicketServiceImpl implements TicketService {
 
     private TicketDto convertFromTicketToDto(Ticket ticket) {
 
-        String statusDescription = StatusTicketEnum.getDescByValue(ticket.getStatus())
+        String statusDescription = StatusTicketEnum.getEnumByValue(ticket.getStatus())
                                                    .getDescription();
 
-        String priorityDescription = PriorityTicketEnum.getDescByValue(ticket.getPriority())
-                                                  .getDescription();
+        String priorityDescription = PriorityTicketEnum.getEnumByValue(ticket.getPriority())
+                                                       .getDescription();
 
         return TicketDto.builder()
                         .ticketId(ticket.getId())

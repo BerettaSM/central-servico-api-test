@@ -24,13 +24,23 @@ public enum StatusTicketEnum {
 
     }
 
-    public static StatusTicketEnum getDescByValue(int value) {
+    public static StatusTicketEnum getEnumByValue(int value) {
 
         for(StatusTicketEnum status: StatusTicketEnum.values())
             if(status.value == value)
                 return status;
 
         return NOT_FOUND;
+
+    }
+
+    public static int getValueByDescription(String description) {
+
+        for(StatusTicketEnum status: StatusTicketEnum.values())
+            if(status.description.equals(description))
+                return status.value;
+
+        return NOT_FOUND.value;
 
     }
 
