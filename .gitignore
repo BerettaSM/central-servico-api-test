@@ -23,6 +23,8 @@
 hs_err_pid*
 replay_pid*
 
+others/
+
 target/
 pom.xml.tag
 pom.xml.releaseBackup
