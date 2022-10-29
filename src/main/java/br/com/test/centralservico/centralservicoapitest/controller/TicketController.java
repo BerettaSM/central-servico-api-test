@@ -1,8 +1,8 @@
 package br.com.test.centralservico.centralservicoapitest.controller;
 
+import br.com.test.centralservico.centralservicoapitest.domain.dto.Mapper;
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketDto;
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketRequestDto;
-import br.com.test.centralservico.centralservicoapitest.domain.enums.PriorityTicketEnum;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Area;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Classification;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Ticket;
@@ -63,9 +63,9 @@ public class TicketController {
     }
 
     @GetMapping("/{ticketId}")
-    public ResponseEntity<Optional<TicketDto>> findById(@PathVariable Long ticketId) {
+    public ResponseEntity<Optional<Ticket>> findById(@PathVariable Long ticketId) {
 
-        Optional<TicketDto> ticket = ticketService.findById(ticketId);
+        Optional<Ticket> ticket = ticketService.findById(ticketId);
 
         if(ticket.isEmpty())
             throw new ResourceNotFoundException("Nenhum ticket com o id " + ticketId + " foi encontrado.");
@@ -75,7 +75,7 @@ public class TicketController {
     }
 
     @PostMapping
-    public ResponseEntity<Optional<TicketDto>> save(@RequestBody TicketRequestDto ticketRequestDto) {
+    public ResponseEntity<Optional<Ticket>> save(@RequestBody TicketRequestDto ticketRequestDto) {
 
         Optional<User> openedBy = userService.findById(ticketRequestDto.getUserId());
 
@@ -102,7 +102,7 @@ public class TicketController {
                                     .area(area.get())
                                     .build();
 
-        Optional<TicketDto> savedTicket = ticketService.save(ticketToSave);
+        Optional<Ticket> savedTicket = ticketService.save(ticketToSave);
 
         return ResponseEntity.status(HttpStatus.OK).body(savedTicket);
 
@@ -121,9 +121,9 @@ public class TicketController {
     }
 
     @DeleteMapping("/{ticketId}")
-    public ResponseEntity<Optional<TicketDto>> deleteById(@PathVariable Long ticketId) {
+    public ResponseEntity<Optional<Ticket>> deleteById(@PathVariable Long ticketId) {
 
-        Optional<TicketDto> ticketToDelete = ticketService.deleteById(ticketId);
+        Optional<Ticket> ticketToDelete = ticketService.deleteById(ticketId);
 
         if(ticketToDelete.isEmpty())
             throw new ResourceNotFoundException("Nenhum ticket com o id " + ticketId + " foi encontrado.");

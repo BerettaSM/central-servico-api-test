@@ -26,7 +26,7 @@
             </column>
             -->
 
-            <column name="PRIORITY" type="integer" remarks="Ticket priority.">
+            <column name="PRIORITY" type="VARCHAR(150 ${char})" remarks="Ticket priority.">
                 <constraints nullable="false"/>
             </column>
 

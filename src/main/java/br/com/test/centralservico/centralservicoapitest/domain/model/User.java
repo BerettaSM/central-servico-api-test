@@ -13,6 +13,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.io.Serializable;
 
@@ -35,8 +37,9 @@ public class User implements Serializable {
     @Column(name = "FULL_NAME")
     private String fullName;
 
-    @Column(name = "ID_LEVEL")
-    private Integer idLevel;
+    @ManyToOne
+    @JoinColumn(name = "ID_LEVEL")
+    private Level idLevel;
 
     @Column(name = "ENABLE")
     private Boolean enabled;

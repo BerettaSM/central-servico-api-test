@@ -40,7 +40,7 @@ public class Ticket implements Serializable {
     private String title;
 
     @Column(name = "PRIORITY")
-    private Integer priority;
+    private String priority;
 
     @Column(name = "DESCRIPTION")
     private String description;

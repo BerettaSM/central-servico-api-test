@@ -1,7 +1,7 @@
 package br.com.test.centralservico.centralservicoapitest.service.impl;
 
+import br.com.test.centralservico.centralservicoapitest.domain.dto.Mapper;
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketDto;
-import br.com.test.centralservico.centralservicoapitest.domain.enums.PriorityTicketEnum;
 import br.com.test.centralservico.centralservicoapitest.domain.enums.StatusTicketEnum;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Ticket;
 import br.com.test.centralservico.centralservicoapitest.persistence.TicketRepository;
@@ -35,24 +35,24 @@ public class TicketServiceImpl implements TicketService {
         else
             tickets = ticketRepository.findAllByStatus(status, pageRequest);
 
-        return tickets.map(this::convertFromTicketToDto);
+        return tickets.map(Mapper::fromTicketToDto);
 
     }
 
     @Override
-    public Optional<TicketDto> findById(Long ticketId) {
+    public Optional<Ticket> findById(Long ticketId) {
 
         Optional<Ticket> ticket = ticketRepository.findById(ticketId);
 
         if(ticket.isEmpty())
             return Optional.empty();
 
-        return Optional.of(convertFromTicketToDto(ticket.get()));
+        return ticket;
 
     }
 
     @Override
-    public Optional<TicketDto> save(Ticket ticket) {
+    public Optional<Ticket> save(Ticket ticket) {
 
         Integer hoursToAdd = ticket.getClassification().getAddTime();
 
@@ -70,7 +70,7 @@ public class TicketServiceImpl implements TicketService {
 
         Ticket savedTicket = ticketRepository.save(ticket);
 
-        return Optional.of(convertFromTicketToDto(savedTicket));
+        return Optional.of(savedTicket);
 
     }
 
@@ -82,12 +82,14 @@ public class TicketServiceImpl implements TicketService {
         if(ticketToUpdate.isEmpty())
             return Optional.empty();
 
+        ticket.setDateUpdated(DateUtils.currentTimeStamp());
+
         return Optional.of(ticketRepository.saveAndFlush(ticket));
 
     }
 
     @Override
-    public Optional<TicketDto> deleteById(Long ticketId) {
+    public Optional<Ticket> deleteById(Long ticketId) {
 
         Optional<Ticket> ticket = ticketRepository.findById(ticketId);
 
@@ -98,34 +100,12 @@ public class TicketServiceImpl implements TicketService {
 
         ticketToDelete.setEnabled(false);
 
+        ticketToDelete.setDateUpdated(DateUtils.currentTimeStamp());
+
         if(ticketToDelete.getStatus() != StatusTicketEnum.CLOSED.getValue())
             ticketToDelete.setStatus(StatusTicketEnum.CANCELLED.getValue());
 
-        return Optional.of(convertFromTicketToDto(ticketRepository.saveAndFlush(ticketToDelete)));
-
-    }
-
-    private TicketDto convertFromTicketToDto(Ticket ticket) {
-
-        String statusDescription = StatusTicketEnum.getEnumByValue(ticket.getStatus())
-                                                   .getDescription();
-
-        String priorityDescription = PriorityTicketEnum.getEnumByValue(ticket.getPriority())
-                                                       .getDescription();
-
-        return TicketDto.builder()
-                        .ticketId(ticket.getId())
-                        .status(ticket.getStatus())
-                        .descStatus(statusDescription)
-                        .title(ticket.getTitle())
-                        .openedBy(ticket.getOpenedBy())
-                        .dateStart(ticket.getDateStart())
-                        .dateEnd(ticket.getDateEnd())
-                        .dateUpdated(ticket.getDateUpdated())
-                        .priority(priorityDescription)
-                        .responsibleUser(ticket.getResponsibleUser())
-                        .onTime(DateUtils.isOnTime(ticket.getDateEnd()))
-                        .build();
+        return Optional.of(ticketRepository.saveAndFlush(ticketToDelete));
 
     }
 

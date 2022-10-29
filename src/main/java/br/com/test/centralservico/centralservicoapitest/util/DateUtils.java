@@ -23,4 +23,10 @@ public abstract class DateUtils {
 
     }
 
+    public static String currentTimeStamp() {
+
+        return LocalDateTime.now().format(formatter);
+
+    }
+
 }

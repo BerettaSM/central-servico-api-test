@@ -16,7 +16,7 @@ public class TicketRequestDto implements Serializable {
 
     private String description;
 
-    private Integer priority;
+    private String priority;
 
     private Long userId;
 
