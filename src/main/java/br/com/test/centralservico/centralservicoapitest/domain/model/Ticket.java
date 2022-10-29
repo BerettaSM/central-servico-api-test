@@ -26,6 +26,8 @@ import java.io.Serializable;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Ticket implements Serializable {
 
+    private static final long serialVersionUID = 9103961671291412533L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")

@@ -2,9 +2,11 @@ package br.com.test.centralservico.centralservicoapitest.controller;
 
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketDto;
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketRequestDto;
+import br.com.test.centralservico.centralservicoapitest.domain.model.Classification;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Ticket;
 import br.com.test.centralservico.centralservicoapitest.domain.model.User;
 import br.com.test.centralservico.centralservicoapitest.exception.ResourceNotFoundException;
+import br.com.test.centralservico.centralservicoapitest.service.ClassificationService;
 import br.com.test.centralservico.centralservicoapitest.service.TicketService;
 import br.com.test.centralservico.centralservicoapitest.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -32,6 +34,8 @@ public class TicketController {
     private final TicketService ticketService;
 
     private final UserService userService;
+
+    private final ClassificationService classificationService;
 
     @GetMapping
     public ResponseEntity<Page<TicketDto>> findAll(@RequestParam(value = "status",
@@ -73,13 +77,20 @@ public class TicketController {
         if(openedBy.isEmpty())
             throw new ResourceNotFoundException("O ticket não está vinculado a nenhum usuário.");
 
-        Ticket ticket = ticketRequestDto.getTicket();
+        Optional<Classification> classification = classificationService.findById(ticketRequestDto.getClassificationId());
 
-        ticket.setOpenedBy(openedBy.get());
+        if(classification.isEmpty())
+            throw new ResourceNotFoundException("O ticket não possui uma classificação válida.");
 
-        Optional<TicketDto> ticketToSave = ticketService.save(ticket);
+        Ticket ticketToSave = ticketRequestDto.getTicket();
 
-        return ResponseEntity.status(HttpStatus.OK).body(ticketToSave);
+        ticketToSave.setOpenedBy(openedBy.get());
+
+        ticketToSave.setClassification(classification.get());
+
+        Optional<TicketDto> savedTicket = ticketService.save(ticketToSave);
+
+        return ResponseEntity.status(HttpStatus.OK).body(savedTicket);
 
     }
 

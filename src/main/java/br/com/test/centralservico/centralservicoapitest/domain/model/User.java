@@ -25,7 +25,7 @@ import java.io.Serializable;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class User implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 5516675241842121584L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

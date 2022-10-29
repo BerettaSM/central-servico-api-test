@@ -13,4 +13,6 @@ public class TicketRequestDto {
 
     private Long userId;
 
+    private Long classificationId;
+
 }

@@ -15,6 +15,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 
@@ -31,22 +33,12 @@ public class TicketServiceImpl implements TicketService {
         PageRequest pageRequest = PageRequest.of(page, size, Sort.Direction.ASC, "id");
 
         if(status == StatusTicketEnum.NOT_FOUND.getValue())
-            tickets = new PageImpl<>(ticketRepository.findAll(), pageRequest, size);
+            tickets = ticketRepository.findAll(pageRequest);
 
         else
-            tickets = new PageImpl<>(ticketRepository.findAllByStatus(status), pageRequest, size);
+            tickets = ticketRepository.findAllByStatus(status, pageRequest);
 
-
-        return tickets.map(new Function<Ticket, TicketDto>() {
-
-            @Override
-            public TicketDto apply(Ticket ticket) {
-
-                return convertFromTicketToDto(ticket);
-
-            }
-
-        });
+        return tickets.map(this::convertFromTicketToDto);
 
     }
 
@@ -65,16 +57,25 @@ public class TicketServiceImpl implements TicketService {
     @Override
     public Optional<TicketDto> save(Ticket ticket) {
 
-        Ticket ticketToSave = Ticket.builder()
-                                    .id(0L)
-                                    .status(StatusTicketEnum.OPEN.getValue())
-                                    .title(ticket.getTitle())
-                                    .priority(ticket.getPriority())
-                                    .description(ticket.getDescription())
-                                    .openedBy(ticket.getOpenedBy())
-                                    .build();
+        Integer addTime = ticket.getClassification().getAddTime();
 
-        return Optional.of(convertFromTicketToDto(ticketToSave));
+        LocalDateTime startDate = LocalDateTime.now();
+
+        LocalDateTime endDate = startDate.plusHours(addTime);
+
+        ticket.setId(0L);
+
+        ticket.setStatus(StatusTicketEnum.OPEN.getValue());
+
+        ticket.setDateStart(MyDateUtils.toFormattedString(startDate));
+
+        ticket.setDateEnd(MyDateUtils.toFormattedString(endDate));
+
+        ticket.setEnabled(true);
+
+        Ticket savedTicket = ticketRepository.save(ticket);
+
+        return Optional.of(convertFromTicketToDto(savedTicket));
 
     }
 
@@ -106,7 +107,7 @@ public class TicketServiceImpl implements TicketService {
         String statusDescription = StatusTicketEnum.getDescByValue(ticket.getStatus())
                                                    .getDescription();
 
-        String priorityString = PriorityTicketEnum.getDescByValue(ticket.getPriority())
+        String priorityDescription = PriorityTicketEnum.getDescByValue(ticket.getPriority())
                                                   .getDescription();
 
         return TicketDto.builder()
@@ -118,7 +119,7 @@ public class TicketServiceImpl implements TicketService {
                         .dateStart(ticket.getDateStart())
                         .dateEnd(ticket.getDateEnd())
                         .dateUpdated(ticket.getDateUpdated())
-                        .priority(priorityString)
+                        .priority(priorityDescription)
                         .responsibleUser(ticket.getResponsibleUser())
                         .onTime(MyDateUtils.isOnTime(ticket.getDateEnd()))
                         .build();
