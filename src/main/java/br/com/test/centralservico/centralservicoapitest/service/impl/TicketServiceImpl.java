@@ -6,7 +6,7 @@ import br.com.test.centralservico.centralservicoapitest.domain.enums.StatusTicke
 import br.com.test.centralservico.centralservicoapitest.domain.model.Ticket;
 import br.com.test.centralservico.centralservicoapitest.persistence.TicketRepository;
 import br.com.test.centralservico.centralservicoapitest.service.TicketService;
-import br.com.test.centralservico.centralservicoapitest.util.MyDateUtils;
+import br.com.test.centralservico.centralservicoapitest.util.DateUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -54,17 +54,17 @@ public class TicketServiceImpl implements TicketService {
     @Override
     public Optional<TicketDto> save(Ticket ticket) {
 
-        Integer addTime = ticket.getClassification().getAddTime();
+        Integer hoursToAdd = ticket.getClassification().getAddTime();
 
         LocalDateTime startDate = LocalDateTime.now();
 
-        LocalDateTime endDate = startDate.plusHours(addTime);
+        LocalDateTime endDate = startDate.plusHours(hoursToAdd);
 
         ticket.setStatus(StatusTicketEnum.OPEN.getValue());
 
-        ticket.setDateStart(MyDateUtils.toFormattedString(startDate));
+        ticket.setDateStart(DateUtils.toFormattedString(startDate));
 
-        ticket.setDateEnd(MyDateUtils.toFormattedString(endDate));
+        ticket.setDateEnd(DateUtils.toFormattedString(endDate));
 
         ticket.setEnabled(true);
 
@@ -87,13 +87,21 @@ public class TicketServiceImpl implements TicketService {
     }
 
     @Override
-    public Optional<Ticket> deleteById(Long ticketId) {
+    public Optional<TicketDto> deleteById(Long ticketId) {
 
-        Optional<Ticket> ticketToDelete = ticketRepository.findById(ticketId);
+        Optional<Ticket> ticket = ticketRepository.findById(ticketId);
 
-        ticketToDelete.ifPresent(ticketRepository::delete);
+        if(ticket.isEmpty())
+            return Optional.empty();
 
-        return ticketToDelete;
+        Ticket ticketToDelete = ticket.get();
+
+        ticketToDelete.setEnabled(false);
+
+        if(ticketToDelete.getStatus() != StatusTicketEnum.CLOSED.getValue())
+            ticketToDelete.setStatus(StatusTicketEnum.CANCELLED.getValue());
+
+        return Optional.of(convertFromTicketToDto(ticketRepository.saveAndFlush(ticketToDelete)));
 
     }
 
@@ -116,7 +124,7 @@ public class TicketServiceImpl implements TicketService {
                         .dateUpdated(ticket.getDateUpdated())
                         .priority(priorityDescription)
                         .responsibleUser(ticket.getResponsibleUser())
-                        .onTime(MyDateUtils.isOnTime(ticket.getDateEnd()))
+                        .onTime(DateUtils.isOnTime(ticket.getDateEnd()))
                         .build();
 
     }

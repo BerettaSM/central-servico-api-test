@@ -16,6 +16,6 @@ public interface TicketService {
 
     Optional<Ticket> update(Ticket ticket);
 
-    Optional<Ticket> deleteById(Long ticketId);
+    Optional<TicketDto> deleteById(Long ticketId);
 
 }

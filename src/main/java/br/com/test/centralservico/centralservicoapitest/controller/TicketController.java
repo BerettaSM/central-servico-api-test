@@ -82,7 +82,8 @@ public class TicketController {
         if(openedBy.isEmpty())
             throw new ResourceNotFoundException("O ticket não está vinculado a nenhum usuário.");
 
-        Optional<Classification> classification = classificationService.findById(ticketRequestDto.getClassificationId());
+        Optional<Classification> classification =
+                classificationService.findById(ticketRequestDto.getClassificationId());
 
         if(classification.isEmpty())
             throw new ResourceNotFoundException("O ticket não possui uma classificação válida.");
@@ -120,9 +121,9 @@ public class TicketController {
     }
 
     @DeleteMapping("/{ticketId}")
-    public ResponseEntity<Optional<Ticket>> deleteById(@PathVariable Long ticketId) {
+    public ResponseEntity<Optional<TicketDto>> deleteById(@PathVariable Long ticketId) {
 
-        Optional<Ticket> ticketToDelete = ticketService.deleteById(ticketId);
+        Optional<TicketDto> ticketToDelete = ticketService.deleteById(ticketId);
 
         if(ticketToDelete.isEmpty())
             throw new ResourceNotFoundException("Nenhum ticket com o id " + ticketId + " foi encontrado.");

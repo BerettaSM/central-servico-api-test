@@ -68,6 +68,14 @@
 
         </createTable>
 
+        <addAutoIncrement
+                tableName="TBL_TICKET"
+                columnName="ID"
+                columnDataType="integer"
+                startWith="1"
+                incrementBy="1"
+        />
+
         <addForeignKeyConstraint
                 baseColumnNames="ID_USER_OPEN_BY"
                 baseTableName="TBL_TICKET"

@@ -8,7 +8,7 @@
 
         <createTable tableName="TBL_LEVEL" remarks="Table to save the Users LEVELS.">
 
-            <column name="ID" type="integer" autoIncrement="true" remarks="Table Id.">
+            <column name="ID" type="integer" remarks="Table Id.">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PK_ID_LEVEL"/>
             </column>
 
@@ -30,5 +30,14 @@
 
         </createTable>
 
+        <addAutoIncrement
+                tableName="TBL_LEVEL"
+                columnName="ID"
+                columnDataType="integer"
+                startWith="1"
+                incrementBy="1"
+        />
+
     </changeSet>
+
 </databaseChangeLog>

@@ -8,7 +8,7 @@
 
         <createTable tableName="TBL_USER" remarks="Table to save the USERS.">
 
-            <column name="ID" type="integer" autoIncrement="true" remarks="Table Id.">
+            <column name="ID" type="integer" remarks="Table Id.">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PK_ID_USER"/>
             </column>
 
@@ -26,6 +26,14 @@
 
         </createTable>
 
+        <addAutoIncrement
+                tableName="TBL_USER"
+                columnName="ID"
+                columnDataType="integer"
+                startWith="1"
+                incrementBy="1"
+        />
+
         <addForeignKeyConstraint
                 baseColumnNames="ID_LEVEL"
                 baseTableName="TBL_USER"
@@ -36,7 +44,8 @@
                 onUpdate="RESTRICT"
                 referencedColumnNames="ID"
                 referencedTableName="TBL_LEVEL"
-                validate="true"/>
+                validate="true"
+        />
 
     </changeSet>
 </databaseChangeLog>
