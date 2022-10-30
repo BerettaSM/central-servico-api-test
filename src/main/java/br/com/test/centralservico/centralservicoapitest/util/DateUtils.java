@@ -5,7 +5,9 @@ import java.time.format.DateTimeFormatter;
 
 public abstract class DateUtils {
 
-    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    private static final String datePattern = "yyyy-MM-dd HH:mm:ss";
+
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern(datePattern);
 
     public static Boolean isOnTime(String dateEndString) {
 

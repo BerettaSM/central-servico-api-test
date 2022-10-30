@@ -1,6 +1,5 @@
 package br.com.test.centralservico.centralservicoapitest.controller;
 
-import br.com.test.centralservico.centralservicoapitest.domain.dto.Mapper;
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketDto;
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketRequestDto;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Area;

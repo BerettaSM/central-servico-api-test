@@ -54,11 +54,11 @@ public class TicketServiceImpl implements TicketService {
     @Override
     public Optional<Ticket> save(Ticket ticket) {
 
-        Integer hoursToAdd = ticket.getClassification().getAddTime();
+        Integer deadlineInHours = ticket.getClassification().getAddTime();
 
         LocalDateTime startDate = LocalDateTime.now();
 
-        LocalDateTime endDate = startDate.plusHours(hoursToAdd);
+        LocalDateTime endDate = startDate.plusHours(deadlineInHours);
 
         ticket.setStatus(StatusTicketEnum.OPEN.getValue());
 

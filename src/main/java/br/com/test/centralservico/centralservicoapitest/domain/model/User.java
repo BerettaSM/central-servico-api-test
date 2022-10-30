@@ -39,7 +39,7 @@ public class User implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "ID_LEVEL")
-    private Level idLevel;
+    private Level level;
 
     @Column(name = "ENABLE")
     private Boolean enabled;
