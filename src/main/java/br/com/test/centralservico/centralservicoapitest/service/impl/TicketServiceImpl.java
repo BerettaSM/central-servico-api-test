@@ -40,14 +40,14 @@ public class TicketServiceImpl implements TicketService {
     }
 
     @Override
-    public Optional<Ticket> findById(Long ticketId) {
+    public Optional<TicketDto> findById(Long ticketId) {
 
         Optional<Ticket> ticket = ticketRepository.findById(ticketId);
 
         if(ticket.isEmpty())
             return Optional.empty();
 
-        return ticket;
+        return Optional.of(Mapper.fromTicketToDto(ticket.get()));
 
     }
 

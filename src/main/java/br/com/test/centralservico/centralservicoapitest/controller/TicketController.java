@@ -65,9 +65,9 @@ public class TicketController {
     }
 
     @GetMapping("/{ticketId}")
-    public ResponseEntity<Optional<Ticket>> findById(@PathVariable Long ticketId) {
+    public ResponseEntity<Optional<TicketDto>> findById(@PathVariable Long ticketId) {
 
-        Optional<Ticket> ticket = ticketService.findById(ticketId);
+        Optional<TicketDto> ticket = ticketService.findById(ticketId);
 
         if(ticket.isEmpty())
             throw new ResourceNotFoundException("Nenhum ticket com o id " + ticketId + " foi encontrado.");
