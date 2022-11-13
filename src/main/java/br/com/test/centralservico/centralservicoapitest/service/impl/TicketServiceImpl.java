@@ -23,17 +23,17 @@ public class TicketServiceImpl implements TicketService {
 
     private final TicketRepository ticketRepository;
 
-    public Page<TicketDto> findAll(int status, int page, int size) {
+    public Page<TicketDto> findAll(int status, int page, int size, boolean isEnabled) {
 
         Page<Ticket> tickets;
 
         PageRequest pageRequest = PageRequest.of(page, size, Sort.Direction.ASC, "id");
 
         if(status == StatusTicketEnum.NOT_FOUND.getValue())
-            tickets = ticketRepository.findAll(pageRequest);
+            tickets = ticketRepository.findAllByEnabled(isEnabled, pageRequest);
 
         else
-            tickets = ticketRepository.findAllByStatus(status, pageRequest);
+            tickets = ticketRepository.findAllByEnabledAndStatus(isEnabled, status, pageRequest);
 
         return tickets.map(Mapper::fromTicketToDto);
 

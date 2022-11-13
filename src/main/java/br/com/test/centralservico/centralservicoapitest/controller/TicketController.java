@@ -50,9 +50,12 @@ public class TicketController {
                                                                  defaultValue = "0") int page,
                                                    @RequestParam(value = "size",
                                                                  required = false,
-                                                                 defaultValue = "10") int size) {
+                                                                 defaultValue = "10") int size,
+                                                   @RequestParam(value = "isEnabled",
+                                                                 required = false,
+                                                                 defaultValue = "true") boolean isEnabled) {
 
-        Page<TicketDto> ticketPage = ticketService.findAll(status, page, size);
+        Page<TicketDto> ticketPage = ticketService.findAll(status, page, size, isEnabled);
 
         if(ticketPage.isEmpty())
             throw new ResourceNotFoundException("Nenhum ticket foi encontrado.");

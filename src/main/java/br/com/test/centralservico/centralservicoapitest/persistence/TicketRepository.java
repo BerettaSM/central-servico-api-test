@@ -8,6 +8,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TicketRepository extends JpaRepository<Ticket, Long> {
 
-    Page<Ticket> findAllByStatus(Integer status, PageRequest pageRequest);
+    Page<Ticket> findAllByEnabled(Boolean enabled, PageRequest pageRequest);
+
+    Page<Ticket> findAllByEnabledAndStatus(Boolean enabled, Integer status,  PageRequest pageRequest);
 
 }

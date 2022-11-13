@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface TicketService {
 
-    Page<TicketDto> findAll(int status, int page, int size);
+    Page<TicketDto> findAll(int status, int page, int size, boolean isEnabled);
 
     Optional<Ticket> findById(Long ticketId);
 
