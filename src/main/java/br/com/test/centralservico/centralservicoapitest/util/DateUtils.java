@@ -3,9 +3,11 @@ package br.com.test.centralservico.centralservicoapitest.util;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public abstract class MyDateUtils {
+public abstract class DateUtils {
 
-    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    private static final String datePattern = "yyyy-MM-dd HH:mm:ss";
+
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern(datePattern);
 
     public static Boolean isOnTime(String dateEndString) {
 
@@ -20,6 +22,12 @@ public abstract class MyDateUtils {
     public static String toFormattedString(LocalDateTime date) {
 
         return date.format(formatter);
+
+    }
+
+    public static String currentTimeStamp() {
+
+        return LocalDateTime.now().format(formatter);
 
     }
 

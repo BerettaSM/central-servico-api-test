@@ -26,6 +26,8 @@ import java.io.Serializable;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Ticket implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
@@ -38,13 +40,13 @@ public class Ticket implements Serializable {
     private String title;
 
     @Column(name = "PRIORITY")
-    private Integer priority;
+    private String priority;
 
     @Column(name = "DESCRIPTION")
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "ID_USER_OPEN_BY")
+    @JoinColumn(name = "ID_USER_OPEN_BY", nullable = false)
     private User openedBy;
 
     @ManyToOne
@@ -52,11 +54,11 @@ public class Ticket implements Serializable {
     private User responsibleUser;
 
     @ManyToOne
-    @JoinColumn(name = "ID_AREA")
+    @JoinColumn(name = "ID_AREA", nullable = false)
     private Area area;
 
     @ManyToOne
-    @JoinColumn(name = "ID_CLASSIFICATION")
+    @JoinColumn(name = "ID_CLASSIFICATION", nullable = false)
     private Classification classification;
 
     @Column(name = "DATE_START")

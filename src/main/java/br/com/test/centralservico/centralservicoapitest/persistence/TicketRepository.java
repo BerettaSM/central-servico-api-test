@@ -1,12 +1,15 @@
 package br.com.test.centralservico.centralservicoapitest.persistence;
 
 import br.com.test.centralservico.centralservicoapitest.domain.model.Ticket;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
 
 public interface TicketRepository extends JpaRepository<Ticket, Long> {
 
-    List<Ticket> findAllByStatus(Integer status);
+    Page<Ticket> findAllByEnabled(Boolean enabled, PageRequest pageRequest);
+
+    Page<Ticket> findAllByEnabledAndStatus(Boolean enabled, Integer status,  PageRequest pageRequest);
 
 }

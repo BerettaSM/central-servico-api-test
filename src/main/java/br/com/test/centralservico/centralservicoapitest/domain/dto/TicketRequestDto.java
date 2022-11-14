@@ -1,16 +1,27 @@
 package br.com.test.centralservico.centralservicoapitest.domain.dto;
 
 
-import br.com.test.centralservico.centralservicoapitest.domain.model.Ticket;
 import lombok.Builder;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Builder
 @Data
-public class TicketRequestDto {
+public class TicketRequestDto implements Serializable {
 
-    private Ticket ticket;
+    private static final Long serialVersionUID = 1L;
+
+    private String title;
+
+    private String description;
+
+    private String priority;
 
     private Long userId;
+
+    private Long areaId;
+
+    private Long classificationId;
 
 }

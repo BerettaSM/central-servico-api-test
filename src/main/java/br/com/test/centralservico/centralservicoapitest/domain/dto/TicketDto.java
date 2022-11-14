@@ -17,7 +17,7 @@ import java.io.Serializable;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class TicketDto implements Serializable {
 
-    private static final Long serialVersionUID = 1234L;
+    private static final long serialVersionUID = 1L;
 
     private Long ticketId;
 

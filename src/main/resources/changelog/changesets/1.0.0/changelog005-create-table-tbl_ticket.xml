@@ -26,7 +26,7 @@
             </column>
             -->
 
-            <column name="PRIORITY" type="integer" remarks="Ticket priority.">
+            <column name="PRIORITY" type="VARCHAR(150 ${char})" remarks="Ticket priority.">
                 <constraints nullable="false"/>
             </column>
 
@@ -67,6 +67,14 @@
             </column>
 
         </createTable>
+
+        <addAutoIncrement
+                tableName="TBL_TICKET"
+                columnName="ID"
+                columnDataType="integer"
+                startWith="1"
+                incrementBy="1"
+        />
 
         <addForeignKeyConstraint
                 baseColumnNames="ID_USER_OPEN_BY"

@@ -19,13 +19,23 @@ public enum PriorityTicketEnum {
         this.value = value;
     }
 
-    public static PriorityTicketEnum getDescByValue(int value) {
+    public static PriorityTicketEnum getEnumByValue(int value) {
 
         for(PriorityTicketEnum priority: PriorityTicketEnum.values())
             if(priority.value == value)
                 return priority;
 
         return LOW;
+
+    }
+
+    public static int getValueByDescription(String description) {
+
+        for(PriorityTicketEnum priority: PriorityTicketEnum.values())
+            if(priority.description.equals(description))
+                return priority.value;
+
+        return LOW.value;
 
     }
 

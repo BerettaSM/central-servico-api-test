@@ -8,11 +8,11 @@ import java.util.Optional;
 
 public interface TicketService {
 
-    Page<TicketDto> findAll(int status, int page, int size);
+    Page<TicketDto> findAll(int status, int page, int size, boolean isEnabled);
 
     Optional<TicketDto> findById(Long ticketId);
 
-    Optional<TicketDto> save(Ticket ticket);
+    Optional<Ticket> save(Ticket ticket);
 
     Optional<Ticket> update(Ticket ticket);
 

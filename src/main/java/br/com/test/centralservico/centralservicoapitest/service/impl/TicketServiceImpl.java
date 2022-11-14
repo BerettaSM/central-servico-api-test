@@ -1,22 +1,21 @@
 package br.com.test.centralservico.centralservicoapitest.service.impl;
 
+import br.com.test.centralservico.centralservicoapitest.domain.dto.Mapper;
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketDto;
-import br.com.test.centralservico.centralservicoapitest.domain.enums.PriorityTicketEnum;
 import br.com.test.centralservico.centralservicoapitest.domain.enums.StatusTicketEnum;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Ticket;
 import br.com.test.centralservico.centralservicoapitest.persistence.TicketRepository;
 import br.com.test.centralservico.centralservicoapitest.service.TicketService;
-import br.com.test.centralservico.centralservicoapitest.util.MyDateUtils;
+import br.com.test.centralservico.centralservicoapitest.util.DateUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
-import java.util.function.Function;
 
 @Service
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
@@ -24,29 +23,19 @@ public class TicketServiceImpl implements TicketService {
 
     private final TicketRepository ticketRepository;
 
-    public Page<TicketDto> findAll(int status, int page, int size) {
+    public Page<TicketDto> findAll(int status, int page, int size, boolean isEnabled) {
 
         Page<Ticket> tickets;
 
         PageRequest pageRequest = PageRequest.of(page, size, Sort.Direction.ASC, "id");
 
         if(status == StatusTicketEnum.NOT_FOUND.getValue())
-            tickets = new PageImpl<>(ticketRepository.findAll(), pageRequest, size);
+            tickets = ticketRepository.findAllByEnabled(isEnabled, pageRequest);
 
         else
-            tickets = new PageImpl<>(ticketRepository.findAllByStatus(status), pageRequest, size);
+            tickets = ticketRepository.findAllByEnabledAndStatus(isEnabled, status, pageRequest);
 
-
-        return tickets.map(new Function<Ticket, TicketDto>() {
-
-            @Override
-            public TicketDto apply(Ticket ticket) {
-
-                return convertFromTicketToDto(ticket);
-
-            }
-
-        });
+        return tickets.map(Mapper::fromTicketToDto);
 
     }
 
@@ -58,23 +47,30 @@ public class TicketServiceImpl implements TicketService {
         if(ticket.isEmpty())
             return Optional.empty();
 
-        return Optional.of(convertFromTicketToDto(ticket.get()));
+        return Optional.of(Mapper.fromTicketToDto(ticket.get()));
 
     }
 
     @Override
-    public Optional<TicketDto> save(Ticket ticket) {
+    public Optional<Ticket> save(Ticket ticket) {
 
-        Ticket ticketToSave = Ticket.builder()
-                                    .id(0L)
-                                    .status(StatusTicketEnum.OPEN.getValue())
-                                    .title(ticket.getTitle())
-                                    .priority(ticket.getPriority())
-                                    .description(ticket.getDescription())
-                                    .openedBy(ticket.getOpenedBy())
-                                    .build();
+        Integer deadlineInHours = ticket.getClassification().getAddTime();
 
-        return Optional.of(convertFromTicketToDto(ticketToSave));
+        LocalDateTime startDate = LocalDateTime.now();
+
+        LocalDateTime endDate = startDate.plusHours(deadlineInHours);
+
+        ticket.setStatus(StatusTicketEnum.OPEN.getValue());
+
+        ticket.setDateStart(DateUtils.toFormattedString(startDate));
+
+        ticket.setDateEnd(DateUtils.toFormattedString(endDate));
+
+        ticket.setEnabled(true);
+
+        Ticket savedTicket = ticketRepository.save(ticket);
+
+        return Optional.of(savedTicket);
 
     }
 
@@ -86,6 +82,8 @@ public class TicketServiceImpl implements TicketService {
         if(ticketToUpdate.isEmpty())
             return Optional.empty();
 
+        ticket.setDateUpdated(DateUtils.currentTimeStamp());
+
         return Optional.of(ticketRepository.saveAndFlush(ticket));
 
     }
@@ -93,35 +91,21 @@ public class TicketServiceImpl implements TicketService {
     @Override
     public Optional<Ticket> deleteById(Long ticketId) {
 
-        Optional<Ticket> ticketToDelete = ticketRepository.findById(ticketId);
+        Optional<Ticket> ticket = ticketRepository.findById(ticketId);
 
-        ticketToDelete.ifPresent(ticketRepository::delete);
+        if(ticket.isEmpty())
+            return Optional.empty();
 
-        return ticketToDelete;
+        Ticket ticketToDelete = ticket.get();
 
-    }
+        ticketToDelete.setEnabled(false);
 
-    private TicketDto convertFromTicketToDto(Ticket ticket) {
+        ticketToDelete.setDateUpdated(DateUtils.currentTimeStamp());
 
-        String statusDescription = StatusTicketEnum.getDescByValue(ticket.getStatus())
-                                                   .getDescription();
+        if(ticketToDelete.getStatus() != StatusTicketEnum.CLOSED.getValue())
+            ticketToDelete.setStatus(StatusTicketEnum.CANCELLED.getValue());
 
-        String priorityString = PriorityTicketEnum.getDescByValue(ticket.getPriority())
-                                                  .getDescription();
-
-        return TicketDto.builder()
-                        .ticketId(ticket.getId())
-                        .status(ticket.getStatus())
-                        .descStatus(statusDescription)
-                        .title(ticket.getTitle())
-                        .openedBy(ticket.getOpenedBy())
-                        .dateStart(ticket.getDateStart())
-                        .dateEnd(ticket.getDateEnd())
-                        .dateUpdated(ticket.getDateUpdated())
-                        .priority(priorityString)
-                        .responsibleUser(ticket.getResponsibleUser())
-                        .onTime(MyDateUtils.isOnTime(ticket.getDateEnd()))
-                        .build();
+        return Optional.of(ticketRepository.saveAndFlush(ticketToDelete));
 
     }
 
