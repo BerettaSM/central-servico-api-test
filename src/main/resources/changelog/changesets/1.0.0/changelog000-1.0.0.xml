@@ -22,14 +22,6 @@
 
     <include file="changelog009-insert-tbl_user.xml" relativeToChangelogFile="true"/>
 
-    <!--
-    <include file="changelog010-insert-tbl_ticket_100_entries.xml" relativeToChangelogFile="true"/>
-    -->
-
-    <include file="changelog010-insert-tbl_ticket_500_entries.xml" relativeToChangelogFile="true"/>
-
-    <!--
-    <include file="changelog010-insert-tbl_ticket_2000_entries.xml" relativeToChangelogFile="true"/>
-    -->
+    <include file="changelog010-insert-tbl_ticket_1000_entries.xml" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>
