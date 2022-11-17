@@ -10,7 +10,7 @@ public interface TicketService {
 
     Page<TicketDto> findAll(int status, int page, int size, boolean isEnabled);
 
-    Optional<TicketDto> findById(Long ticketId);
+    Optional<Ticket> findById(Long ticketId);
 
     Optional<Ticket> save(Ticket ticket);
 

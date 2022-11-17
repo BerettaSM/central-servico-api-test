@@ -1,7 +1,9 @@
 package br.com.test.centralservico.centralservicoapitest.controller;
 
+import br.com.test.centralservico.centralservicoapitest.domain.dto.Mapper;
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketDto;
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketRequestDto;
+import br.com.test.centralservico.centralservicoapitest.domain.enums.StatusTicketEnum;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Area;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Classification;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Ticket;
@@ -67,12 +69,43 @@ public class TicketController {
     @GetMapping("/{ticketId}")
     public ResponseEntity<Optional<TicketDto>> findById(@PathVariable Long ticketId) {
 
-        Optional<TicketDto> ticket = ticketService.findById(ticketId);
+        Optional<Ticket> ticket = ticketService.findById(ticketId);
 
         if(ticket.isEmpty())
             throw new ResourceNotFoundException("Nenhum ticket com o id " + ticketId + " foi encontrado.");
 
-        return ResponseEntity.status(HttpStatus.OK).body(ticket);
+        Optional<TicketDto> ticketFound = Optional.of(Mapper.fromTicketToDto(ticket.get()));
+
+        return ResponseEntity.status(HttpStatus.OK).body(ticketFound);
+
+    }
+
+    @GetMapping("/assign-to-me")
+    public ResponseEntity<Optional<TicketDto>> assignToMe(@RequestParam(value = "ticketId") Long ticketId,
+                                                          @RequestParam(value = "attendantId") Long attendantId) {
+
+        Optional<User> attendant = userService.findById(attendantId);
+
+        Optional<Ticket> ticketToAssign = ticketService.findById(ticketId);
+
+        if(attendant.isEmpty() || ticketToAssign.isEmpty())
+            throw new ResourceNotFoundException("Atribuição de ticket não válida.");
+
+        ticketToAssign.get().setResponsibleUser(attendant.get());
+
+        Integer ticketStatus = ticketToAssign.get().getStatus();
+
+        if(ticketStatus == StatusTicketEnum.OPEN.getValue() || ticketStatus == StatusTicketEnum.REOPENED.getValue())
+            ticketToAssign.get().setStatus(StatusTicketEnum.IN_PROGRESS.getValue());
+
+        Optional<Ticket> updatedTicket = ticketService.update(ticketToAssign.get());
+
+        if(updatedTicket.isEmpty())
+            throw new ResourceNotFoundException("Falha na atualização.");
+
+        Optional<TicketDto> updatedTicketDto = Optional.of(Mapper.fromTicketToDto(updatedTicket.get()));
+
+        return ResponseEntity.status(HttpStatus.OK).body(updatedTicketDto);
 
     }
 
