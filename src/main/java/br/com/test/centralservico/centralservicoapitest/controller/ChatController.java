@@ -39,6 +39,8 @@ public class ChatController {
 
         TicketMessageResponseDto savedMessage = saveMessage(message);
 
+        System.out.println("Mensagem recebida -> " + savedMessage);
+
         return savedMessage;
 
     }
