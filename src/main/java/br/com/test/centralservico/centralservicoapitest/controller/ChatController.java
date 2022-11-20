@@ -13,9 +13,9 @@ import br.com.test.centralservico.centralservicoapitest.service.UserService;
 import br.com.test.centralservico.centralservicoapitest.util.DateUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
-import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 
@@ -33,15 +33,15 @@ public class ChatController {
 
     private final UserService userService;
 
-    @MessageMapping("/message")
-    @SendTo("/topic/public")
-    public TicketMessageResponseDto receiveTicketMessage(@Payload TicketMessageRequestDto message) {
+    @MessageMapping("/message/{ticketId}")
+    public void receiveTicketMessage(@DestinationVariable String ticketId,
+                                     @Payload TicketMessageRequestDto message) {
 
         TicketMessageResponseDto savedMessage = saveMessage(message);
 
-        System.out.println("Mensagem recebida -> " + savedMessage);
+        String destination = "/topic/ticket/" + ticketId;
 
-        return savedMessage;
+        simpMessagingTemplate.convertAndSend(destination, savedMessage);
 
     }
 
@@ -62,7 +62,7 @@ public class ChatController {
 
         TicketMessage savedMessage = ticketMessageService.save(ticketMessage);
 
-        return Mapper.fromTicketMessageToDto(savedMessage);
+        return Mapper.fromTicketMessageToResponseDto(savedMessage);
 
     }
 

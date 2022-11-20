@@ -31,7 +31,7 @@ public abstract class Mapper {
 
     }
 
-    public static TicketMessageResponseDto fromTicketMessageToDto(TicketMessage ticketMessage) {
+    public static TicketMessageResponseDto fromTicketMessageToResponseDto(TicketMessage ticketMessage) {
 
         return TicketMessageResponseDto.builder()
                                        .id(ticketMessage.getId())
@@ -47,7 +47,7 @@ public abstract class Mapper {
     public static List<TicketMessageResponseDto> fromTicketMessageListToDtoList(List<TicketMessage> ticketMessages) {
 
         return ticketMessages.stream()
-                             .map(Mapper::fromTicketMessageToDto)
+                             .map(Mapper::fromTicketMessageToResponseDto)
                              .collect(Collectors.toList());
 
     }

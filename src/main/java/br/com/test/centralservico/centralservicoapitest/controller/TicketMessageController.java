@@ -81,7 +81,7 @@ public class TicketMessageController {
 
         Optional<TicketMessageResponseDto> savedMessageResponseDto = Optional.of(
 
-                Mapper.fromTicketMessageToDto(savedMessage)
+                Mapper.fromTicketMessageToResponseDto(savedMessage)
 
         );
 
