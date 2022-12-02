@@ -14,22 +14,16 @@
 
     <include file="changelog005-create-table-tbl_ticket.xml" relativeToChangelogFile="true"/>
 
-    <include file="changelog006-insert-tbl_classification.xml" relativeToChangelogFile="true"/>
+    <include file="changelog006-create-table-tbl_ticket_message.xml" relativeToChangelogFile="true"/>
 
-    <include file="changelog007-insert-tbl_area.xml" relativeToChangelogFile="true"/>
+    <include file="changelog007-insert-tbl_classification.xml" relativeToChangelogFile="true"/>
 
-    <include file="changelog008-insert-tbl_level.xml" relativeToChangelogFile="true"/>
+    <include file="changelog008-insert-tbl_area.xml" relativeToChangelogFile="true"/>
 
-    <include file="changelog009-insert-tbl_user.xml" relativeToChangelogFile="true"/>
+    <include file="changelog009-insert-tbl_level.xml" relativeToChangelogFile="true"/>
 
-    <!--
-    <include file="changelog010-insert-tbl_ticket_100_entries.xml" relativeToChangelogFile="true"/>
-    -->
+    <include file="changelog010-insert-tbl_user.xml" relativeToChangelogFile="true"/>
 
-    <include file="changelog010-insert-tbl_ticket_500_entries.xml" relativeToChangelogFile="true"/>
-
-    <!--
-    <include file="changelog010-insert-tbl_ticket_2000_entries.xml" relativeToChangelogFile="true"/>
-    -->
+    <include file="changelog011-insert-tbl_ticket_500_entries.xml" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>

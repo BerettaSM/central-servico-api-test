@@ -20,12 +20,6 @@
                 <constraints nullable="false"/>
             </column>
 
-            <!--
-            <column name="PRIORITY" type="VARCHAR(150 ${char})" remarks="Ticket priority.">
-                <constraints nullable="false"/>
-            </column>
-            -->
-
             <column name="PRIORITY" type="VARCHAR(150 ${char})" remarks="Ticket priority.">
                 <constraints nullable="false"/>
             </column>

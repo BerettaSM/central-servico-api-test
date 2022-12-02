@@ -66,49 +66,49 @@
         <insert tableName="TBL_USER">
             <column name="ID" value="9"/>
             <column name="FULL_NAME" value="Mariscleuza Souza"/>
-            <column name="ID_LEVEL" value="2"/>
+            <column name="ID_LEVEL" value="3"/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
         <insert tableName="TBL_USER">
             <column name="ID" value="10"/>
             <column name="FULL_NAME" value="Creuza de Gezuis"/>
-            <column name="ID_LEVEL" value="2"/>
+            <column name="ID_LEVEL" value="3"/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
         <insert tableName="TBL_USER">
             <column name="ID" value="11"/>
             <column name="FULL_NAME" value="Joscleusson Martins"/>
-            <column name="ID_LEVEL" value="2"/>
+            <column name="ID_LEVEL" value="3"/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
         <insert tableName="TBL_USER">
             <column name="ID" value="12"/>
             <column name="FULL_NAME" value="João das Neves"/>
-            <column name="ID_LEVEL" value="2"/>
+            <column name="ID_LEVEL" value="3"/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
         <insert tableName="TBL_USER">
             <column name="ID" value="13"/>
             <column name="FULL_NAME" value="Walter Branco"/>
-            <column name="ID_LEVEL" value="2"/>
+            <column name="ID_LEVEL" value="3"/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
         <insert tableName="TBL_USER">
             <column name="ID" value="14"/>
             <column name="FULL_NAME" value="Klascomenau Pires"/>
-            <column name="ID_LEVEL" value="2"/>
+            <column name="ID_LEVEL" value="3"/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
         <insert tableName="TBL_USER">
             <column name="ID" value="15"/>
             <column name="FULL_NAME" value="Juanda Gomes"/>
-            <column name="ID_LEVEL" value="2"/>
+            <column name="ID_LEVEL" value="3"/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 

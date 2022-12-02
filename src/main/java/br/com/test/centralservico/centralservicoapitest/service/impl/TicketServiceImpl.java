@@ -4,8 +4,10 @@ import br.com.test.centralservico.centralservicoapitest.domain.dto.Mapper;
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketDto;
 import br.com.test.centralservico.centralservicoapitest.domain.enums.StatusTicketEnum;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Ticket;
+import br.com.test.centralservico.centralservicoapitest.domain.model.User;
 import br.com.test.centralservico.centralservicoapitest.persistence.TicketRepository;
 import br.com.test.centralservico.centralservicoapitest.service.TicketService;
+import br.com.test.centralservico.centralservicoapitest.service.UserService;
 import br.com.test.centralservico.centralservicoapitest.util.DateUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +29,7 @@ public class TicketServiceImpl implements TicketService {
 
         Page<Ticket> tickets;
 
-        PageRequest pageRequest = PageRequest.of(page, size, Sort.Direction.ASC, "id");
+        PageRequest pageRequest = PageRequest.of(page, size, Sort.Direction.DESC, "dateStart");
 
         if(status == StatusTicketEnum.NOT_FOUND.getValue())
             tickets = ticketRepository.findAllByEnabled(isEnabled, pageRequest);
@@ -40,14 +42,9 @@ public class TicketServiceImpl implements TicketService {
     }
 
     @Override
-    public Optional<TicketDto> findById(Long ticketId) {
+    public Optional<Ticket> findById(Long ticketId) {
 
-        Optional<Ticket> ticket = ticketRepository.findById(ticketId);
-
-        if(ticket.isEmpty())
-            return Optional.empty();
-
-        return Optional.of(Mapper.fromTicketToDto(ticket.get()));
+        return ticketRepository.findById(ticketId);
 
     }
 

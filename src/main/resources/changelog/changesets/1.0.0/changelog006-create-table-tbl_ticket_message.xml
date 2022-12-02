@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+            xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+
+    <changeSet author="Team-CS-devs" id="TBL_TICKET_MESSAGE-2022-11-18-create-table">
+
+        <createTable tableName="TBL_TICKET_MESSAGE" remarks="Table to save the TICKET MESSAGES.">
+
+            <column name="ID" type="integer" autoIncrement="true" remarks="Table Id.">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_ID_TICKET_MESSAGE"/>
+            </column>
+
+            <column name="MESSAGE" type="TEXT" remarks="Ticket message.">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="DATE_SEND" type="DATETIME" remarks="Sets the date for when the message was sent.">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="ID_TICKET" type="integer" remarks="FK for TBL_TICKET.">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="ID_SENDER" type="integer" remarks="FK for TBL_USER.">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+        <addAutoIncrement
+                tableName="TBL_TICKET_MESSAGE"
+                columnName="ID"
+                columnDataType="integer"
+                startWith="1"
+                incrementBy="1"
+        />
+
+        <addForeignKeyConstraint
+                baseColumnNames="ID_SENDER"
+                baseTableName="TBL_TICKET_MESSAGE"
+                constraintName="FK_TICKET_MESSAGE_TO_USER"
+                deferrable="false"
+                initiallyDeferred="false"
+                onDelete="RESTRICT"
+                onUpdate="RESTRICT"
+                referencedColumnNames="ID"
+                referencedTableName="TBL_USER"
+                validate="true"/>
+
+        <addForeignKeyConstraint
+                baseColumnNames="ID_TICKET"
+                baseTableName="TBL_TICKET_MESSAGE"
+                constraintName="FK_TICKET_MESSAGE_TO_TICKET"
+                deferrable="false"
+                initiallyDeferred="false"
+                onDelete="RESTRICT"
+                onUpdate="RESTRICT"
+                referencedColumnNames="ID"
+                referencedTableName="TBL_TICKET"
+                validate="true"/>
+
+    </changeSet>
+
+</databaseChangeLog>
