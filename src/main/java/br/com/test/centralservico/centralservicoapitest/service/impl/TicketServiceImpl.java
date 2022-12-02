@@ -29,7 +29,7 @@ public class TicketServiceImpl implements TicketService {
 
         Page<Ticket> tickets;
 
-        PageRequest pageRequest = PageRequest.of(page, size, Sort.Direction.ASC, "id");
+        PageRequest pageRequest = PageRequest.of(page, size, Sort.Direction.DESC, "dateStart");
 
         if(status == StatusTicketEnum.NOT_FOUND.getValue())
             tickets = ticketRepository.findAllByEnabled(isEnabled, pageRequest);
