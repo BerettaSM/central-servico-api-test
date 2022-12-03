@@ -22,3 +22,8 @@ spring:
   liquibase-heart-beat-aware-lock:
     change-log-lock-wait-time: PT2M
     change-log-lock-poll-rate: PT1S
+  security:
+    filter:
+      order: 10
+jwt:
+  secret: 8c53b^6f5920c#73be9cff9#&0325fedb@bbec!a89**95949f54c55d6ec!@#5

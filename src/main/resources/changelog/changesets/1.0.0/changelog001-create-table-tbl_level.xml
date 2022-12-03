@@ -8,11 +8,11 @@
 
         <createTable tableName="TBL_LEVEL" remarks="Table to save the Users LEVELS.">
 
-            <column name="ID" type="integer" remarks="Table Id.">
+            <column name="ID" type="integer" remarks="Table Id." autoIncrement="true">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PK_ID_LEVEL"/>
             </column>
 
-            <column name="LEVEL_CODE" type="VARCHAR(8 ${char})" remarks="Level code.">
+            <column name="AUTHORITY" type="VARCHAR(50 ${char})" remarks="Authority.">
                 <constraints nullable="false"/>
             </column>
 
@@ -29,14 +29,6 @@
             </column>
 
         </createTable>
-
-        <addAutoIncrement
-                tableName="TBL_LEVEL"
-                columnName="ID"
-                columnDataType="integer"
-                startWith="1"
-                incrementBy="1"
-        />
 
     </changeSet>
 

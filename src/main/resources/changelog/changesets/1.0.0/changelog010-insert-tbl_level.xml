@@ -9,7 +9,7 @@
 
         <insert tableName="TBL_LEVEL">
             <column name="ID" value="1"/>
-            <column name="LEVEL_CODE" value="Adm01"/>
+            <column name="AUTHORITY" value="ROLE_ADMIN"/>
             <column name="LEVEL_NAME" value="Administrador"/>
             <column name="DESCRIPTION" value="Cargo de administrador geral."/>
             <column name="ENABLE" valueBoolean="TRUE"/>
@@ -17,7 +17,7 @@
 
         <insert tableName="TBL_LEVEL">
             <column name="ID" value="2"/>
-            <column name="LEVEL_CODE" value="Fun01"/>
+            <column name="AUTHORITY" value="ROLE_ATENDANT"/>
             <column name="LEVEL_NAME" value="Atendente"/>
             <column name="DESCRIPTION" value="Cargo de atendente."/>
             <column name="ENABLE" valueBoolean="TRUE"/>
@@ -25,7 +25,7 @@
 
         <insert tableName="TBL_LEVEL">
             <column name="ID" value="3"/>
-            <column name="LEVEL_CODE" value="User01"/>
+            <column name="AUTHORITY" value="ROLE_USER"/>
             <column name="LEVEL_NAME" value="Usuário"/>
             <column name="DESCRIPTION" value="O dito cujo."/>
             <column name="ENABLE" valueBoolean="TRUE"/>

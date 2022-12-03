@@ -1,11 +1,14 @@
 package br.com.test.centralservico.centralservicoapitest.domain.dto;
 
 import br.com.test.centralservico.centralservicoapitest.domain.enums.StatusTicketEnum;
+import br.com.test.centralservico.centralservicoapitest.domain.model.Level;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Ticket;
 import br.com.test.centralservico.centralservicoapitest.domain.model.TicketMessage;
 import br.com.test.centralservico.centralservicoapitest.util.DateUtils;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public abstract class Mapper {
@@ -39,7 +42,7 @@ public abstract class Mapper {
                                        .sendDate(ticketMessage.getSendDate())
                                        .senderId(ticketMessage.getSender().getId())
                                        .senderName(ticketMessage.getSender().getFullName())
-                                       .senderLevel(ticketMessage.getSender().getLevel().getLevelName())
+                                       .senderLevel(getHighestUserAuthority(ticketMessage))
                                        .build();
 
     }
@@ -49,6 +52,19 @@ public abstract class Mapper {
         return ticketMessages.stream()
                              .map(Mapper::fromTicketMessageToResponseDto)
                              .collect(Collectors.toList());
+
+    }
+
+    private static String getHighestUserAuthority(TicketMessage ticketMessage) {
+
+        Optional<Level> level = ticketMessage.getSender()
+                .getAuthorities()
+                .stream().min(Comparator.comparing(Level::getId));
+
+        if(level.isEmpty())
+            return "DESCONHECIDO";
+
+        return level.get().getLevelName();
 
     }
 

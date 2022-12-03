@@ -1,6 +1,11 @@
 package br.com.test.centralservico.centralservicoapitest.domain.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,15 +13,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import java.io.Serializable;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Table;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Set;
 
 @Entity
 @Table(name = "TBL_USER")
@@ -25,9 +31,7 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class User implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,11 +41,47 @@ public class User implements Serializable {
     @Column(name = "FULL_NAME")
     private String fullName;
 
-    @ManyToOne
-    @JoinColumn(name = "ID_LEVEL")
-    private Level level;
+    @Column(name = "USERNAME")
+    private String username;
+
+    @Column(name = "PASSWORD")
+    private String password;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "TBL_USER_LEVEL",
+               joinColumns = @JoinColumn(name = "ID_USER", referencedColumnName = "ID"),
+               inverseJoinColumns = @JoinColumn(name = "ID_LEVEL", referencedColumnName = "ID"))
+    private Set<Level> authorities;
 
     @Column(name = "ENABLE")
     private Boolean enabled;
+
+    @Override
+    public boolean isAccountNonExpired() {
+
+        return true;
+
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+
+        return true;
+
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+
+        return true;
+
+    }
+
+    @Override
+    public boolean isEnabled() {
+
+        return true;
+
+    }
 
 }

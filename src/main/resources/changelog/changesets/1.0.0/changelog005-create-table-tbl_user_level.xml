@@ -4,23 +4,25 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
-    <changeSet author="Team-CS-devs" id="TBL_USER-2022-05-21-create-table">
+    <changeSet author="Team-CS-devs" id="TBL_USER_LEVEL-2022-12-02-create-table">
 
-        <createTable tableName="TBL_AREA" remarks="Table to save the AREA.">
+        <createTable tableName="TBL_USER_LEVEL" remarks="Join table between user and level.">
 
-            <column name="ID" type="integer" remarks="Table Id." autoIncrement="true">
-                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_ID_AREA"/>
-            </column>
-
-            <column name="DESCRIPTION" type="VARCHAR(50 ${char})" remarks="Area description.">
+            <column name="ID_USER" type="integer" remarks="User Id.">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="ENABLE" type="BOOLEAN" remarks="Set if this user is enable.">
+            <column name="ID_LEVEL" type="integer" remarks="Level Id.">
                 <constraints nullable="false"/>
             </column>
 
         </createTable>
+
+        <addPrimaryKey
+                columnNames="ID_USER, ID_LEVEL"
+                constraintName="PK_COMPOSITE_USER_LEVEL"
+                tableName="TBL_USER_LEVEL"
+        />
 
     </changeSet>
 
