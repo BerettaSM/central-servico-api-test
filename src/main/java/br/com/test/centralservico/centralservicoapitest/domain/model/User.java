@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
-import jakarta.persistence.OneToMany;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -45,6 +44,7 @@ public class User implements UserDetails {
     private String username;
 
     @Column(name = "PASSWORD")
+    @JsonIgnore
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER)

@@ -1,10 +1,11 @@
-package br.com.test.centralservico.centralservicoapitest.domain.dto;
+package br.com.test.centralservico.centralservicoapitest.util;
 
+import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketDto;
+import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketMessageResponseDto;
 import br.com.test.centralservico.centralservicoapitest.domain.enums.StatusTicketEnum;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Level;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Ticket;
 import br.com.test.centralservico.centralservicoapitest.domain.model.TicketMessage;
-import br.com.test.centralservico.centralservicoapitest.util.DateUtils;
 
 import java.util.Comparator;
 import java.util.List;

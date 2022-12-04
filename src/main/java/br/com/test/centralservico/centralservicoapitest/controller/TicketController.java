@@ -1,6 +1,6 @@
 package br.com.test.centralservico.centralservicoapitest.controller;
 
-import br.com.test.centralservico.centralservicoapitest.domain.dto.Mapper;
+import br.com.test.centralservico.centralservicoapitest.util.Mapper;
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketDto;
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketRequestDto;
 import br.com.test.centralservico.centralservicoapitest.domain.enums.StatusTicketEnum;
@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -44,9 +45,9 @@ public class TicketController {
     private final ClassificationService classificationService;
 
     @GetMapping
-    public ResponseEntity<Page<TicketDto>> findAll(@RequestParam(value = "status",
+    public ResponseEntity<Page<TicketDto>> findAll(@RequestParam(value = "queryType",
                                                                  required = false,
-                                                                 defaultValue = "0") int status,
+                                                                 defaultValue = "0") int queryType,
                                                    @RequestParam(value = "page",
                                                                  required = false,
                                                                  defaultValue = "0") int page,
@@ -55,9 +56,10 @@ public class TicketController {
                                                                  defaultValue = "10") int size,
                                                    @RequestParam(value = "isEnabled",
                                                                  required = false,
-                                                                 defaultValue = "true") boolean isEnabled) {
+                                                                 defaultValue = "true") boolean isEnabled,
+                                                   @AuthenticationPrincipal User user) {
 
-        Page<TicketDto> ticketPage = ticketService.findAll(status, page, size, isEnabled);
+        Page<TicketDto> ticketPage = ticketService.findAll(queryType, page, size, isEnabled, user);
 
         if(ticketPage.isEmpty())
             throw new ResourceNotFoundException("Nenhum ticket foi encontrado.");
@@ -67,7 +69,8 @@ public class TicketController {
     }
 
     @GetMapping("/{ticketId}")
-    public ResponseEntity<Optional<TicketDto>> findById(@PathVariable Long ticketId) {
+    public ResponseEntity<Optional<TicketDto>> findById(@PathVariable Long ticketId,
+                                                        @AuthenticationPrincipal User user) {
 
         Optional<Ticket> ticket = ticketService.findById(ticketId);
 
@@ -82,7 +85,8 @@ public class TicketController {
 
     @GetMapping("/assign-to-me")
     public ResponseEntity<Optional<TicketDto>> assignToMe(@RequestParam(value = "ticketId") Long ticketId,
-                                                          @RequestParam(value = "attendantId") Long attendantId) {
+                                                          @RequestParam(value = "attendantId") Long attendantId,
+                                                          @AuthenticationPrincipal User user) {
 
         Optional<User> attendant = userService.findById(attendantId);
 
@@ -110,7 +114,8 @@ public class TicketController {
     }
 
     @PostMapping
-    public ResponseEntity<Optional<Ticket>> save(@RequestBody TicketRequestDto ticketRequestDto) {
+    public ResponseEntity<Optional<Ticket>> save(@RequestBody TicketRequestDto ticketRequestDto,
+                                                 @AuthenticationPrincipal User user) {
 
         Optional<User> openedBy = userService.findById(ticketRequestDto.getUserId());
 
@@ -144,7 +149,8 @@ public class TicketController {
     }
 
     @PutMapping
-    public ResponseEntity<Optional<Ticket>> update(@RequestBody Ticket ticket) {
+    public ResponseEntity<Optional<Ticket>> update(@RequestBody Ticket ticket,
+                                                   @AuthenticationPrincipal User user) {
 
         Optional<Ticket> ticketToUpdate = ticketService.update(ticket);
 
@@ -156,7 +162,8 @@ public class TicketController {
     }
 
     @DeleteMapping("/{ticketId}")
-    public ResponseEntity<Optional<Ticket>> deleteById(@PathVariable Long ticketId) {
+    public ResponseEntity<Optional<Ticket>> deleteById(@PathVariable Long ticketId,
+                                                       @AuthenticationPrincipal User user) {
 
         Optional<Ticket> ticketToDelete = ticketService.deleteById(ticketId);
 

@@ -1,5 +1,6 @@
 package br.com.test.centralservico.centralservicoapitest.util;
 
+import br.com.test.centralservico.centralservicoapitest.domain.model.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -86,7 +87,39 @@ public class JwtUtil implements Serializable {
                 .map(GrantedAuthority::getAuthority)
                 .collect(Collectors.toList()));
 
+        claims.put("fullName", extractFullNameFromUserDetails(userDetails));
+
+        claims.put("userId", extractUserIdFromUserDetails(userDetails));
+
         return doGenerateToken(claims, userDetails.getUsername());
+
+    }
+
+    private String extractFullNameFromUserDetails(UserDetails userDetails) {
+
+        try {
+
+            return  ((User) userDetails).getFullName();
+
+        } catch(ClassCastException e) {
+
+            return null;
+
+        }
+
+    }
+
+    private Long extractUserIdFromUserDetails(UserDetails userDetails) {
+
+        try {
+
+            return  ((User) userDetails).getId();
+
+        } catch(ClassCastException e) {
+
+            return -1L;
+
+        }
 
     }
 
