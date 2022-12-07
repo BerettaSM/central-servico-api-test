@@ -14,7 +14,6 @@
 
     <include file="changelog005-create-table-tbl_user_level.xml" relativeToChangelogFile="true"/>
 
-    <!-- create-table-tbl_level aqui se ela tiver FK com user -->
     <include file="changelog006-create-table-tbl_ticket.xml" relativeToChangelogFile="true"/>
 
     <include file="changelog007-create-table-tbl_ticket_message.xml" relativeToChangelogFile="true"/>
@@ -27,7 +26,11 @@
 
     <include file="changelog011-insert-tbl_user.xml" relativeToChangelogFile="true"/>
 
-    <include file="changelog012-insert-tbl_ticket_500_entries.xml" relativeToChangelogFile="true"/>
+    <!--
+    <include file="changelog012-insert-tbl_ticket_750_entries.xml" relativeToChangelogFile="true"/>
+
+    -->
+    <include file="changelog012-insert-tbl_ticket_2000_entries.xml" relativeToChangelogFile="true"/>
 
     <include file="changelog013-insert-tbl_user_level.xml" relativeToChangelogFile="true"/>
 

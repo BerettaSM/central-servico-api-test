@@ -17,6 +17,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -95,6 +96,12 @@ public class TicketServiceImpl implements TicketService {
             ticketToDelete.setStatus(StatusTicketEnum.CANCELLED.getValue());
 
         return Optional.of(ticketRepository.saveAndFlush(ticketToDelete));
+
+    }
+
+    public Optional<List<Ticket>> findAllUnpaginatedTickets() {
+
+        return Optional.of(ticketRepository.findAll());
 
     }
 

@@ -23,7 +23,9 @@ public class TicketDto implements Serializable {
 
     private Integer status;
 
-    private String descStatus;
+    private String statusDescription;
+
+    private String description;
 
     private String title;
 

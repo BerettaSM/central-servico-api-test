@@ -1,5 +1,6 @@
 package br.com.test.centralservico.centralservicoapitest.controller;
 
+import br.com.test.centralservico.centralservicoapitest.domain.dto.FlattenedTicketResponseDto;
 import br.com.test.centralservico.centralservicoapitest.util.Mapper;
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketDto;
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketRequestDto;
@@ -29,7 +30,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/ticket")
@@ -63,6 +66,7 @@ public class TicketController {
 
         if(ticketPage.isEmpty())
             throw new ResourceNotFoundException("Nenhum ticket foi encontrado.");
+
 
         return ResponseEntity.status(HttpStatus.OK).body(ticketPage);
 
@@ -171,6 +175,25 @@ public class TicketController {
             throw new ResourceNotFoundException("Nenhum ticket com o id " + ticketId + " foi encontrado.");
 
         return ResponseEntity.status(HttpStatus.OK).body(ticketToDelete);
+
+    }
+
+    @GetMapping("/unpaginated")
+    public ResponseEntity<Optional<List<FlattenedTicketResponseDto>>> findAllUnpaginatedTickets() {
+
+        // Para o servidor de estatisticas consumir.
+
+        Optional<List<Ticket>> allUnpaginatedTickets = ticketService.findAllUnpaginatedTickets();
+
+        if(allUnpaginatedTickets.isEmpty())
+            throw new ResourceNotFoundException("Nenhum ticket foi encontrado.");
+
+        List<FlattenedTicketResponseDto> flattenedTickets = allUnpaginatedTickets.get()
+                                                                                  .stream()
+                                                                                  .map(Mapper::flattenTicket)
+                                                                                  .collect(Collectors.toList());
+
+        return ResponseEntity.status(HttpStatus.OK).body(Optional.of(flattenedTickets));
 
     }
 

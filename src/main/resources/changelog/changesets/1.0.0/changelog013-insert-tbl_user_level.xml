@@ -82,6 +82,11 @@
             <column name="ID_LEVEL" value="3"/>
         </insert>
 
+        <insert tableName="TBL_USER_LEVEL">
+            <column name="ID_USER" value="16"/>
+            <column name="ID_LEVEL" value="2"/>
+        </insert>
+
     </changeSet>
 
 </databaseChangeLog>

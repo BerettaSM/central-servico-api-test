@@ -11,7 +11,7 @@
             <column name="ID" value="1"/>
             <column name="FULL_NAME" value="Ramon Saviato"/>
             <column name="USERNAME" value="ramon123"/>
-            <column name="PASSWORD" value="asdfasdf"/>
+            <column name="PASSWORD" value="$2a$10$sTjKPXMpVOadE0YWlXY4xeVIwA.L7Ctr4kXaX2aeOeygWnCqCOIc."/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
@@ -19,7 +19,7 @@
             <column name="ID" value="2"/>
             <column name="FULL_NAME" value="Frank Matos"/>
             <column name="USERNAME" value="frank123"/>
-            <column name="PASSWORD" value="asdfasdf"/>
+            <column name="PASSWORD" value="$2a$10$sTjKPXMpVOadE0YWlXY4xeVIwA.L7Ctr4kXaX2aeOeygWnCqCOIc."/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
@@ -27,7 +27,7 @@
             <column name="ID" value="3"/>
             <column name="FULL_NAME" value="Lady França"/>
             <column name="USERNAME" value="lady123"/>
-            <column name="PASSWORD" value="asdfasdf"/>
+            <column name="PASSWORD" value="$2a$10$sTjKPXMpVOadE0YWlXY4xeVIwA.L7Ctr4kXaX2aeOeygWnCqCOIc."/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
@@ -35,7 +35,7 @@
             <column name="ID" value="4"/>
             <column name="FULL_NAME" value="Warley Nobre"/>
             <column name="USERNAME" value="warley123"/>
-            <column name="PASSWORD" value="asdfasdf"/>
+            <column name="PASSWORD" value="$2a$10$sTjKPXMpVOadE0YWlXY4xeVIwA.L7Ctr4kXaX2aeOeygWnCqCOIc."/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
@@ -43,7 +43,7 @@
             <column name="ID" value="5"/>
             <column name="FULL_NAME" value="Anderson Silva"/>
             <column name="USERNAME" value="anderson123"/>
-            <column name="PASSWORD" value="asdfasdf"/>
+            <column name="PASSWORD" value="$2a$10$sTjKPXMpVOadE0YWlXY4xeVIwA.L7Ctr4kXaX2aeOeygWnCqCOIc."/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
@@ -51,7 +51,7 @@
             <column name="ID" value="6"/>
             <column name="FULL_NAME" value="João da Silva"/>
             <column name="USERNAME" value="joao123"/>
-            <column name="PASSWORD" value="asdfasdf"/>
+            <column name="PASSWORD" value="$2a$10$sTjKPXMpVOadE0YWlXY4xeVIwA.L7Ctr4kXaX2aeOeygWnCqCOIc."/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
@@ -59,7 +59,7 @@
             <column name="ID" value="7"/>
             <column name="FULL_NAME" value="Josisnelson Pereira"/>
             <column name="USERNAME" value="josisnelson123"/>
-            <column name="PASSWORD" value="asdfasdf"/>
+            <column name="PASSWORD" value="$2a$10$sTjKPXMpVOadE0YWlXY4xeVIwA.L7Ctr4kXaX2aeOeygWnCqCOIc."/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
@@ -67,7 +67,7 @@
             <column name="ID" value="8"/>
             <column name="FULL_NAME" value="Hemengarda Fiorentino"/>
             <column name="USERNAME" value="hemengarda123"/>
-            <column name="PASSWORD" value="asdfasdf"/>
+            <column name="PASSWORD" value="$2a$10$sTjKPXMpVOadE0YWlXY4xeVIwA.L7Ctr4kXaX2aeOeygWnCqCOIc."/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
@@ -75,7 +75,7 @@
             <column name="ID" value="9"/>
             <column name="FULL_NAME" value="Mariscleuza Souza"/>
             <column name="USERNAME" value="mariscleuza123"/>
-            <column name="PASSWORD" value="asdfasdf"/>
+            <column name="PASSWORD" value="$2a$10$sTjKPXMpVOadE0YWlXY4xeVIwA.L7Ctr4kXaX2aeOeygWnCqCOIc."/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
@@ -83,7 +83,7 @@
             <column name="ID" value="10"/>
             <column name="FULL_NAME" value="Creuza de Gezuis"/>
             <column name="USERNAME" value="creuza123"/>
-            <column name="PASSWORD" value="asdfasdf"/>
+            <column name="PASSWORD" value="$2a$10$sTjKPXMpVOadE0YWlXY4xeVIwA.L7Ctr4kXaX2aeOeygWnCqCOIc."/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
@@ -91,7 +91,7 @@
             <column name="ID" value="11"/>
             <column name="FULL_NAME" value="Joscleusson Martins"/>
             <column name="USERNAME" value="joscleusson123"/>
-            <column name="PASSWORD" value="asdfasdf"/>
+            <column name="PASSWORD" value="$2a$10$sTjKPXMpVOadE0YWlXY4xeVIwA.L7Ctr4kXaX2aeOeygWnCqCOIc."/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
@@ -99,7 +99,7 @@
             <column name="ID" value="12"/>
             <column name="FULL_NAME" value="João das Neves"/>
             <column name="USERNAME" value="joaodasneves123"/>
-            <column name="PASSWORD" value="asdfasdf"/>
+            <column name="PASSWORD" value="$2a$10$sTjKPXMpVOadE0YWlXY4xeVIwA.L7Ctr4kXaX2aeOeygWnCqCOIc."/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
@@ -107,7 +107,7 @@
             <column name="ID" value="13"/>
             <column name="FULL_NAME" value="Walter Branco"/>
             <column name="USERNAME" value="walter123"/>
-            <column name="PASSWORD" value="asdfasdf"/>
+            <column name="PASSWORD" value="$2a$10$sTjKPXMpVOadE0YWlXY4xeVIwA.L7Ctr4kXaX2aeOeygWnCqCOIc."/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
@@ -115,7 +115,7 @@
             <column name="ID" value="14"/>
             <column name="FULL_NAME" value="Klascomenau Pires"/>
             <column name="USERNAME" value="klascomenau123"/>
-            <column name="PASSWORD" value="asdfasdf"/>
+            <column name="PASSWORD" value="$2a$10$sTjKPXMpVOadE0YWlXY4xeVIwA.L7Ctr4kXaX2aeOeygWnCqCOIc."/>
             <column name="ENABLE" valueBoolean="TRUE"/>
         </insert>
 
@@ -123,8 +123,16 @@
             <column name="ID" value="15"/>
             <column name="FULL_NAME" value="Juanda Gomes"/>
             <column name="USERNAME" value="juanda123"/>
-            <column name="PASSWORD" value="asdfasdf"/>
+            <column name="PASSWORD" value="$2a$10$sTjKPXMpVOadE0YWlXY4xeVIwA.L7Ctr4kXaX2aeOeygWnCqCOIc."/>
             <column name="ENABLE" valueBoolean="TRUE"/>
+        </insert>
+
+        <insert tableName="TBL_USER">
+            <column name="ID" value="16"/>
+            <column name="FULL_NAME" value="STATISTICS_SERVER"/>
+            <column name="USERNAME" value="STATISTICS_SERVER"/>
+            <column name="PASSWORD" value="$2a$10$BxCKpT.LArejRSvFh37iNu7yipBQojXbdVUc2piGrEgvQ1UmV4Zlq"/>
+            <column name="ENABLE" valueBoolean="FALSE"/>
         </insert>
 
     </changeSet>
