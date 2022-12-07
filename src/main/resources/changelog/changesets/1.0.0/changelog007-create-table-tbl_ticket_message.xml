@@ -31,14 +31,6 @@
 
         </createTable>
 
-        <addAutoIncrement
-                tableName="TBL_TICKET_MESSAGE"
-                columnName="ID"
-                columnDataType="integer"
-                startWith="1"
-                incrementBy="1"
-        />
-
         <addForeignKeyConstraint
                 baseColumnNames="ID_SENDER"
                 baseTableName="TBL_TICKET_MESSAGE"

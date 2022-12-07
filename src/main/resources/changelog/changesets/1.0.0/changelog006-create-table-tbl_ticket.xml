@@ -53,7 +53,7 @@
             </column>
 
             <column name="DATE_UPDATED" type="DATETIME" remarks="Set date when the ticket was updated.">
-                <constraints nullable="false"/>
+                <constraints nullable="true"/>
             </column>
 
             <column name="ENABLE" type="BOOLEAN" remarks="Set if this user is enable.">
@@ -61,14 +61,6 @@
             </column>
 
         </createTable>
-
-        <addAutoIncrement
-                tableName="TBL_TICKET"
-                columnName="ID"
-                columnDataType="integer"
-                startWith="1"
-                incrementBy="1"
-        />
 
         <addForeignKeyConstraint
                 baseColumnNames="ID_USER_OPEN_BY"

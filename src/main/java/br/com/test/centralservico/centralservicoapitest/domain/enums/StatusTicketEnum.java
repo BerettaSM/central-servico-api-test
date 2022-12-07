@@ -34,13 +34,13 @@ public enum StatusTicketEnum {
 
     }
 
-    public static int getValueByDescription(String description) {
+    public static String getDescriptionByValue(int value) {
 
         for(StatusTicketEnum status: StatusTicketEnum.values())
-            if(status.description.equals(description))
-                return status.value;
+            if(status.value == value)
+                return status.description;
 
-        return NOT_FOUND.value;
+        return NOT_FOUND.description;
 
     }
 

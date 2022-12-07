@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+
+    <changeSet author="Team-CS-devs" id="TBL_USER_LEVEL-2022-12-02-insert">
+
+        <insert tableName="TBL_USER_LEVEL">
+            <column name="ID_USER" value="1"/>
+            <column name="ID_LEVEL" value="2"/>
+        </insert>
+
+        <insert tableName="TBL_USER_LEVEL">
+            <column name="ID_USER" value="2"/>
+            <column name="ID_LEVEL" value="2"/>
+        </insert>
+
+        <insert tableName="TBL_USER_LEVEL">
+            <column name="ID_USER" value="3"/>
+            <column name="ID_LEVEL" value="2"/>
+        </insert>
+
+        <insert tableName="TBL_USER_LEVEL">
+            <column name="ID_USER" value="4"/>
+            <column name="ID_LEVEL" value="2"/>
+        </insert>
+
+        <insert tableName="TBL_USER_LEVEL">
+            <column name="ID_USER" value="5"/>
+            <column name="ID_LEVEL" value="2"/>
+        </insert>
+
+        <insert tableName="TBL_USER_LEVEL">
+            <column name="ID_USER" value="6"/>
+            <column name="ID_LEVEL" value="3"/>
+        </insert>
+
+        <insert tableName="TBL_USER_LEVEL">
+            <column name="ID_USER" value="7"/>
+            <column name="ID_LEVEL" value="3"/>
+        </insert>
+
+        <insert tableName="TBL_USER_LEVEL">
+            <column name="ID_USER" value="8"/>
+            <column name="ID_LEVEL" value="3"/>
+        </insert>
+
+        <insert tableName="TBL_USER_LEVEL">
+            <column name="ID_USER" value="9"/>
+            <column name="ID_LEVEL" value="3"/>
+        </insert>
+
+        <insert tableName="TBL_USER_LEVEL">
+            <column name="ID_USER" value="10"/>
+            <column name="ID_LEVEL" value="3"/>
+        </insert>
+
+        <insert tableName="TBL_USER_LEVEL">
+            <column name="ID_USER" value="11"/>
+            <column name="ID_LEVEL" value="3"/>
+        </insert>
+
+        <insert tableName="TBL_USER_LEVEL">
+            <column name="ID_USER" value="12"/>
+            <column name="ID_LEVEL" value="3"/>
+        </insert>
+
+        <insert tableName="TBL_USER_LEVEL">
+            <column name="ID_USER" value="13"/>
+            <column name="ID_LEVEL" value="3"/>
+        </insert>
+
+        <insert tableName="TBL_USER_LEVEL">
+            <column name="ID_USER" value="14"/>
+            <column name="ID_LEVEL" value="3"/>
+        </insert>
+
+        <insert tableName="TBL_USER_LEVEL">
+            <column name="ID_USER" value="15"/>
+            <column name="ID_LEVEL" value="3"/>
+        </insert>
+
+        <insert tableName="TBL_USER_LEVEL">
+            <column name="ID_USER" value="16"/>
+            <column name="ID_LEVEL" value="2"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

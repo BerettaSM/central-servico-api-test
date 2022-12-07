@@ -13,4 +13,9 @@ public interface TicketRepository extends JpaRepository<Ticket, Long> {
 
     Page<Ticket> findAllByEnabledAndStatus(Boolean enabled, Integer status,  PageRequest pageRequest);
 
+    Page<Ticket> findAllByEnabledAndStatusAndResponsibleUser(Boolean enabled,
+                                                             Integer status,
+                                                             User responsibleUser,
+                                                             PageRequest pageRequest);
+
 }

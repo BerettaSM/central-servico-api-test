@@ -1,13 +1,13 @@
 package br.com.test.centralservico.centralservicoapitest.service.impl;
 
-import br.com.test.centralservico.centralservicoapitest.domain.dto.Mapper;
+import br.com.test.centralservico.centralservicoapitest.util.Mapper;
 import br.com.test.centralservico.centralservicoapitest.domain.dto.TicketDto;
 import br.com.test.centralservico.centralservicoapitest.domain.enums.StatusTicketEnum;
+import br.com.test.centralservico.centralservicoapitest.domain.enums.TicketQueryTypeEnum;
 import br.com.test.centralservico.centralservicoapitest.domain.model.Ticket;
 import br.com.test.centralservico.centralservicoapitest.domain.model.User;
 import br.com.test.centralservico.centralservicoapitest.persistence.TicketRepository;
 import br.com.test.centralservico.centralservicoapitest.service.TicketService;
-import br.com.test.centralservico.centralservicoapitest.service.UserService;
 import br.com.test.centralservico.centralservicoapitest.util.DateUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +17,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -25,17 +26,9 @@ public class TicketServiceImpl implements TicketService {
 
     private final TicketRepository ticketRepository;
 
-    public Page<TicketDto> findAll(int status, int page, int size, boolean isEnabled) {
+    public Page<TicketDto> findAll(int queryType, int page, int size, boolean isEnabled, User user) {
 
-        Page<Ticket> tickets;
-
-        PageRequest pageRequest = PageRequest.of(page, size, Sort.Direction.DESC, "dateStart");
-
-        if(status == StatusTicketEnum.NOT_FOUND.getValue())
-            tickets = ticketRepository.findAllByEnabled(isEnabled, pageRequest);
-
-        else
-            tickets = ticketRepository.findAllByEnabledAndStatus(isEnabled, status, pageRequest);
+        Page<Ticket> tickets = findAllByQueryType(queryType, page, size, isEnabled, user);
 
         return tickets.map(Mapper::fromTicketToDto);
 
@@ -103,6 +96,59 @@ public class TicketServiceImpl implements TicketService {
             ticketToDelete.setStatus(StatusTicketEnum.CANCELLED.getValue());
 
         return Optional.of(ticketRepository.saveAndFlush(ticketToDelete));
+
+    }
+
+    public Optional<List<Ticket>> findAllUnpaginatedTickets() {
+
+        return Optional.of(ticketRepository.findAll());
+
+    }
+
+    private Page<Ticket> findAllByQueryType(int queryType, int page, int size, boolean isEnabled, User user) {
+
+        TicketQueryTypeEnum query = TicketQueryTypeEnum.findQueryType(queryType);
+
+        PageRequest pageRequest = PageRequest.of(page, size, Sort.Direction.DESC, "dateStart");
+
+        switch(query) {
+
+            case OPEN_TICKETS:
+
+                return ticketRepository.findAllByEnabledAndStatus(
+
+                        isEnabled, StatusTicketEnum.OPEN.getValue(), pageRequest
+
+                );
+
+            case ONGOING_TICKETS:
+
+                return ticketRepository.findAllByEnabledAndStatus(
+
+                        isEnabled, StatusTicketEnum.IN_PROGRESS.getValue(), pageRequest
+
+                );
+
+            case ONGOING_TICKETS_BY_ASSIGNED_USER:
+
+                return ticketRepository.findAllByEnabledAndStatusAndResponsibleUser(
+
+                        isEnabled, StatusTicketEnum.IN_PROGRESS.getValue(), user, pageRequest
+
+                );
+
+            case CLOSED_TICKETS_BY_ASSIGNED_USER:
+
+                return ticketRepository.findAllByEnabledAndStatusAndResponsibleUser(
+
+                        isEnabled, StatusTicketEnum.CLOSED.getValue(), user, pageRequest
+
+                );
+
+        }
+
+        // Default é ALL_TICKETS
+        return ticketRepository.findAllByEnabled(isEnabled, pageRequest);
 
     }
 
