@@ -29,8 +29,11 @@
     <!--
     <include file="changelog012-insert-tbl_ticket_750_entries.xml" relativeToChangelogFile="true"/>
 
-    -->
+
     <include file="changelog012-insert-tbl_ticket_2000_entries.xml" relativeToChangelogFile="true"/>
+    -->
+
+    <include file="changelog012-insert-tbl_ticket_5000_entries.xml" relativeToChangelogFile="true"/>
 
     <include file="changelog013-insert-tbl_user_level.xml" relativeToChangelogFile="true"/>
 
